@@ -1,7 +1,5 @@
 package controllers;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -17,7 +15,7 @@ public class MainController implements Initializable{
     private Button btnRegistrarse;
     @FXML
     private Button btnVerOfertas;
-    
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

@@ -1,4 +1,4 @@
-module SubastasQuindio {
+module SubastasQuindio_Proyecto{
 	requires javafx.controls;
 	requires javafx.fxml;
 	requires javafx.graphics;
