@@ -39,6 +39,6 @@
          </children>
       </FlowPane>
       <Separator layoutX="-1.0" layoutY="80.0" prefHeight="10.0" prefWidth="874.0" />
-      <ListView layoutX="13.0" layoutY="100.0" prefHeight="383.0" prefWidth="847.0" />
+      <ListView fx:id="listViewInicio" layoutX="13.0" layoutY="100.0" prefHeight="383.0" prefWidth="847.0" />
    </children>
 </AnchorPane>
