@@ -1,4 +1,4 @@
-package model;
+package co.edu.uniquindio.progiii.subastasquindio.model;
 
 import java.io.File;
 

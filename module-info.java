@@ -3,7 +3,7 @@ module SubastasQuindio_Proyecto{
 	requires javafx.fxml;
 	requires javafx.graphics;
 
-	opens controllers to javafx.fxml;
-	opens application to javafx.graphics, javafx.fxml;
-	exports application;
+	opens co.edu.uniquindio.progiii.subastasquindio.controllers to javafx.fxml;
+	opens co.edu.uniquindio.progiii.subastasquindio.application to javafx.graphics, javafx.fxml;
+	exports co.edu.uniquindio.progiii.subastasquindio.application;
 }

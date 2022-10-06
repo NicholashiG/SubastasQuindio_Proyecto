@@ -1,4 +1,4 @@
-package model;
+package co.edu.uniquindio.progiii.subastasquindio.model;
 
 
 import java.io.Serializable;
@@ -15,13 +15,7 @@ public class Usuario implements Serializable {
     private String email;
     private int edad;
 
-    public void login(){
 
-    }
-
-    public void logout(){
-
-    }
 
     //Getters y Setters
     public String getNombreUsuario() {

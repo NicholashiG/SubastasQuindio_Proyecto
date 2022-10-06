@@ -1,9 +1,9 @@
-package model;
+package co.edu.uniquindio.progiii.subastasquindio.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Comprador extends Usuario implements Serializable {
+public class Comprador extends Usuario implements Serializable, IUsuario {
 
     //Constructor vacío
     public Comprador() {
@@ -27,5 +27,16 @@ public class Comprador extends Usuario implements Serializable {
 
     public void setPujas(ArrayList<Puja> pujas) {
         this.pujas = pujas;
+    }
+
+    //Funciones de IUsuario
+    @Override
+    public void login() {
+
+    }
+
+    @Override
+    public void logout() {
+
     }
 }

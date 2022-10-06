@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="497.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerCrudArticulos">
+<AnchorPane prefHeight="497.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.progiii.subastasquindio.controllers.ControllerCrudArticulos">
    <children>
       <FlowPane prefHeight="65.0" prefWidth="858.0">
          <children>

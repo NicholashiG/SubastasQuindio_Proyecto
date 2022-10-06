@@ -1,4 +1,4 @@
-package application;
+package co.edu.uniquindio.progiii.subastasquindio.application;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -15,7 +15,7 @@ public class Main extends Application {
 	}
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/view/CrudAnuncios.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/MainView.fxml"));
 		try {
             Scene scene = new Scene(fxmlLoader.load());
             primaryStage.setScene(scene);

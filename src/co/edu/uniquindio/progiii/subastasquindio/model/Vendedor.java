@@ -1,9 +1,9 @@
-package model;
+package co.edu.uniquindio.progiii.subastasquindio.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Vendedor extends Usuario implements Serializable {
+public class Vendedor extends Usuario implements Serializable, IUsuario {
 
     //Constructor vacío
     public Vendedor() {
@@ -12,19 +12,19 @@ public class Vendedor extends Usuario implements Serializable {
     //Variables globales
     private ArrayList<Publicacion> publicaciones = new ArrayList<>();
 
-    public void publicar(){
+    public void publicar() {
 
     }
 
-    public void escogerPuja(){
+    public void escogerPuja() {
 
     }
 
-    public void editarPublicacion(){
+    public void editarPublicacion() {
 
     }
 
-    public void borrarPublicacion(){
+    public void borrarPublicacion() {
 
     }
 
@@ -35,5 +35,16 @@ public class Vendedor extends Usuario implements Serializable {
 
     public void setPublicaciones(ArrayList<Publicacion> publicaciones) {
         this.publicaciones = publicaciones;
+    }
+
+    //Funciones de IUsuario
+    @Override
+    public void login() {
+
+    }
+
+    @Override
+    public void logout() {
+
     }
 }
