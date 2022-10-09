@@ -1,4 +1,4 @@
-package co.edu.uniquindio.progiii.subastasquindio.model;
+package co.edu.uniquindio.progiii.subastasquindio.services;
 
 public interface IUsuario {
 

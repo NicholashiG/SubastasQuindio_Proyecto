@@ -3,6 +3,8 @@ package co.edu.uniquindio.progiii.subastasquindio.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import co.edu.uniquindio.progiii.subastasquindio.services.IUsuario;
+
 public class Vendedor extends Usuario implements Serializable, IUsuario {
 
     //Constructor vacío
