@@ -1,10 +1,9 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
-import java.io.IOException;
-
 import co.edu.uniquindio.progiii.subastasquindio.application.Main;
 import co.edu.uniquindio.progiii.subastasquindio.model.CasaSubastas;
 import co.edu.uniquindio.progiii.subastasquindio.model.Usuario;
+import co.edu.uniquindio.progiii.subastasquindio.persistencia.Persistencia;
 import javafx.stage.Stage;
 
 public class SingletonController {
@@ -37,10 +36,18 @@ public class SingletonController {
         	instancia = new SingletonController(); 
         } 
         return instancia; 
-    } 
-    
-    
-    public void openLogin() {
+    }
+
+	public static void guardarRegistroUsuarioLog(String nombre, String email) {
+		Persistencia.guardaRegistroLog("Se ha registrado un nuevo usuario", 1, nombre+"_"+email);
+	}
+
+	public static void guardarInicioSesionUsuarioLog(String nombre) {
+		Persistencia.guardaRegistroLog("Ha ingresado un usuario", 1, nombre);
+	}
+
+
+	public void openLogin() {
     	Main.openLogin();
     }
     
@@ -56,7 +63,8 @@ public class SingletonController {
     		Main.closeLogin(loginStage);
     	} else { // Aqui va la excepcion de Usuario no existe
     		return "Usuario no existe";
-    	}
+
+		}
     	return "";
     }
     	
@@ -65,6 +73,7 @@ public class SingletonController {
 	public void registrar(String nombre, String contra, String email, int edad) {
 
 		subastasQuindio.registrarUsuario(new Usuario(nombre, contra, email, edad));
+		SingletonController.guardarRegistroUsuarioLog(nombre,email);
 		Main.closeLogin(loginStage);
 	}
 

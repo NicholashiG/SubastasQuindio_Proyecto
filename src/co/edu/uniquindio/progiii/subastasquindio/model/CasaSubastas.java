@@ -1,5 +1,7 @@
 package co.edu.uniquindio.progiii.subastasquindio.model;
 
+import co.edu.uniquindio.progiii.subastasquindio.controllers.SingletonController;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -9,6 +11,7 @@ public class CasaSubastas implements Serializable {
 	
 	
 	ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+	ArrayList<Publicacion> listaPublicaciones = new ArrayList<Publicacion>();
 	Usuario usuarioLogeado;
 
 	
@@ -22,6 +25,7 @@ public class CasaSubastas implements Serializable {
 		for (Usuario user: listaUsuarios) {
 			System.out.println("user: " + user.getNombreUsuario() + " - " + user.getContrasena() + "/n" + "Strings: " + usuario + " - " + contra );
 			if (user.getNombreUsuario().equals(usuario) && user.getContrasena().equals(contra)) {
+				SingletonController.guardarInicioSesionUsuarioLog(usuario);
 				usuarioLogeado = user;
 				return true;
 			}
@@ -44,6 +48,13 @@ public class CasaSubastas implements Serializable {
 		this.listaUsuarios = listaUsuarios;
 	}
 
+	public ArrayList<Publicacion> getListaPublicaciones() {
+		return listaPublicaciones;
+	}
+
+	public void setListaPublicaciones(ArrayList<Publicacion> listaPublicaciones) {
+		this.listaPublicaciones = listaPublicaciones;
+	}
 
 	public Usuario getUsuarioLogeado() {
 		return usuarioLogeado;

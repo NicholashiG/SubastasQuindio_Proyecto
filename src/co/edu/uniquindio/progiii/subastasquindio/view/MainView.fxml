@@ -12,13 +12,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="497.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.progiii.subastasquindio.controllers.MainController">
+<AnchorPane prefHeight="497.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.progiii.subastasquindio.controllers.MainController">
    <children>
       <FlowPane prefHeight="65.0" prefWidth="858.0">
          <children>
             <ImageView fitHeight="64.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
                <FlowPane.margin>
-                  <Insets bottom="10.0" left="10.0" right="230.0" top="10.0" />
+                  <Insets bottom="10.0" left="10.0" right="200.0" top="10.0" />
                </FlowPane.margin>
                <image>
                   <Image url="@images/LogoSubastasQuindio.png" />
@@ -43,7 +43,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </FlowPane.margin>
             </Button>
-            <Button fx:id="btnRegistrarse" mnemonicParsing="false" text="Registrarse" onAction="#registrarse" >
+            <Button fx:id="btnRegistrarse" mnemonicParsing="false" onAction="#registrarse" text="Registrarse">
                <FlowPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </FlowPane.margin>

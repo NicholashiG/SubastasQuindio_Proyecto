@@ -33,7 +33,8 @@ public class ControllerRegistro implements Initializable {
 	    		// VOY A USAR EL MISMO LOGIN STAGE PORQUE SOLO SE PUEDE ABRIR
 	    			// UNO A LA VEZ Y ADEMAS ME DA PEREZA HACER OTRO
 				control.setLoginStage( (Stage) usuario.getScene().getWindow() );
-				control.registrar(usuario.getText(), contra.getText(), email.getText(), Integer.parseInt(edad.getText()));  
+				control.registrar(usuario.getText(), contra.getText(), email.getText(), Integer.parseInt(edad.getText()));
+
 	    	} else feedback.setText("El correo o edad son erroneos");
 			
 

@@ -69,4 +69,13 @@ public class Usuario implements Serializable {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+    @Override
+    public String toString() {
+        return
+                "nombreUsuario='" + nombreUsuario +
+                ", contrasena='" + contrasena +
+                ", email='" + email +
+                ", edad=" + edad;
+    }
 }

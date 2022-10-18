@@ -103,4 +103,19 @@ public class Publicacion implements Serializable {
     public void setPujaGanadora(Puja pujaGanadora) {
         this.pujaGanadora = pujaGanadora;
     }
+
+    @Override
+    public String toString() {
+        return
+                "nombre='" + nombre +
+                ", tipo=" + tipo +
+                ", descripcion='" + descripcion  +
+                ", foto=" + foto +
+                ", estado=" + estado +
+                ", vendedor=" + vendedor +
+                ", fechaInicial=" + fechaInicial +
+                ", fechaFinal=" + fechaFinal +
+                ", valorInicial=" + valorInicial +
+                ", pujaGanadora=" + pujaGanadora;
+    }
 }
