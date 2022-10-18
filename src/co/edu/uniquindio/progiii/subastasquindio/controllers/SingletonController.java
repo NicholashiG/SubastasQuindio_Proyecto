@@ -46,6 +46,10 @@ public class SingletonController {
 		Persistencia.guardaRegistroLog("Ha ingresado un usuario", 1, nombre);
 	}
 
+	public static void guardarExcepcion(String mensaje, String tipoExcepcion) {
+		Persistencia.guardaRegistroLog("¡Ha ocurrido una excepción!: ", 2, mensaje+" "+tipoExcepcion);
+	}
+
 
 	public void openLogin() {
     	Main.openLogin();

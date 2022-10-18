@@ -23,14 +23,12 @@ public class Persistencia {
 	public static final String RUTA_ARCHIVO_USUARIOS = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/archivos/archivoUsuarios.txt";
 	public static final String RUTA_ARCHIVO_PUBLICACIONES = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/archivos/archivoPublicaciones.txt";
 	public static final String RUTA_ARCHIVO_ARTICULOS = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/archivos/archivoArticulos.txt";
-	public static final String RUTA_ARCHIVO_LOG = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/archivos/archivoLog.log";
+	public static final String RUTA_ARCHIVO_LOG = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/archivos/log/archivoLog.log";
 	public static final String RUTA_ARCHIVO_TRANSACCIONES = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/archivos/archivoTransacciones.txt";
 	public static final String RUTA_ARCHIVO_MODELO_SUBASTAS_BINARIO = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/model.dat";
+	public static final String RUTA_ARCHIVO_MODELO_SUBASTAS_BINARIO_RESPALDO = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/respaldo/model.dat";
 	public static final String RUTA_ARCHIVO_MODELO_SUBASTAS_XML = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/model.xml";
-
-
-
-	
+	public static final String RUTA_ARCHIVO_MODELO_SUBASTAS_XML_RESPALDO = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/respaldo/model.xml";
 	
 	public static void cargarDatosArchivos(CasaSubastas subastasQuindio) throws FileNotFoundException, IOException {
 		
