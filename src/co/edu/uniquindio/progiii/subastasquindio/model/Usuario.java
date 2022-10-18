@@ -15,9 +15,15 @@ public class Usuario implements Serializable {
     private String email;
     private int edad;
 
+    
+    	// ESTE CONSTRUCTOR ES TEMPORAL PARA LAS PRUEBAS DE LOGIN
+	public Usuario(String nombreUsuario, String contrasena) {
+		super();
+		this.nombreUsuario = nombreUsuario;
+		this.contrasena = contrasena;
+	}
 
-
-    //Getters y Setters
+	//Getters y Setters
     public String getNombreUsuario() {
         return nombreUsuario;
     }

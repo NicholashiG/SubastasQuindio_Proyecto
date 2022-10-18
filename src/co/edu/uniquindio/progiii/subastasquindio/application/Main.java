@@ -7,18 +7,19 @@ import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
 
+import co.edu.uniquindio.progiii.subastasquindio.controllers.SingletonController;
+
 
 public class Main extends Application {
 
+
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/MainView.fxml"));
-	//	FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudAnuncios.fxml"));
-//		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudArticulos.fxml"));
-//		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudUsuarios.fxml"));
 		try {
             Scene scene = new Scene(fxmlLoader.load());
             primaryStage.setScene(scene);
@@ -26,6 +27,38 @@ public class Main extends Application {
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	
+	public static void openLogin() throws IOException {
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/Login.fxml"));
+		try {
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	
+	//CAMBIAR LUEGO NO SE KAJSKRJD ESTO ES UN COPYPASTE
+	public static void refreshMain(Stage mainStage) {
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/MainView.fxml"));
+		try {
+            Scene scene = new Scene(fxmlLoader.load());
+            mainStage.setScene(scene);
+            mainStage.show();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+
+	public static void closeLogin(Stage stage) {
+		// TODO Auto-generated method stub
+		stage.close();
 	}
 	
 

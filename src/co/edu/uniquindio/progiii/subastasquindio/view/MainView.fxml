@@ -10,8 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="497.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.progiii.subastasquindio.controllers.MainController">
+<AnchorPane prefHeight="497.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.progiii.subastasquindio.controllers.MainController">
    <children>
       <FlowPane prefHeight="65.0" prefWidth="858.0">
          <children>
@@ -23,6 +24,7 @@
                   <Image url="@images/LogoSubastasQuindio.png" />
                </image>
             </ImageView>
+            <Text fx:id="bienvenida" strokeType="OUTSIDE" strokeWidth="0.0" text=" " />
             <Hyperlink fx:id="hyperlinkVendedor" text="¿Eres vendedor?">
                <FlowPane.margin>
                   <Insets right="10.0" />
@@ -36,7 +38,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </FlowPane.margin>
             </Button>
-            <Button fx:id="btnIniciarSesion" mnemonicParsing="false" text="Iniciar Sesión">
+            <Button fx:id="btnIniciarSesion" mnemonicParsing="false" onAction="#iniciarSesion" text="Iniciar Sesión">
                <FlowPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </FlowPane.margin>
