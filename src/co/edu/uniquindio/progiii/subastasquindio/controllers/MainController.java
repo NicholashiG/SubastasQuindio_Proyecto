@@ -7,10 +7,13 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import co.edu.uniquindio.progiii.subastasquindio.model.Usuario;
+
+import static co.edu.uniquindio.progiii.subastasquindio.persistencia.Persistencia.guardarPublicaciones;
 
 public class MainController implements Initializable{
 
@@ -30,7 +33,13 @@ public class MainController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-    Usuario usuarioLogeado = control.getUsuarioLogeado();
+       /* try {
+            guardarPublicaciones(SingletonController.getInstance().getSubastasQuindio());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }*/
+
+        Usuario usuarioLogeado = control.getUsuarioLogeado();
     if (usuarioLogeado != null)   {
     		btnIniciarSesion.setVisible(false);
     		btnRegistrarse.setVisible(false);

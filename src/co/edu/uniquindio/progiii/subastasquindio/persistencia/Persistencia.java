@@ -21,7 +21,7 @@ import java.util.logging.SimpleFormatter;
 public class Persistencia {
 
 	public static final String RUTA_ARCHIVO_USUARIOS = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/archivos/archivoUsuarios.txt";
-	public static final String RUTA_ARCHIVO_PUBLICACIONES = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/archivos/archivoPublicaciones.txt";
+	public static final String RUTA_ARCHIVO_PUBLICACIONES = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/archivos/archivoPublicaciones.xml";
 	public static final String RUTA_ARCHIVO_ARTICULOS = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/archivos/archivoArticulos.txt";
 	public static final String RUTA_ARCHIVO_LOG = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/log/archivoLog.log";
 	public static final String RUTA_ARCHIVO_TRANSACCIONES = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/archivos/archivoTransacciones.txt";
@@ -30,7 +30,7 @@ public class Persistencia {
 	public static final String RUTA_ARCHIVO_MODELO_SUBASTAS_XML = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/model.xml";
 	public static final String RUTA_ARCHIVO_MODELO_SUBASTAS_XML_RESPALDO = "src/co/edu/uniquindio/progiii/subastasquindio/persistencia/respaldo/model.xml";
 	
-	public static void cargarDatosArchivos(CasaSubastas subastasQuindio) throws FileNotFoundException, IOException {
+	public static void cargarDatosArchivos(CasaSubastas subastasQuindio) throws Exception {
 		
 		
 		//cargar archivo de clientes
@@ -40,7 +40,7 @@ public class Persistencia {
 			subastasQuindio.getListaUsuarios().addAll(usuariosCargados);
 
 		
-		//cargar archivos empleados
+		//cargar archivos de publicaciones
 		ArrayList<Publicacion> publicacionesCargadas = cargarPublicaciones();
 		
 		if(publicacionesCargadas.size() > 0)
@@ -68,17 +68,14 @@ public class Persistencia {
 	}
 	
 	
-	public static void guardarPublicaciones(ArrayList<Publicacion> listaPublicaciones) throws IOException {
-		
-		// TODO Auto-generated method stub
-		String contenido = "";
-		
-		for(Publicacion publicacion:listaPublicaciones)
-		{
-			contenido+= publicacion.toString()+"\n";
-			// Hay que revisar si guarda los objetos como File y Date. Creo que sí, hay que revisar jeje
+	public static void guardarPublicaciones(CasaSubastas subastasQuindio) throws IOException {
+
+		try {
+			ArchivoUtil.salvarRecursoSerializadoXML(RUTA_ARCHIVO_PUBLICACIONES, subastasQuindio);
+			// Revisar si en XML también guarda el tipo File y Date, de lo contrario, hay que buscar cómo hacerlo
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_PUBLICACIONES, contenido, false);
 	}
 	
 	
@@ -111,18 +108,9 @@ public class Persistencia {
 		return usuarios;
 	}
 
-	private static ArrayList<Publicacion> cargarPublicaciones() throws IOException, FileNotFoundException {
-		ArrayList<Publicacion> publicaciones =new ArrayList<Publicacion>();
-		ArrayList<String> contenido = ArchivoUtil.leerArchivo(RUTA_ARCHIVO_PUBLICACIONES);
-		String linea="";
-		// Aquí se deben cargar las publicaciones
-		// Se debe revisar cómo hacer para los tipos Date y File
-		for (int i = 0; i < contenido.size(); i++)
-		{
-			linea = contenido.get(i);
-			Publicacion publicacion = new Publicacion();
-			publicaciones.add(publicacion);
-		}
+	private static ArrayList<Publicacion> cargarPublicaciones() throws Exception {
+		CasaSubastas casaSubastas = (CasaSubastas) ArchivoUtil.cargarRecursoSerializado(RUTA_ARCHIVO_PUBLICACIONES);
+		ArrayList<Publicacion> publicaciones = casaSubastas.getListaPublicaciones();
 		return publicaciones;
 	}
 
@@ -205,8 +193,9 @@ public class Persistencia {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
+
+
 	public static CasaSubastas cargarRecursoCasaSubastasXML() {
 		
 		CasaSubastas subastasQuindio = null;
