@@ -2,7 +2,9 @@ package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
 import co.edu.uniquindio.progiii.subastasquindio.application.Main;
 import co.edu.uniquindio.progiii.subastasquindio.model.CasaSubastas;
+import co.edu.uniquindio.progiii.subastasquindio.model.Comprador;
 import co.edu.uniquindio.progiii.subastasquindio.model.Usuario;
+import co.edu.uniquindio.progiii.subastasquindio.model.Vendedor;
 import co.edu.uniquindio.progiii.subastasquindio.persistencia.Persistencia;
 import javafx.stage.Stage;
 
@@ -56,9 +58,12 @@ public class SingletonController {
     }
     
 	public void openRegistro() {
-    	Main.openRegistro();
+    	Main.openRegistroUsuarios();
 	}
-    
+	public void openRegistroVendedores() {
+    	Main.openRegistroVendedores();
+	}
+
     public String login(String usuario, String contra) {
 
     	if (subastasQuindio.login(usuario, contra)) {
@@ -74,9 +79,8 @@ public class SingletonController {
     	
     // REGISTRA UN USUARIO, NO UN COMPRADOR O VENDEDOR
     // 	CAMBIAR LUEGO
-	public void registrar(String nombre, String contra, String email, int edad) {
-
-		subastasQuindio.registrarUsuario(new Usuario(nombre, contra, email, edad));
+	public void registrarUsuario(String nombre, String contra, String email, int edad) {
+		subastasQuindio.registrarComprador(new Comprador(nombre, contra, email, edad));
 		SingletonController.guardarRegistroUsuarioLog(nombre,email);
 		Main.closeLogin(loginStage);
 	}
@@ -112,11 +116,11 @@ public class SingletonController {
 	}
 
 
-
-
-	
-	
-	
-} 
+	public void registrarVendedor(String nombre, String contrasena, String email, int edad, String id) {
+		subastasQuindio.registrarVendedor(new Vendedor(nombre, contrasena, email, edad, id));
+		SingletonController.guardarRegistroUsuarioLog(nombre,email);
+		Main.closeLogin(loginStage);
+	}
+}
 	
 

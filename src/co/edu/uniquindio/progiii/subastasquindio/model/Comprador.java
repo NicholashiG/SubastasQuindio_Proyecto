@@ -11,6 +11,10 @@ public class Comprador extends Usuario implements Serializable, IUsuario {
     public Comprador() {
     }
 
+    public Comprador(String nombreUsuario, String contrasena, String email, int edad) {
+        super(nombreUsuario, contrasena, email, edad);
+    }
+
     //Variables globales
     private ArrayList<Puja> pujas = new ArrayList<>();
 

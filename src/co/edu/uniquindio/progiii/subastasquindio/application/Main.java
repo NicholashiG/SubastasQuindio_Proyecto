@@ -7,8 +7,6 @@ import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
 
-import co.edu.uniquindio.progiii.subastasquindio.controllers.SingletonController;
-
 
 public class Main extends Application {
 
@@ -42,8 +40,18 @@ public class Main extends Application {
 		}
 	}
 	
-	public static void openRegistro() {
+	public static void openRegistroUsuarios() {
 		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/Registro.fxml"));
+		try {
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}public static void openRegistroVendedores() {
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/RegistroVendedores.fxml"));
 		try {
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();

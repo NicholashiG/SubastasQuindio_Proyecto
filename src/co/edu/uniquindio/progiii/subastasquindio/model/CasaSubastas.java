@@ -34,7 +34,7 @@ public class CasaSubastas implements Serializable {
 		return false;
 	}
 
-	public void registrarUsuario(Usuario user) {
+	public void registrarComprador(Usuario user) {
 		listaUsuarios.add(user);
 	}
 	
@@ -66,8 +66,7 @@ public class CasaSubastas implements Serializable {
 	}
 
 
-
-	
-	
-	
+	public void registrarVendedor(Vendedor vendedor) {
+		listaUsuarios.add(vendedor);
+	}
 }

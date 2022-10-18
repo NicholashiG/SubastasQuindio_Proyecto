@@ -25,7 +25,7 @@ public class MainController implements Initializable{
     @FXML
     private Text bienvenida;
     @FXML
-    private Hyperlink hyperlinkVendedor;
+    private Hyperlink hyperlinkRegistroVendedor;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -34,7 +34,7 @@ public class MainController implements Initializable{
     if (usuarioLogeado != null)   {
     		btnIniciarSesion.setVisible(false);
     		btnRegistrarse.setVisible(false);
-    		hyperlinkVendedor.setVisible(false);
+            hyperlinkRegistroVendedor.setVisible(false);
     		bienvenida.setText("Bienvenido " + usuarioLogeado.getNombreUsuario() + "!");
     	}
     }
@@ -50,6 +50,11 @@ public class MainController implements Initializable{
     public void registrarse() {
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
         control.openRegistro();
+    }
+
+    public void registrarseVendedor() {
+        control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
+        control.openRegistroVendedores();
     }
 }
  
