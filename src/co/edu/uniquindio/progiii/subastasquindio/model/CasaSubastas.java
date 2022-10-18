@@ -19,19 +19,21 @@ public class CasaSubastas implements Serializable {
 	
 	public boolean login (String usuario, String contra) {
 		
-//		for (Usuario user: listaUsuarios) {
-//			
-//			if (user.getNombreUsuario() == usuario && user.getContrasena() == contra) {
-//				usuarioLogeado = user;
-							//- ---- SOLO PARA DEBUGGING DEL LOGIN
-						usuarioLogeado = new Usuario(usuario, contra);
+		for (Usuario user: listaUsuarios) {
+			System.out.println("user: " + user.getNombreUsuario() + " - " + user.getContrasena() + "/n" + "Strings: " + usuario + " - " + contra );
+			if (user.getNombreUsuario().equals(usuario) && user.getContrasena().equals(contra)) {
+				usuarioLogeado = user;
 				return true;
-//			}
-//			
-//		}
-//		return false;
+			}
+			
+		}
+		return false;
 	}
 
+	public void registrarUsuario(Usuario user) {
+		listaUsuarios.add(user);
+	}
+	
 
 	public ArrayList<Usuario> getListaUsuarios() {
 		return listaUsuarios;
@@ -51,6 +53,9 @@ public class CasaSubastas implements Serializable {
 	public void setUsuarioLogeado(Usuario usuarioLogeado) {
 		this.usuarioLogeado = usuarioLogeado;
 	}
+
+
+
 	
 	
 	

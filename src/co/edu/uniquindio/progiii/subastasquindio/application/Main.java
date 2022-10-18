@@ -30,8 +30,20 @@ public class Main extends Application {
 	}
 	
 	
-	public static void openLogin() throws IOException {
+	public static void openLogin() {
 		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/Login.fxml"));
+		try {
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void openRegistro() {
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/Registro.fxml"));
 		try {
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
@@ -43,7 +55,7 @@ public class Main extends Application {
 	}
 
 	
-	//CAMBIAR LUEGO NO SE KAJSKRJD ESTO ES UN COPYPASTE
+	//CAMBIAR LUEGO NO SÉ KAJSKRJD ESTO ES UN COPYPASTE
 	public static void refreshMain(Stage mainStage) {
 		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/MainView.fxml"));
 		try {
@@ -55,11 +67,12 @@ public class Main extends Application {
 		}
 	}
 	
-
+	// ESTO LITERALMENTE CIERRA CUALQUIER VENTANA JAJAJA
 	public static void closeLogin(Stage stage) {
 		// TODO Auto-generated method stub
 		stage.close();
 	}
+
 	
 
 }

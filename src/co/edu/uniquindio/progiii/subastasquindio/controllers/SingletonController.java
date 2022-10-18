@@ -41,24 +41,32 @@ public class SingletonController {
     
     
     public void openLogin() {
-    	try {
-			Main.openLogin();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    	Main.openLogin();
     }
     
-    public void login(String usuario, String contra) {
+	public void openRegistro() {
+    	Main.openRegistro();
+	}
     
+    public String login(String usuario, String contra) {
+
     	if (subastasQuindio.login(usuario, contra)) {
+
     		Main.refreshMain(mainStage);
     		Main.closeLogin(loginStage);
+    	} else { // Aqui va la excepcion de Usuario no existe
+    		return "Usuario no existe";
     	}
-    	
+    	return "";
     }
-    
-    
+    	
+    // REGISTRA UN USUARIO, NO UN COMPRADOR O VENDEDOR
+    // 	CAMBIAR LUEGO
+	public void registrar(String nombre, String contra, String email, int edad) {
+
+		subastasQuindio.registrarUsuario(new Usuario(nombre, contra, email, edad));
+		Main.closeLogin(loginStage);
+	}
 
 	public CasaSubastas getSubastasQuindio() {
 		return subastasQuindio;
@@ -89,6 +97,10 @@ public class SingletonController {
 		return subastasQuindio.getUsuarioLogeado();
 		
 	}
+
+
+
+
 	
 	
 	

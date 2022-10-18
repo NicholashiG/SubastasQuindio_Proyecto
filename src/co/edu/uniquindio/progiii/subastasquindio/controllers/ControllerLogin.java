@@ -22,12 +22,14 @@ public class ControllerLogin implements Initializable {
 
 	@FXML TextField usuario;
 	@FXML PasswordField contra;
+	@FXML TextField email;
+	@FXML TextField edad;
 	@FXML Text feedback;
 	public void login() {
 		if (usuario.getText() != "" && contra.getText() != "") {
 	    	// ESTOY ENVIANDO EL STAGE AL SINGLETON PARA QUE MANEJE TODO
 			control.setLoginStage( (Stage) usuario.getScene().getWindow() );
-			control.login(usuario.getText(), contra.getText());  
+			feedback.setText(control.login(usuario.getText(), contra.getText()));  
 		}
 		else { feedback.setText("Los campos no pueden estar vacios"); }
 	}

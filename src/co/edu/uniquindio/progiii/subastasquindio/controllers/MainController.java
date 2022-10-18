@@ -35,7 +35,7 @@ public class MainController implements Initializable{
     		btnIniciarSesion.setVisible(false);
     		btnRegistrarse.setVisible(false);
     		hyperlinkVendedor.setVisible(false);
-    		bienvenida.setText("Bienvenido " + usuarioLogeado.getNombreUsuario() + "!  ");
+    		bienvenida.setText("Bienvenido " + usuarioLogeado.getNombreUsuario() + "!");
     	}
     }
     
@@ -45,6 +45,11 @@ public class MainController implements Initializable{
     		// PORQUE NO SE ME OCURRIO MEJOR IDEA KJDKAJSDKAJ
     control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
     control.openLogin();
+    }
+    
+    public void registrarse() {
+        control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
+        control.openRegistro();
     }
 }
  
