@@ -9,69 +9,26 @@ public class Publicacion implements Serializable {
 
     //Constructor vacío
     public Publicacion() {
+
+    }
+
+    public Publicacion(Date fechaInicial, Date fechaFinal, int valorInicial, Puja pujaGanadora, Estado estado) {
+        this.fechaInicial = fechaInicial;
+        this.fechaFinal = fechaFinal;
+        this.valorInicial = valorInicial;
+        this.pujaGanadora = pujaGanadora;
+        this.estado = estado;
     }
 
     //Variables globales
-    private String nombre;
-    private TipoPublicacion tipo;
-    private String descripcion;
-    private File foto;
-    private Estado estado;
-    private Vendedor vendedor;
     private Date fechaInicial;
     private Date fechaFinal;
     private int valorInicial;
     private Puja pujaGanadora;
 
+    private Estado estado;
+
     //Getters y Setters
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public TipoPublicacion getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(TipoPublicacion tipo) {
-        this.tipo = tipo;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public File getFoto() {
-        return foto;
-    }
-
-    public void setFoto(File foto) {
-        this.foto = foto;
-    }
-
-    public Estado getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
-
-    public Vendedor getVendedor() {
-        return vendedor;
-    }
-
-    public void setVendedor(Vendedor vendedor) {
-        this.vendedor = vendedor;
-    }
-
     public Date getFechaInicial() {
         return fechaInicial;
     }
@@ -104,18 +61,21 @@ public class Publicacion implements Serializable {
         this.pujaGanadora = pujaGanadora;
     }
 
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
     @Override
     public String toString() {
         return
-                "nombre='" + nombre +
-                ", tipo=" + tipo +
-                ", descripcion='" + descripcion  +
-                ", foto=" + foto +
-                ", estado=" + estado +
-                ", vendedor=" + vendedor +
-                ", fechaInicial=" + fechaInicial +
+                "fechaInicial=" + fechaInicial +
                 ", fechaFinal=" + fechaFinal +
                 ", valorInicial=" + valorInicial +
-                ", pujaGanadora=" + pujaGanadora;
+                ", pujaGanadora=" + pujaGanadora +
+                ", estado=" + estado;
     }
 }

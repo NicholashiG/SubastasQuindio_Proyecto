@@ -16,3 +16,7 @@ Oct 18, 2022 12:24:27 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.
 INFO: Pedro_pedroVende@gmail.com,Se ha registrado un nuevo usuario,-10-18
 Oct 18, 2022 12:24:41 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: Pedro,Ha ingresado un usuario,-10-18
+Oct 18, 2022 6:26:54 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Jaun_jaun@mail.com,Se ha registrado un nuevo usuario,-10-18
+Oct 18, 2022 6:27:07 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Jaun,Ha ingresado un usuario,-10-18
