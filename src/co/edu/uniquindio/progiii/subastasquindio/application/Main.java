@@ -76,6 +76,18 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
+
+	public static void openCrudAnuncios() {
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudAnuncios.fxml"));
+		try {
+			Scene scene = new Scene(fxmlLoader.load());
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	// ESTO LITERALMENTE CIERRA CUALQUIER VENTANA JAJAJA
 	public static void closeLogin(Stage stage) {

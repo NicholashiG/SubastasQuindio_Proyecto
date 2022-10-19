@@ -117,7 +117,7 @@
                         <Insets bottom="7.0" left="7.0" right="7.0" top="9.0" />
                      </VBox.margin>
                   </TextField>
-                  <ChoiceBox fx:id="choicePujaGanadora" layoutX="17.0" layoutY="64.0" prefHeight="31.0" prefWidth="250.0">
+                  <ChoiceBox fx:id="choiceEstado" layoutX="17.0" layoutY="64.0" prefHeight="31.0" prefWidth="250.0">
                      <VBox.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="9.0" />
                      </VBox.margin>

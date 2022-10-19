@@ -1,9 +1,7 @@
 package co.edu.uniquindio.progiii.subastasquindio.model;
 
-import java.io.File;
-
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Publicacion implements Serializable {
 
@@ -12,36 +10,41 @@ public class Publicacion implements Serializable {
 
     }
 
-    public Publicacion(Date fechaInicial, Date fechaFinal, int valorInicial, Puja pujaGanadora, Estado estado) {
+    public Publicacion(LocalDate fechaInicial, LocalDate fechaFinal, int valorInicial, Puja pujaGanadora, Estado estado, Articulo articulo) {
         this.fechaInicial = fechaInicial;
         this.fechaFinal = fechaFinal;
         this.valorInicial = valorInicial;
         this.pujaGanadora = pujaGanadora;
         this.estado = estado;
+        this.articulo = articulo;
     }
 
     //Variables globales
-    private Date fechaInicial;
-    private Date fechaFinal;
+    private
+    LocalDate fechaInicial;
+    private
+    LocalDate fechaFinal;
     private int valorInicial;
     private Puja pujaGanadora;
 
     private Estado estado;
 
+    private Articulo articulo;
+
     //Getters y Setters
-    public Date getFechaInicial() {
+    public LocalDate getFechaInicial() {
         return fechaInicial;
     }
 
-    public void setFechaInicial(Date fechaInicial) {
+    public void setFechaInicial(LocalDate fechaInicial) {
         this.fechaInicial = fechaInicial;
     }
 
-    public Date getFechaFinal() {
+    public LocalDate getFechaFinal() {
         return fechaFinal;
     }
 
-    public void setFechaFinal(Date fechaFinal) {
+    public void setFechaFinal(LocalDate fechaFinal) {
         this.fechaFinal = fechaFinal;
     }
 
@@ -69,6 +72,14 @@ public class Publicacion implements Serializable {
         this.estado = estado;
     }
 
+    public Articulo getArticulo() {
+        return articulo;
+    }
+
+    public void setArticulo(Articulo articulo) {
+        this.articulo = articulo;
+    }
+
     @Override
     public String toString() {
         return
@@ -76,6 +87,7 @@ public class Publicacion implements Serializable {
                 ", fechaFinal=" + fechaFinal +
                 ", valorInicial=" + valorInicial +
                 ", pujaGanadora=" + pujaGanadora +
-                ", estado=" + estado;
+                ", estado=" + estado +
+                ", artículo= " + articulo;
     }
 }

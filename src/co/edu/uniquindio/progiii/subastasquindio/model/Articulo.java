@@ -62,9 +62,7 @@ public class Articulo implements Serializable {
     public void setVendedor(Vendedor vendedor) {
         this.vendedor = vendedor;
     }
-
-    @Override
-    public String toString() {
+    public String toString1() {
         return
                 "nombre='" + nombre +
                 ", tipo=" + tipo +
@@ -72,5 +70,10 @@ public class Articulo implements Serializable {
                 ", foto=" + foto.getAbsolutePath() +
                 ", vendedor=" + vendedor +
                 '}';
+    }
+
+    @Override
+    public String toString() {
+        return nombre;
     }
 }

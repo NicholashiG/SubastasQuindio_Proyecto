@@ -1,21 +1,25 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
-import co.edu.uniquindio.progiii.subastasquindio.model.Articulo;
-import co.edu.uniquindio.progiii.subastasquindio.model.Publicacion;
+import co.edu.uniquindio.progiii.subastasquindio.model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ControllerCrudAnuncios implements Initializable {
 
+    SingletonController control = SingletonController.getInstance();
+
     @FXML
     private ChoiceBox<Articulo> choiceArticulo;
 
     @FXML
-    private ChoiceBox<String> choicePujaGanadora;
+    private ChoiceBox<Puja> choicePujaGanadora;
+    @FXML
+    private ChoiceBox<Estado> choiceEstado;
 
     @FXML
     private DatePicker dateFinal;
@@ -33,6 +37,17 @@ public class ControllerCrudAnuncios implements Initializable {
 
     @FXML
     private void nuevo(){
+
+        if(choiceArticulo.getValue() != null && dateInicial.getAccessibleText()!="" && dateFinal.getAccessibleText() != "" && txtValorInicial.getText() != "" && choiceEstado.getValue() != null){
+            Publicacion publicacion = new Publicacion(dateInicial.getValue(),
+                                                dateFinal.getValue(),
+                                                Integer.parseInt(txtValorInicial.getText()),
+                                                null, choiceEstado.getValue(),
+                                                 choiceArticulo.getValue());
+            control.registrarPublicacion(publicacion);
+            listViewAnuncios.getItems().add(publicacion);
+        }
+
 
     }
     @FXML
@@ -61,6 +76,12 @@ public class ControllerCrudAnuncios implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        Vendedor vendedor = (Vendedor) control.subastasQuindio.getUsuarioLogeado();
+        choiceArticulo.getItems().addAll(vendedor.getArticulos());
+        choiceEstado.getItems().add(Estado.ACTIVO);
+        choiceEstado.getItems().add(Estado.VENDIDO);
+        choiceEstado.getItems().add(Estado.INACTIVO);
+        choiceEstado.getItems().add(Estado.EN_ESPERA_PUJA_GANADORA);
+        listViewAnuncios.getItems().addAll(vendedor.getPublicaciones());
     }
 }

@@ -18,6 +18,7 @@ public class Vendedor extends Usuario implements Serializable, IUsuario {
 
     //Variables globales
     private ArrayList<Publicacion> publicaciones = new ArrayList<>();
+    private ArrayList<Articulo> articulos = new ArrayList<>();
 
     private String id;
 
@@ -44,6 +45,14 @@ public class Vendedor extends Usuario implements Serializable, IUsuario {
 
     public void setPublicaciones(ArrayList<Publicacion> publicaciones) {
         this.publicaciones = publicaciones;
+    }
+
+    public ArrayList<Articulo> getArticulos() {
+        return articulos;
+    }
+
+    public void setArticulos(ArrayList<Articulo> articulos) {
+        this.articulos = articulos;
     }
 
     public String getId() {

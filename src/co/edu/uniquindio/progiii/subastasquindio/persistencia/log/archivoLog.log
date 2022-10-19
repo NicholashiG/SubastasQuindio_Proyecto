@@ -20,3 +20,13 @@ Oct 18, 2022 6:26:54 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.A
 INFO: Jaun_jaun@mail.com,Se ha registrado un nuevo usuario,-10-18
 Oct 18, 2022 6:27:07 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: Jaun,Ha ingresado un usuario,-10-18
+Oct 18, 2022 8:11:51 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Seleccione un archivo válido co.edu.uniquindio.progiii.subastasquindio.exceptions.FileNotFoundException: Seleccione un archivo válido,¡Ha ocurrido una excepción!: ,-10-18
+Oct 18, 2022 8:13:52 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Seleccione un archivo válido co.edu.uniquindio.progiii.subastasquindio.exceptions.FileNotFoundException: Seleccione un archivo válido,¡Ha ocurrido una excepción!: ,-10-18
+Oct 18, 2022 8:14:23 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Seleccione un archivo válido co.edu.uniquindio.progiii.subastasquindio.exceptions.FileNotFoundException: Seleccione un archivo válido,¡Ha ocurrido una excepción!: ,-10-18
+Oct 18, 2022 8:16:33 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Seleccione un archivo válido co.edu.uniquindio.progiii.subastasquindio.exceptions.FileNotFoundException: Seleccione un archivo válido,¡Ha ocurrido una excepción!: ,-10-18
+Oct 18, 2022 8:17:16 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Seleccione un archivo válido co.edu.uniquindio.progiii.subastasquindio.exceptions.FileNotFoundException: Seleccione un archivo válido,¡Ha ocurrido una excepción!: ,-10-18

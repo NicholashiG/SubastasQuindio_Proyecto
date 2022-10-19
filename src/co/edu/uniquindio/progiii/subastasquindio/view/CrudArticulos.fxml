@@ -110,5 +110,6 @@
             </VBox>
          </children>
       </FlowPane>
+      <Label fx:id="txtRutaArchivo" layoutX="436.0" layoutY="373.0" prefHeight="17.0" prefWidth="419.0" />
    </children>
 </AnchorPane>

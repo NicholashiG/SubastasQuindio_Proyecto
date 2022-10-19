@@ -1,10 +1,7 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
 import co.edu.uniquindio.progiii.subastasquindio.application.Main;
-import co.edu.uniquindio.progiii.subastasquindio.model.CasaSubastas;
-import co.edu.uniquindio.progiii.subastasquindio.model.Comprador;
-import co.edu.uniquindio.progiii.subastasquindio.model.Usuario;
-import co.edu.uniquindio.progiii.subastasquindio.model.Vendedor;
+import co.edu.uniquindio.progiii.subastasquindio.model.*;
 import co.edu.uniquindio.progiii.subastasquindio.persistencia.Persistencia;
 import javafx.stage.Stage;
 
@@ -56,7 +53,9 @@ public class SingletonController {
 	public void openLogin() {
     	Main.openLogin();
     }
-    
+	public void openCrudAnuncios() {
+		Main.openCrudAnuncios();
+	}
 	public void openRegistro() {
     	Main.openRegistroUsuarios();
 	}
@@ -121,6 +120,18 @@ public class SingletonController {
 		SingletonController.guardarRegistroUsuarioLog(nombre,email);
 		Main.closeLogin(loginStage);
 	}
+
+	public void registrarArticulo(Articulo articulo){
+		Vendedor vendedor = (Vendedor) subastasQuindio.getUsuarioLogeado();
+		vendedor.getArticulos().add(articulo);
+	}
+
+	public void registrarPublicacion(Publicacion publicacion){
+		Vendedor vendedor = (Vendedor) subastasQuindio.getUsuarioLogeado();
+		vendedor.getPublicaciones().add(publicacion);
+	}
+
+
 }
 	
 
