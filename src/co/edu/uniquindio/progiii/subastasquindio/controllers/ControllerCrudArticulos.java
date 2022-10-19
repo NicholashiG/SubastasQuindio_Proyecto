@@ -2,6 +2,7 @@ package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
 import co.edu.uniquindio.progiii.subastasquindio.model.Articulo;
 import co.edu.uniquindio.progiii.subastasquindio.model.TipoPublicacion;
+import co.edu.uniquindio.progiii.subastasquindio.services.FilePicker;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
@@ -29,6 +30,8 @@ public class ControllerCrudArticulos implements Initializable {
     @FXML
     private void nuevo(){
 
+
+
     }
     @FXML
     private void editar(){
@@ -47,8 +50,20 @@ public class ControllerCrudArticulos implements Initializable {
 
     }
 
+    @FXML
+    private void escogerImagen() throws Exception {
+        FilePicker filePicker = new FilePicker();
+        System.out.println(filePicker.getDireccionArchivo());
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        choiceTipo.getItems().add(TipoPublicacion.BIEN_RAIZ);
+        choiceTipo.getItems().add(TipoPublicacion.DEPORTES);
+        choiceTipo.getItems().add(TipoPublicacion.HOGAR);
+        choiceTipo.getItems().add(TipoPublicacion.TECNOLOGIA);
+        choiceTipo.getItems().add(TipoPublicacion.VEHICULOS);
 
     }
 
