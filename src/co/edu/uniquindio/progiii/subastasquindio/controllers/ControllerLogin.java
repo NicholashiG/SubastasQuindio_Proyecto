@@ -1,5 +1,6 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -25,11 +26,12 @@ public class ControllerLogin implements Initializable {
 	@FXML TextField email;
 	@FXML TextField edad;
 	@FXML Text feedback;
-	public void login() {
+	public void login() throws IOException {
 		if (usuario.getText() != "" && contra.getText() != "") {
 	    	// ESTOY ENVIANDO EL STAGE AL SINGLETON PARA QUE MANEJE TODO
 			control.setLoginStage( (Stage) usuario.getScene().getWindow() );
 			feedback.setText(control.login(usuario.getText(), contra.getText()));
+
 		}
 		else { feedback.setText("Los campos no pueden estar vacios"); }
 	}

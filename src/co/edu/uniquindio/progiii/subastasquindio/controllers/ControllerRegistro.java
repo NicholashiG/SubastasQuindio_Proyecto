@@ -1,5 +1,6 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -34,6 +35,11 @@ public class ControllerRegistro implements Initializable {
 	    			// UNO A LA VEZ Y ADEMAS ME DA PEREZA HACER OTRO
 				control.setLoginStage( (Stage) usuario.getScene().getWindow() );
 				control.registrarUsuario(usuario.getText(), contra.getText(), email.getText(), Integer.parseInt(edad.getText()));
+				try {
+					control.guardarCasaSubastasXML(control.subastasQuindio);
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+				}
 
 	    	} else feedback.setText("El correo o edad son erroneos");
 		}

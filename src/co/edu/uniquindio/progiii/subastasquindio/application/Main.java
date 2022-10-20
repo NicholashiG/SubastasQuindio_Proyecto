@@ -15,11 +15,12 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+
+
+
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-		//FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/MainView.fxml"));
-		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudArticulos.fxml"));
-
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/MainView.fxml"));
 		try {
             Scene scene = new Scene(fxmlLoader.load());
             primaryStage.setScene(scene);
@@ -88,9 +89,21 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
+
+	public static void openCrudArticulos() {
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudArticulos.fxml"));
+		try {
+			Scene scene = new Scene(fxmlLoader.load());
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	// ESTO LITERALMENTE CIERRA CUALQUIER VENTANA JAJAJA
-	public static void closeLogin(Stage stage) {
+	public static void closeWindow(Stage stage) {
 		// TODO Auto-generated method stub
 		stage.close();
 	}

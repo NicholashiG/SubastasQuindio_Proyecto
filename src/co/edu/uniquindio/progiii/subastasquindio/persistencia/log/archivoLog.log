@@ -30,3 +30,83 @@ Oct 18, 2022 8:16:33 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.A
 WARNING: Seleccione un archivo válido co.edu.uniquindio.progiii.subastasquindio.exceptions.FileNotFoundException: Seleccione un archivo válido,¡Ha ocurrido una excepción!: ,-10-18
 Oct 18, 2022 8:17:16 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 WARNING: Seleccione un archivo válido co.edu.uniquindio.progiii.subastasquindio.exceptions.FileNotFoundException: Seleccione un archivo válido,¡Ha ocurrido una excepción!: ,-10-18
+Oct 19, 2022 9:03:46 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Juan_juanVende@mail.com,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:03:56 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Juan,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:10:41 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Juan_juan10@mail.com,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:10:54 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Juan,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:12:04 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Juan_juan10@mail.com,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:12:11 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Juan,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:24:03 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Juan_juan@1,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:24:19 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanV_@,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:24:26 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanV,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:33:37 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanCompra_juanCompra@mail.com,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:34:00 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende_juanVende@mail.com,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:34:09 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanCompra,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:36:15 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanCompra_juan@mail.com,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:36:36 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende_juanVende@mail.com,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:36:48 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:37:03 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanCompra,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:37:26 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:39:18 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NicoVende_nicoVende@mail.com,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:39:33 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NicoVende,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:45:16 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NicoVende,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:46:03 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NicoVende,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:47:51 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshVende_joshVende@mail.com,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:48:57 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshVende_joshVende@mail,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:49:12 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshVende,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:49:47 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell_josh@mail.com,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:50:05 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:53:08 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:53:58 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende_@,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:54:19 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:54:32 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:55:32 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NicoVende_nicoVende@mail.com,Se ha registrado un nuevo usuario,-10-19
+Oct 19, 2022 9:55:46 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:56:50 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:58:01 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-19
+Oct 19, 2022 9:59:27 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-19
+Oct 19, 2022 10:00:02 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-19
+Oct 19, 2022 10:03:06 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshVende,Ha ingresado un usuario,-10-19
+Oct 19, 2022 10:03:23 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-19
+Oct 19, 2022 10:05:43 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-19
+Oct 19, 2022 10:07:16 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-19

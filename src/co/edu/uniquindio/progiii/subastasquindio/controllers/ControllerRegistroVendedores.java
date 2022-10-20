@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -34,6 +35,11 @@ public class ControllerRegistroVendedores implements Initializable {
                 // UNO A LA VEZ Y ADEMAS ME DA PEREZA HACER OTRO
                 control.setLoginStage( (Stage) usuario.getScene().getWindow() );
                 control.registrarVendedor(usuario.getText(), contra.getText(), email.getText(), Integer.parseInt(edad.getText()), id.getText());
+                try {
+                    control.guardarCasaSubastasXML(control.subastasQuindio);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
 
             } else feedback.setText("El correo, edad o id son erroneos");
 

@@ -6,7 +6,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class ControllerCrudAnuncios implements Initializable {
@@ -46,6 +49,11 @@ public class ControllerCrudAnuncios implements Initializable {
                                                  choiceArticulo.getValue());
             control.registrarPublicacion(publicacion);
             listViewAnuncios.getItems().add(publicacion);
+            /*try {
+                control.guardarCasaSubastasXML(control.subastasQuindio);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }*/
         }
 
 
@@ -72,6 +80,12 @@ public class ControllerCrudAnuncios implements Initializable {
 
     }
 
+    @FXML
+    private void nuevoArticulo(){
+        control.closeVentana();
+        control.openCrudArticulos();
+    }
+
 
 
     @Override
@@ -83,5 +97,6 @@ public class ControllerCrudAnuncios implements Initializable {
         choiceEstado.getItems().add(Estado.INACTIVO);
         choiceEstado.getItems().add(Estado.EN_ESPERA_PUJA_GANADORA);
         listViewAnuncios.getItems().addAll(vendedor.getPublicaciones());
+
     }
 }

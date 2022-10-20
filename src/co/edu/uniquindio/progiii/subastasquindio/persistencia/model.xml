@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="18.0.1.1" class="java.beans.XMLDecoder">
+ <object class="co.edu.uniquindio.progiii.subastasquindio.model.CasaSubastas" id="CasaSubastas0">
+  <void property="listaUsuarios">
+   <void method="add">
+    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Comprador">
+     <void property="contrasena">
+      <string>1234</string>
+     </void>
+     <void property="edad">
+      <int>1234</int>
+     </void>
+     <void property="email">
+      <string>joshVende@mail</string>
+     </void>
+     <void property="nombreUsuario">
+      <string>JoshVende</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Vendedor" id="Vendedor0">
+     <void property="contrasena">
+      <string>1234</string>
+     </void>
+     <void property="edad">
+      <int>15</int>
+     </void>
+     <void property="email">
+      <string>josh@mail.com</string>
+     </void>
+     <void property="id">
+      <string>1234</string>
+     </void>
+     <void property="nombreUsuario">
+      <string>JoshSell</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Vendedor">
+     <void property="contrasena">
+      <string>1234</string>
+     </void>
+     <void property="edad">
+      <int>35</int>
+     </void>
+     <void property="email">
+      <string>@</string>
+     </void>
+     <void property="id">
+      <string>1</string>
+     </void>
+     <void property="nombreUsuario">
+      <string>JuanVende</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Vendedor">
+     <void property="contrasena">
+      <string>1234</string>
+     </void>
+     <void property="edad">
+      <int>58</int>
+     </void>
+     <void property="email">
+      <string>nicoVende@mail.com</string>
+     </void>
+     <void property="id">
+      <string>1234</string>
+     </void>
+     <void property="nombreUsuario">
+      <string>NicoVende</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="usuarioLogeado">
+   <object idref="Vendedor0"/>
+  </void>
+ </object>
+</java>

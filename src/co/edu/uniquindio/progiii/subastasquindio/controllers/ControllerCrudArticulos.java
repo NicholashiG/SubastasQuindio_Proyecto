@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -46,8 +47,15 @@ public class ControllerCrudArticulos implements Initializable {
                                             img, vendedor);
             control.registrarArticulo(articulo);
             listViewArticulos.getItems().add(articulo);
-            control.setMainStage((Stage) btnEscogerImg.getScene().getWindow());
+            control.closeVentana();
             control.openCrudAnuncios();
+            /*control.setMainStage((Stage) btnEscogerImg.getScene().getWindow());
+            control.openCrudAnuncios();*/
+            /*try {
+                control.guardarCasaSubastasXML(control.subastasQuindio);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }*/
         }
 
 

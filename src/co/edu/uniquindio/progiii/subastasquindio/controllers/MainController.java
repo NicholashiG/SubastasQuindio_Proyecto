@@ -1,5 +1,6 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
+import co.edu.uniquindio.progiii.subastasquindio.model.Vendedor;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -26,12 +27,15 @@ public class MainController implements Initializable{
     @FXML
     private Button btnVerOfertas;
     @FXML
+    private Button btnVerAnuncios;
+    @FXML
     private Text bienvenida;
     @FXML
     private Hyperlink hyperlinkRegistroVendedor;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        btnVerAnuncios.setVisible(false);
 
        /* try {
             guardarPublicaciones(SingletonController.getInstance().getSubastasQuindio());
@@ -44,8 +48,32 @@ public class MainController implements Initializable{
     		btnIniciarSesion.setVisible(false);
     		btnRegistrarse.setVisible(false);
             hyperlinkRegistroVendedor.setVisible(false);
-    		bienvenida.setText("Bienvenido " + usuarioLogeado.getNombreUsuario() + "!");
+    		bienvenida.setText("Bienvenido, " + usuarioLogeado.getNombreUsuario() + "!");
+            if (usuarioLogeado.getClass() == Vendedor.class){
+                btnVerAnuncios.setVisible(true);
+            }
     	}
+
+        try {
+            control.setSubastasQuindio(control.cargarCasaSubastasAnunciosXML());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            control.guardarCasaSubastasXML(control.subastasQuindio);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            control.setSubastasQuindio(control.cargarCasaSubastasAnunciosXML());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
+
+
     }
     
     
@@ -64,6 +92,11 @@ public class MainController implements Initializable{
     public void registrarseVendedor() {
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
         control.openRegistroVendedores();
+    }
+
+    public void verAnuncios(){
+        control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
+        control.openCrudAnuncios();
     }
 }
  

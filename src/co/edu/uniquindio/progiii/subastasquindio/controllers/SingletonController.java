@@ -5,11 +5,15 @@ import co.edu.uniquindio.progiii.subastasquindio.model.*;
 import co.edu.uniquindio.progiii.subastasquindio.persistencia.Persistencia;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class SingletonController {
 
 	CasaSubastas subastasQuindio;
 	Stage loginStage;
 	Stage mainStage;
+
+	Stage articuloStage;
 
 
 
@@ -56,6 +60,11 @@ public class SingletonController {
 	public void openCrudAnuncios() {
 		Main.openCrudAnuncios();
 	}
+	public void openCrudArticulos() {
+		Main.openCrudArticulos();
+	}public void closeVentana() {
+		Main.closeWindow(mainStage);
+	}
 	public void openRegistro() {
     	Main.openRegistroUsuarios();
 	}
@@ -63,12 +72,12 @@ public class SingletonController {
     	Main.openRegistroVendedores();
 	}
 
-    public String login(String usuario, String contra) {
+    public String login(String usuario, String contra) throws IOException {
 
     	if (subastasQuindio.login(usuario, contra)) {
-
+			guardarCasaSubastasXML(subastasQuindio);
     		Main.refreshMain(mainStage);
-    		Main.closeLogin(loginStage);
+    		Main.closeWindow(loginStage);
     	} else { // Aqui va la excepcion de Usuario no existe
     		return "Usuario no existe";
 
@@ -81,7 +90,7 @@ public class SingletonController {
 	public void registrarUsuario(String nombre, String contra, String email, int edad) {
 		subastasQuindio.registrarComprador(new Comprador(nombre, contra, email, edad));
 		SingletonController.guardarRegistroUsuarioLog(nombre,email);
-		Main.closeLogin(loginStage);
+		Main.closeWindow(loginStage);
 	}
 
 	public CasaSubastas getSubastasQuindio() {
@@ -118,7 +127,7 @@ public class SingletonController {
 	public void registrarVendedor(String nombre, String contrasena, String email, int edad, String id) {
 		subastasQuindio.registrarVendedor(new Vendedor(nombre, contrasena, email, edad, id));
 		SingletonController.guardarRegistroUsuarioLog(nombre,email);
-		Main.closeLogin(loginStage);
+		Main.closeWindow(loginStage);
 	}
 
 	public void registrarArticulo(Articulo articulo){
@@ -129,6 +138,18 @@ public class SingletonController {
 	public void registrarPublicacion(Publicacion publicacion){
 		Vendedor vendedor = (Vendedor) subastasQuindio.getUsuarioLogeado();
 		vendedor.getPublicaciones().add(publicacion);
+	}
+
+	public void guardarAnunciosXML(CasaSubastas subastasQuindio) throws IOException {
+		Persistencia.guardarPublicaciones(subastasQuindio);
+	}
+
+	public CasaSubastas cargarCasaSubastasAnunciosXML() throws IOException {
+		CasaSubastas casaSubastas = Persistencia.cargarRecursoCasaSubastasXML();
+		return casaSubastas;
+	}
+	public void guardarCasaSubastasXML(CasaSubastas subastasQuindio) throws IOException {
+		Persistencia.guardarRecursoCasaSubastasXML(subastasQuindio);
 	}
 
 

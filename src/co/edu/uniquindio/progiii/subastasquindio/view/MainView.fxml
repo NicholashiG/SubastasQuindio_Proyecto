@@ -18,13 +18,18 @@
          <children>
             <ImageView fitHeight="64.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
                <FlowPane.margin>
-                  <Insets bottom="10.0" left="10.0" right="180.0" top="10.0" />
+                  <Insets bottom="10.0" left="10.0" right="70.0" top="10.0" />
                </FlowPane.margin>
                <image>
                   <Image url="@images/LogoSubastasQuindio.png" />
                </image>
             </ImageView>
             <Text fx:id="bienvenida" strokeType="OUTSIDE" strokeWidth="0.0" text=" " />
+            <Button fx:id="btnVerAnuncios" mnemonicParsing="false" onAction="#verAnuncios" text="Ver Anuncios">
+               <FlowPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </FlowPane.margin>
+            </Button>
             <Hyperlink fx:id="hyperlinkRegistroVendedor" onAction="#registrarseVendedor" text="¿Quieres ser vendedor?">
                <FlowPane.margin>
                   <Insets right="10.0" />
