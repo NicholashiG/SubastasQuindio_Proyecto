@@ -2,14 +2,15 @@ package co.edu.uniquindio.progiii.subastasquindio.model;
 
 import co.edu.uniquindio.progiii.subastasquindio.controllers.SingletonController;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class CasaSubastas implements Serializable {
 
-	
-	
-	
+
+
+	//SingletonController control = SingletonController.getInstance();
 	ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 	ArrayList<Publicacion> listaPublicaciones = new ArrayList<Publicacion>();
 	Usuario usuarioLogeado;
@@ -34,8 +35,9 @@ public class CasaSubastas implements Serializable {
 		return false;
 	}
 
-	public void registrarComprador(Usuario user) {
+	public void registrarComprador(Usuario user) throws IOException {
 		listaUsuarios.add(user);
+		SingletonController.guardarUsuario(user);
 	}
 	
 

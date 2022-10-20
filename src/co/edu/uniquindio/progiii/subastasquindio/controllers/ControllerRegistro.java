@@ -26,7 +26,7 @@ public class ControllerRegistro implements Initializable {
 	@FXML TextField email;
 	@FXML TextField edad;
 	@FXML Text feedback;
-	public void registrar() {
+	public void registrar() throws IOException {
 		if (usuario.getText() != "" && contra.getText() != "" && email.getText() != "" && edad.getText() != "") {
 			
 	    	if (email.getText().contains("@") && isNumeric(edad.getText())) {

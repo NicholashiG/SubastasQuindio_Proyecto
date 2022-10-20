@@ -117,10 +117,14 @@ public class SingletonController {
     	
     // REGISTRA UN USUARIO, NO UN COMPRADOR O VENDEDOR
     // 	CAMBIAR LUEGO
-	public void registrarUsuario(String nombre, String contra, String email, int edad) {
+	public void registrarUsuario(String nombre, String contra, String email, int edad) throws IOException {
 		subastasQuindio.registrarComprador(new Comprador(nombre, contra, email, edad));
 		SingletonController.guardarRegistroUsuarioLog(nombre,email);
 		Main.closeWindow(loginStage);
+	}
+
+	public static void guardarUsuario(Usuario usuario) throws IOException {
+		Persistencia.guardarUsuarios(SingletonController.getInstance().subastasQuindio.getListaUsuarios());
 	}
 
 	public CasaSubastas getSubastasQuindio() {

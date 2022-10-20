@@ -261,9 +261,41 @@
      </void>
     </object>
    </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Comprador">
+     <void property="contrasena">
+      <string>1234</string>
+     </void>
+     <void property="edad">
+      <int>19</int>
+     </void>
+     <void property="email">
+      <string>nickjurado@mail.com</string>
+     </void>
+     <void property="nombreUsuario">
+      <string>NickJurado</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Comprador" id="Comprador0">
+     <void property="contrasena">
+      <string>1234</string>
+     </void>
+     <void property="edad">
+      <int>1234</int>
+     </void>
+     <void property="email">
+      <string>camilo@mail.com</string>
+     </void>
+     <void property="nombreUsuario">
+      <string>Camilo</string>
+     </void>
+    </object>
+   </void>
   </void>
   <void property="usuarioLogeado">
-   <object idref="Vendedor0"/>
+   <object idref="Comprador0"/>
   </void>
  </object>
 </java>
