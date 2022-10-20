@@ -107,6 +107,25 @@
         </void>
        </object>
       </void>
+      <void method="add">
+       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo3">
+        <void property="descripcion">
+         <string>Es una casa grande de dos pisos con piscina incluida</string>
+        </void>
+        <void property="nombre">
+         <string>Casa Grande</string>
+        </void>
+        <void property="tipo">
+         <object class="java.lang.Enum" method="valueOf">
+          <class>co.edu.uniquindio.progiii.subastasquindio.model.TipoPublicacion</class>
+          <string>BIEN_RAIZ</string>
+         </object>
+        </void>
+        <void property="vendedor">
+         <object idref="Vendedor0"/>
+        </void>
+       </object>
+      </void>
      </void>
      <void property="contrasena">
       <string>1234</string>
@@ -159,13 +178,26 @@
          <object idref="Articulo1"/>
         </void>
         <void property="estado">
-         <object class="java.lang.Enum" method="valueOf">
+         <object class="java.lang.Enum" id="Estado1" method="valueOf">
           <class>co.edu.uniquindio.progiii.subastasquindio.model.Estado</class>
           <string>ACTIVO</string>
          </object>
         </void>
         <void property="valorInicial">
          <int>124</int>
+        </void>
+       </object>
+      </void>
+      <void method="add">
+       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion">
+        <void property="articulo">
+         <object idref="Articulo3"/>
+        </void>
+        <void property="estado">
+         <object idref="Estado1"/>
+        </void>
+        <void property="valorInicial">
+         <int>200000</int>
         </void>
        </object>
       </void>

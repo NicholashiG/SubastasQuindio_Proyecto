@@ -88,6 +88,7 @@ public class SingletonController {
 
 	public void nuevoArticuloRefresh() throws IOException {
 			guardarCasaSubastasXML(subastasQuindio);
+			guardarCasaSubastasBinario(subastasQuindio);
 			cargarCasaSubastasAnunciosXML();
 			Main.refreshArticulos(articuloStage);
 			Main.closeWindow(articuloStage);
@@ -95,17 +96,20 @@ public class SingletonController {
 	}
 	public void nuevoAnuncioRefresh() throws IOException {
 			guardarCasaSubastasXML(subastasQuindio);
+			guardarCasaSubastasBinario(subastasQuindio);
 		    cargarCasaSubastasAnunciosXML();
 			Main.refreshAnuncios(anunciosStage);
 	}
 	public void atrasAnuncios() throws IOException {
 			guardarCasaSubastasXML(subastasQuindio);
+			guardarCasaSubastasBinario(subastasQuindio);
 		    cargarCasaSubastasAnunciosXML();
 			Main.closeWindow(anunciosStage);
 			Main.refreshMain(mainStage);
 	}
 	public void atrasArticulos() throws IOException {
 			guardarCasaSubastasXML(subastasQuindio);
+			guardarCasaSubastasBinario(subastasQuindio);
 		    cargarCasaSubastasAnunciosXML();
 			Main.closeWindow(articuloStage);
 			Main.openCrudAnuncios();
@@ -190,8 +194,15 @@ public class SingletonController {
 		CasaSubastas casaSubastas = Persistencia.cargarRecursoCasaSubastasXML();
 		return casaSubastas;
 	}
+	public CasaSubastas cargarCasaSubastasAnunciosBinario() throws IOException {
+		CasaSubastas casaSubastas = Persistencia.cargarRecursoCasaSubastasBinario();
+		return casaSubastas;
+	}
 	public void guardarCasaSubastasXML(CasaSubastas subastasQuindio) throws IOException {
 		Persistencia.guardarRecursoCasaSubastasXML(subastasQuindio);
+	}
+	public void guardarCasaSubastasBinario(CasaSubastas subastasQuindio) throws IOException {
+		Persistencia.guardarRecursoCasaSubastasBinario(subastasQuindio);
 	}
 
 
