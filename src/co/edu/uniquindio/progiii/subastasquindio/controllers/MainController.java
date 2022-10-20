@@ -82,21 +82,26 @@ public class MainController implements Initializable{
     		// PORQUE NO SE ME OCURRIO MEJOR IDEA KJDKAJSDKAJ
     control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
     control.openLogin();
+    control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
     }
     
     public void registrarse() {
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
         control.openRegistro();
+        control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
     }
 
     public void registrarseVendedor() {
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
         control.openRegistroVendedores();
+        control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
     }
 
     public void verAnuncios(){
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
         control.openCrudAnuncios();
+        control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
+
     }
 }
  

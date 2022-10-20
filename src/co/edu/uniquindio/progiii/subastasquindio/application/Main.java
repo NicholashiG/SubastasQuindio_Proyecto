@@ -78,6 +78,28 @@ public class Main extends Application {
 		}
 	}
 
+	public static void refreshAnuncios(Stage mainStage) {
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudAnuncios.fxml"));
+		try {
+			Scene scene = new Scene(fxmlLoader.load());
+			mainStage.setScene(scene);
+			mainStage.show();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void refreshArticulos(Stage mainStage) {
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudArticulos.fxml"));
+		try {
+			Scene scene = new Scene(fxmlLoader.load());
+			mainStage.setScene(scene);
+			mainStage.show();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 	public static void openCrudAnuncios() {
 		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudAnuncios.fxml"));
 		try {

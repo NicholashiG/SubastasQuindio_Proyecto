@@ -31,6 +31,7 @@ public class ControllerLogin implements Initializable {
 	    	// ESTOY ENVIANDO EL STAGE AL SINGLETON PARA QUE MANEJE TODO
 			control.setLoginStage( (Stage) usuario.getScene().getWindow() );
 			feedback.setText(control.login(usuario.getText(), contra.getText()));
+			control.setLoginStage((Stage) usuario.getScene().getWindow());
 
 		}
 		else { feedback.setText("Los campos no pueden estar vacios"); }

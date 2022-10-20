@@ -49,11 +49,12 @@ public class ControllerCrudAnuncios implements Initializable {
                                                  choiceArticulo.getValue());
             control.registrarPublicacion(publicacion);
             listViewAnuncios.getItems().add(publicacion);
-            /*try {
+
+            try {
                 control.guardarCasaSubastasXML(control.subastasQuindio);
             } catch (IOException e) {
                 throw new RuntimeException(e);
-            }*/
+            }
         }
 
 
@@ -71,8 +72,9 @@ public class ControllerCrudAnuncios implements Initializable {
 
     }
     @FXML
-    private void atras(){
-
+    private void atras() throws IOException {
+        control.setAnunciosStage((Stage) txtValorInicial.getScene().getWindow());
+        control.atrasAnuncios();
     }
 
     @FXML
@@ -82,15 +84,20 @@ public class ControllerCrudAnuncios implements Initializable {
 
     @FXML
     private void nuevoArticulo(){
-        control.closeVentana();
+        control.setAnunciosStage((Stage) txtValorInicial.getScene().getWindow());
+        control.subastasQuindio.setUsuarioLogeado( control.subastasQuindio.getUsuarioLogeado());
         control.openCrudArticulos();
+        control.closeVentana();
+
     }
 
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         Vendedor vendedor = (Vendedor) control.subastasQuindio.getUsuarioLogeado();
+        control.subastasQuindio.setUsuarioLogeado(vendedor);
         choiceArticulo.getItems().addAll(vendedor.getArticulos());
         choiceEstado.getItems().add(Estado.ACTIVO);
         choiceEstado.getItems().add(Estado.VENDIDO);

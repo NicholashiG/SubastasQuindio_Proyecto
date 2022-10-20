@@ -36,10 +36,10 @@ public class ControllerCrudArticulos implements Initializable {
     private Button btnEscogerImg;
 
     @FXML
-    private void nuevo(){
+    private void nuevo() throws IOException {
 
         if(choiceTipo.getValue() != null && txtDescripcion.getText() != "" && txtNombre.getText() != "" && txtRutaArchivo.getText() != ""){
-            File img = new File(txtRutaArchivo.getText());
+            File img = null;
             Vendedor vendedor = (Vendedor) SingletonController.getInstance().subastasQuindio.getUsuarioLogeado();
             Articulo articulo = new Articulo(txtNombre.getText(),
                                             choiceTipo.getValue(),
@@ -47,17 +47,20 @@ public class ControllerCrudArticulos implements Initializable {
                                             img, vendedor);
             control.registrarArticulo(articulo);
             listViewArticulos.getItems().add(articulo);
-            control.closeVentana();
-            control.openCrudAnuncios();
-            /*control.setMainStage((Stage) btnEscogerImg.getScene().getWindow());
-            control.openCrudAnuncios();*/
-            /*try {
+            control.getSubastasQuindio().setUsuarioLogeado(control.getUsuarioLogeado());
+            control.setArticuloStage((Stage) txtDescripcion.getScene().getWindow());
+            control.nuevoArticuloRefresh();
+
+            try {
                 control.guardarCasaSubastasXML(control.subastasQuindio);
             } catch (IOException e) {
                 throw new RuntimeException(e);
-            }*/
+            }
         }
 
+        else {
+            System.out.println("No está completo");
+        }
 
 
     }
@@ -74,8 +77,9 @@ public class ControllerCrudArticulos implements Initializable {
 
     }
     @FXML
-    private void atras(){
-
+    private void atras() throws IOException {
+        control.setArticuloStage((Stage) txtDescripcion.getScene().getWindow());
+        control.atrasArticulos();
     }
 
     @FXML
@@ -101,8 +105,7 @@ public class ControllerCrudArticulos implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Vendedor vendedor = new Vendedor();
-        control.subastasQuindio.setUsuarioLogeado(vendedor);
+        Vendedor vendedor = (Vendedor) control.subastasQuindio.getUsuarioLogeado();
         choiceTipo.getItems().add(TipoPublicacion.BIEN_RAIZ);
         choiceTipo.getItems().add(TipoPublicacion.DEPORTES);
         choiceTipo.getItems().add(TipoPublicacion.HOGAR);

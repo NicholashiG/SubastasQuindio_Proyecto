@@ -83,11 +83,9 @@ public class Publicacion implements Serializable {
     @Override
     public String toString() {
         return
-                "fechaInicial=" + fechaInicial +
-                ", fechaFinal=" + fechaFinal +
-                ", valorInicial=" + valorInicial +
+                "valorInicial=" + valorInicial +
                 ", pujaGanadora=" + pujaGanadora +
                 ", estado=" + estado +
-                ", artículo= " + articulo;
+                ", articulo=" + articulo;
     }
 }

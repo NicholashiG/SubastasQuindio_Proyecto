@@ -14,6 +14,7 @@ public class SingletonController {
 	Stage mainStage;
 
 	Stage articuloStage;
+	Stage anunciosStage;
 
 
 
@@ -84,6 +85,31 @@ public class SingletonController {
 		}
     	return "";
     }
+
+	public void nuevoArticuloRefresh() throws IOException {
+			guardarCasaSubastasXML(subastasQuindio);
+			cargarCasaSubastasAnunciosXML();
+			Main.refreshArticulos(articuloStage);
+			Main.closeWindow(articuloStage);
+			Main.refreshAnuncios(anunciosStage);
+	}
+	public void nuevoAnuncioRefresh() throws IOException {
+			guardarCasaSubastasXML(subastasQuindio);
+		    cargarCasaSubastasAnunciosXML();
+			Main.refreshAnuncios(anunciosStage);
+	}
+	public void atrasAnuncios() throws IOException {
+			guardarCasaSubastasXML(subastasQuindio);
+		    cargarCasaSubastasAnunciosXML();
+			Main.closeWindow(anunciosStage);
+			Main.refreshMain(mainStage);
+	}
+	public void atrasArticulos() throws IOException {
+			guardarCasaSubastasXML(subastasQuindio);
+		    cargarCasaSubastasAnunciosXML();
+			Main.closeWindow(articuloStage);
+			Main.openCrudAnuncios();
+	}
     	
     // REGISTRA UN USUARIO, NO UN COMPRADOR O VENDEDOR
     // 	CAMBIAR LUEGO
@@ -116,6 +142,22 @@ public class SingletonController {
 
 	public void setMainStage(Stage mainStage) {
 		this.mainStage = mainStage;
+	}
+
+	public Stage getArticuloStage() {
+		return articuloStage;
+	}
+
+	public void setArticuloStage(Stage articuloStage) {
+		this.articuloStage = articuloStage;
+	}
+
+	public Stage getAnunciosStage() {
+		return anunciosStage;
+	}
+
+	public void setAnunciosStage(Stage anunciosStage) {
+		this.anunciosStage = anunciosStage;
 	}
 
 	public Usuario getUsuarioLogeado() {
