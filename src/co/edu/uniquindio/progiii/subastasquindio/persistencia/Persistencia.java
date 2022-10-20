@@ -99,10 +99,10 @@ public class Persistencia {
 		{
 			linea = contenido.get(i);
 			Usuario usuario = new Usuario();
-			usuario.setNombreUsuario(linea.split(",")[0]);
-			usuario.setContrasena(linea.split(",")[1]);
-			usuario.setEdad(Integer.parseInt(linea.split(",")[2]));
-			usuario.setEmail(linea.split(",")[3]);
+			usuario.setNombreUsuario(linea.split("@@")[0]);
+			usuario.setContrasena(linea.split("@@")[1]);
+			usuario.setEdad(Integer.parseInt(linea.split("@@")[2]));
+			usuario.setEmail(linea.split("@@")[3]);
 			usuarios.add(usuario);
 		}
 		return usuarios;
