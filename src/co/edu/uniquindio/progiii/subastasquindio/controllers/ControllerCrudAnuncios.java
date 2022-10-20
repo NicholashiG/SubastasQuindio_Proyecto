@@ -49,7 +49,7 @@ public class ControllerCrudAnuncios implements Initializable {
                                                  choiceArticulo.getValue());
             control.registrarPublicacion(publicacion);
             listViewAnuncios.getItems().add(publicacion);
-
+            SingletonController.guardarCambiosCrudLog("Se ha creado un nuevo anuncio por "+control.getUsuarioLogeado().getNombreUsuario(), "Artículo anunciado: "+choiceArticulo.getValue().getNombre());
             try {
                 control.guardarCasaSubastasXML(control.subastasQuindio);
             } catch (IOException e) {

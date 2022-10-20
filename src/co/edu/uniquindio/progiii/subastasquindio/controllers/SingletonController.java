@@ -45,7 +45,9 @@ public class SingletonController {
 	public static void guardarRegistroUsuarioLog(String nombre, String email) {
 		Persistencia.guardaRegistroLog("Se ha registrado un nuevo usuario", 1, nombre+"_"+email);
 	}
-
+	public static void guardarCambiosCrudLog(String mensaje, String nombreObjeto) {
+		Persistencia.guardaRegistroLog(mensaje, 1, nombreObjeto);
+	}
 	public static void guardarInicioSesionUsuarioLog(String nombre) {
 		Persistencia.guardaRegistroLog("Ha ingresado un usuario", 1, nombre);
 	}

@@ -194,3 +194,15 @@ Oct 20, 2022 11:09:01 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.
 INFO: Camilo_camilo@mail.com,Se ha registrado un nuevo usuario,-10-20
 Oct 20, 2022 11:09:06 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: Camilo,Ha ingresado un usuario,-10-20
+Oct 20, 2022 11:25:44 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NicoVende,Ha ingresado un usuario,-10-20
+Oct 20, 2022 11:26:04 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: Pan,Se ha creado un nuevo artículo,-10-20
+Oct 20, 2022 11:26:22 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Pan,Se ha creado un nuevo anuncio,-10-20
+Oct 20, 2022 11:27:38 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NicoVende,Ha ingresado un usuario,-10-20
+Oct 20, 2022 11:28:06 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: MacBook Pro,Se ha creado un nuevo artículo por NicoVende,-10-20
+Oct 20, 2022 11:28:46 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: MacBook Pro,Se ha creado un nuevo anuncio por NicoVende,-10-20
