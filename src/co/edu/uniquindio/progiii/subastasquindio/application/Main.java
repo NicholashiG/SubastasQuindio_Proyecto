@@ -10,14 +10,12 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-
-	
 	public static void main(String[] args) {
 		launch(args);
 	}
 
 
-
+	// CARGA LA VENTANA INICAL
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/MainView.fxml"));
@@ -30,7 +28,7 @@ public class Main extends Application {
 		}
 	}
 	
-	
+	// ABRE LA VENTANA DE LOGIN
 	public static void openLogin() {
 		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/Login.fxml"));
 		try {
@@ -43,6 +41,7 @@ public class Main extends Application {
 		}
 	}
 	
+	// ABRE LA VENTANA DE REGISTRO COMPRADORES
 	public static void openRegistroUsuarios() {
 		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/Registro.fxml"));
 		try {
@@ -53,7 +52,10 @@ public class Main extends Application {
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
-	}public static void openRegistroVendedores() {
+	}
+	
+	// ABRE LA VENTANA DE REGISTRO VENDEDORES
+	public static void openRegistroVendedores() {
 		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/RegistroVendedores.fxml"));
 		try {
             Scene scene = new Scene(fxmlLoader.load());
@@ -66,40 +68,7 @@ public class Main extends Application {
 	}
 
 	
-	//CAMBIAR LUEGO NO SÉ KAJSKRJD ESTO ES UN COPYPASTE
-	public static void refreshMain(Stage mainStage) {
-		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/MainView.fxml"));
-		try {
-            Scene scene = new Scene(fxmlLoader.load());
-            mainStage.setScene(scene);
-            mainStage.show();
-		} catch(IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	public static void refreshAnuncios(Stage mainStage) {
-		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudAnuncios.fxml"));
-		try {
-			Scene scene = new Scene(fxmlLoader.load());
-			mainStage.setScene(scene);
-			mainStage.show();
-		} catch(IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	public static void refreshArticulos(Stage mainStage) {
-		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudArticulos.fxml"));
-		try {
-			Scene scene = new Scene(fxmlLoader.load());
-			mainStage.setScene(scene);
-			mainStage.show();
-		} catch(IOException e) {
-			e.printStackTrace();
-		}
-	}
-
+	// ABRE LA VENTANA DE CRUD ANUNCIOS
 	public static void openCrudAnuncios() {
 		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudAnuncios.fxml"));
 		try {
@@ -112,6 +81,7 @@ public class Main extends Application {
 		}
 	}
 
+	// ABRE LA VENTANA DE CRUD ARTICULOS
 	public static void openCrudArticulos() {
 		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudArticulos.fxml"));
 		try {
@@ -124,7 +94,46 @@ public class Main extends Application {
 		}
 	}
 	
-	// ESTO LITERALMENTE CIERRA CUALQUIER VENTANA JAJAJA
+	
+	// Refresca la ventana de  main (Metodo temporal)
+	public static void refreshMain(Stage mainStage) {
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/MainView.fxml"));
+		try {
+            Scene scene = new Scene(fxmlLoader.load());
+            mainStage.setScene(scene);
+            mainStage.show();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	
+	// Refresca la ventana de anuncios (Metodo temporal)
+	public static void refreshAnuncios(Stage mainStage) {
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudAnuncios.fxml"));
+		try {
+			Scene scene = new Scene(fxmlLoader.load());
+			mainStage.setScene(scene);
+			mainStage.show();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	// Refresca la ventana de articulos (Metodo temporal)
+	public static void refreshArticulos(Stage mainStage) {
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudArticulos.fxml"));
+		try {
+			Scene scene = new Scene(fxmlLoader.load());
+			mainStage.setScene(scene);
+			mainStage.show();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+
+	// CERRAR STAGES
 	public static void closeWindow(Stage stage) {
 		// TODO Auto-generated method stub
 		stage.close();

@@ -3,6 +3,7 @@ package co.edu.uniquindio.progiii.subastasquindio.persistencia;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException;
 import co.edu.uniquindio.progiii.subastasquindio.model.CasaSubastas;
 import co.edu.uniquindio.progiii.subastasquindio.model.Publicacion;
+import co.edu.uniquindio.progiii.subastasquindio.model.Transaccion;
 import co.edu.uniquindio.progiii.subastasquindio.model.Usuario;
 
 import java.beans.XMLEncoder;
@@ -78,6 +79,17 @@ public class Persistencia {
 		}
 	}
 	
+
+	public static void guardarTransacciones(ArrayList<Transaccion> listaTransacciones) throws IOException {
+		String contenido = "";
+		for(Transaccion transaccion:listaTransacciones)
+		{
+			contenido+= transaccion.toString()+"\n";
+		}
+		ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_TRANSACCIONES, contenido, false);
+		
+	}
+	
 	
 	
 //	----------------------LOADS------------------------
@@ -107,6 +119,31 @@ public class Persistencia {
 		}
 		return usuarios;
 	}
+	
+	
+	public static ArrayList<Transaccion> cargarTransacciones() throws FileNotFoundException, IOException
+	{
+		ArrayList<Transaccion> transacciones =new ArrayList<Transaccion>();
+		
+		ArrayList<String> contenido = ArchivoUtil.leerArchivo(RUTA_ARCHIVO_TRANSACCIONES);
+		String linea="";
+		
+		for (int i = 0; i < contenido.size(); i++)
+		{
+			linea = contenido.get(i);
+			Transaccion transaccion = new Transaccion();
+			transaccion.setId(Integer.parseInt((linea.split("@@")[0])));
+			transaccion.setFecha(linea.split("@@")[1]);
+			transaccion.setHora(linea.split("@@")[2]);
+			// CARGA USUARIOS Y PUBLICACIONES EN STRING
+			transaccion.setComprador(linea.split("@@")[3]);
+			transaccion.setPublicacion(linea.split("@@")[4]);
+			transaccion.setVendedor(linea.split("@@")[5]);
+			transacciones.add(transaccion);
+		}
+		return transacciones;
+	}
+	
 
 	private static ArrayList<Publicacion> cargarPublicaciones() throws Exception {
 		CasaSubastas casaSubastas = (CasaSubastas) ArchivoUtil.cargarRecursoSerializado(RUTA_ARCHIVO_PUBLICACIONES);
@@ -193,6 +230,9 @@ public class Persistencia {
 			e.printStackTrace();
 		}
 	}
+	
+
+
 
 
 
@@ -201,7 +241,7 @@ public class Persistencia {
 		CasaSubastas subastasQuindio = null;
 		
 		try {
-			subastasQuindio = (CasaSubastas)ArchivoUtil.cargarRecursoSerializadoXML(RUTA_ARCHIVO_MODELO_SUBASTAS_XML);
+			subastasQuindio = (CasaSubastas) ArchivoUtil.cargarRecursoSerializadoXML(RUTA_ARCHIVO_MODELO_SUBASTAS_XML);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -220,14 +260,16 @@ public class Persistencia {
 			e.printStackTrace();
 		}
 	}
-
-
-
-
-
 	
+	public static void guardarRecursoCasaSubastasXMLRespaldo(CasaSubastas subastasQuindio) {
+		
+		try {
+			ArchivoUtil.salvarRecursoSerializadoXML(RUTA_ARCHIVO_MODELO_SUBASTAS_XML_RESPALDO, subastasQuindio);
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+	}
 	
-
-
 
 }

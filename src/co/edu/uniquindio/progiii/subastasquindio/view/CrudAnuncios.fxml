@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="497.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.progiii.subastasquindio.controllers.ControllerCrudAnuncios">
+<AnchorPane prefHeight="497.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.progiii.subastasquindio.controllers.ControllerCrudAnuncios">
    <children>
       <FlowPane prefHeight="65.0" prefWidth="858.0">
          <children>
@@ -41,6 +41,7 @@
       <Button fx:id="btnEditar" layoutX="97.0" layoutY="458.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
       <Button fx:id="btnNuevo" layoutX="34.0" layoutY="458.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
       <Button fx:id="btnEliminar" layoutX="157.0" layoutY="458.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="transaccion" layoutX="596.0" layoutY="458.0" mnemonicParsing="false" onAction="#generarTransaccion" text="Generar transaccion (prueba)" />
       <FlowPane layoutX="448.0" layoutY="136.0" prefHeight="181.0" prefWidth="400.0">
          <children>
             <VBox prefHeight="149.0" prefWidth="135.0">

@@ -37,7 +37,6 @@ public class ControllerCrudAnuncios implements Initializable {
     private TextField txtValorInicial;
 
 
-
     @FXML
     private void nuevo(){
 
@@ -82,6 +81,26 @@ public class ControllerCrudAnuncios implements Initializable {
 
     }
 
+    // TRANSACCION DE PRUEBA !!
+    // USA UNA 
+    @FXML
+    private void generarTransaccion() throws IOException {
+		
+		Comprador comprador = new Comprador();
+		comprador.setNombreUsuario("Comprador123");
+    	
+		Vendedor vendedor = new Vendedor();
+		vendedor.setNombreUsuario("Vendedor123");
+		Articulo articulo = new Articulo();
+		articulo.setNombre("Articulo de prueba");
+		Publicacion publicacion = new Publicacion();
+		publicacion.setArticulo(articulo);
+    	
+    	
+    	SingletonController.crearTransaccion(comprador, vendedor, publicacion);
+    	
+    }
+    
     @FXML
     private void nuevoArticulo(){
         control.setAnunciosStage((Stage) txtValorInicial.getScene().getWindow());

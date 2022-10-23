@@ -206,3 +206,35 @@ Oct 20, 2022 11:28:06 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.
 INFO: Artículo nuevo: MacBook Pro,Se ha creado un nuevo artículo por NicoVende,-10-20
 Oct 20, 2022 11:28:46 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: Artículo anunciado: MacBook Pro,Se ha creado un nuevo anuncio por NicoVende,-10-20
+oct. 22, 2022 3:47:45 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-22
+oct. 22, 2022 3:59:17 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshVende,Ha ingresado un usuario,-10-22
+oct. 22, 2022 6:00:12 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-22
+oct. 22, 2022 6:09:45 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-22
+oct. 22, 2022 6:09:53 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 891@@2022-10-22@@2022-10-22T18:09:53.879260600@@JoshSell@@Articulo de prueba@@Vendedor123,Transaccion hecha,-10-22
+oct. 22, 2022 6:31:26 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-22
+oct. 22, 2022 6:31:32 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 580@@2022-10-22@@18:31@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-10-22
+oct. 23, 2022 11:27:01 A. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Usuario ingresado no existe en la base de datos co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException: Usuario ingresado no existe en la base de datos,¡Ha ocurrido una excepción!: ,-10-23
+oct. 23, 2022 11:27:01 A. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Usuario no existe Usuario ingresado no existe en la base de datos,¡Ha ocurrido una excepción!: ,-10-23
+oct. 23, 2022 11:28:37 A. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Usuario ingresado no existe en la base de datos co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException: Usuario ingresado no existe en la base de datos,¡Ha ocurrido una excepción!: ,-10-23
+oct. 23, 2022 11:30:30 A. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Usuario ingresado no existe en la base de datos co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException: Usuario ingresado no existe en la base de datos,¡Ha ocurrido una excepción!: ,-10-23
+oct. 23, 2022 11:30:52 A. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Usuario ingresado no existe en la base de datos co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException: Usuario ingresado no existe en la base de datos,¡Ha ocurrido una excepción!: ,-10-23
+oct. 23, 2022 11:31:12 A. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Usuario ingresado no existe en la base de datos co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException: Usuario ingresado no existe en la base de datos,¡Ha ocurrido una excepción!: ,-10-23
+oct. 23, 2022 11:31:19 A. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-23
+oct. 23, 2022 11:31:34 A. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 352@@2022-10-23@@11:31@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-10-23
+oct. 23, 2022 11:31:53 A. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 402@@2022-10-23@@11:31@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-10-23

@@ -1,16 +1,26 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
 import co.edu.uniquindio.progiii.subastasquindio.application.Main;
+import co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException;
+import co.edu.uniquindio.progiii.subastasquindio.exceptions.WrongPasswordException;
 import co.edu.uniquindio.progiii.subastasquindio.model.*;
 import co.edu.uniquindio.progiii.subastasquindio.persistencia.Persistencia;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class SingletonController {
 
 	CasaSubastas subastasQuindio;
+	// El login stage es el Stage del login
+	// y del registro, debido a que solo uno
+	// puede estar abierto al tiempo.
+	// En caso de ser necesario se debe separar.
 	Stage loginStage;
+	
+	// Stage de la ventana inicial y principal
 	Stage mainStage;
 
 	Stage articuloStage;
@@ -18,30 +28,139 @@ public class SingletonController {
 
 
 
-	// Static variable single_instance of type Singleton 
+	// instacia unica del controlador
     private static SingletonController instancia = null; 
   
-    // Declaring a variable of type String 
-  
-    // Constructor of this class 
-    // Here private constructor is used to 
-    // restricted to this class itself 
+    // constructor privado
     private SingletonController() 
     { 
     	subastasQuindio = new CasaSubastas();
     } 
   
-    // Method 
-    // Static method to create instance of Singleton class 
+    // Metodo estatico para obtener la instancia
+    
     public static SingletonController getInstance() 
     { 
-        // To ensure only one instance is created 
+        // Asegura una unica instancia
         if (instancia == null) { 
         	instancia = new SingletonController(); 
         } 
         return instancia; 
     }
 
+
+    // Funcion de login
+    public String login(String usuario, String contra) throws IOException {
+    		
+    		// el string de feedback es el mensaje que se muestra
+    		// en la ventana de login.
+    		String feedback = "";
+    		try {
+    			// Si esta funcion no da excepcion,
+    			// el usuario y contrasena son correctos
+				subastasQuindio.login(usuario, contra);
+				guardarCasaSubastasXML(subastasQuindio);
+				guardarInicioSesionUsuarioLog(usuario);
+	    		Main.refreshMain(mainStage);
+	    		Main.closeWindow(loginStage);
+	    		
+			} catch (UserNotFoundException e) {
+				feedback = "Usuario no existe!";
+			} catch (WrongPasswordException e) {
+				feedback = "Contraseña incorrecta";
+			}
+    		return feedback;
+
+    }
+
+	public void nuevoArticuloRefresh() throws IOException {
+			// Cada vez que se crea un articulo
+			// se guarda el modelo
+			guardarCasaSubastasXML(subastasQuindio);
+			guardarCasaSubastasBinario(subastasQuindio);
+			cargarCasaSubastasAnunciosXML();
+			// Recarga las ventanas
+			Main.refreshArticulos(articuloStage);
+			Main.closeWindow(articuloStage);
+			Main.refreshAnuncios(anunciosStage);
+	}
+	public void nuevoAnuncioRefresh() throws IOException {
+		// Cada vez que se crea un Anuncio
+		// se guarda el modelo
+			guardarCasaSubastasXML(subastasQuindio);
+			guardarCasaSubastasBinario(subastasQuindio);
+		    cargarCasaSubastasAnunciosXML();
+			// Recarga las ventanas
+			Main.refreshAnuncios(anunciosStage);
+	}
+	public void atrasAnuncios() throws IOException {
+		
+			// se guarda el modelo al salir
+			guardarCasaSubastasXML(subastasQuindio);
+			guardarCasaSubastasBinario(subastasQuindio);
+		    cargarCasaSubastasAnunciosXML();
+			// Recarga las ventanas
+			Main.closeWindow(anunciosStage);
+			Main.refreshMain(mainStage);
+	}
+	public void atrasArticulos() throws IOException {
+		// se guarda el modelo al salir
+			guardarCasaSubastasXML(subastasQuindio);
+			guardarCasaSubastasBinario(subastasQuindio);
+		    cargarCasaSubastasAnunciosXML();
+			// Recarga las ventanas
+			Main.closeWindow(articuloStage);
+			Main.openCrudAnuncios();
+	}
+    	
+    // REGISTRA UN COMPRADOR
+	public void registrarUsuario(String nombre, String contra, String email, int edad) throws IOException {
+		subastasQuindio.registrarUsuario(new Comprador(nombre, contra, email, edad));
+		SingletonController.guardarRegistroUsuarioLog(nombre,email);
+		Main.closeWindow(loginStage);
+	}
+	
+	// REGISTRA VENDEDOOR
+	public void registrarVendedor(String nombre, String contrasena, String email, int edad, String id) throws IOException {
+		subastasQuindio.registrarUsuario(new Vendedor(nombre, contrasena, email, edad, id));
+		SingletonController.guardarRegistroUsuarioLog(nombre,email);
+		Main.closeWindow(loginStage);
+	}
+	
+
+	public static void guardarUsuario(Usuario usuario) throws IOException {
+		Persistencia.guardarUsuarios(SingletonController.getInstance().subastasQuindio.getListaUsuarios());
+	}
+
+	
+	public static void crearTransaccion(Comprador comprador, Vendedor vendedor, Publicacion publicacion) throws IOException {
+		
+		// TRANSACCION DE PRUEBA !!
+		
+		Transaccion transaccion = new Transaccion(comprador, vendedor, publicacion );
+		SingletonController.getInstance().subastasQuindio.getListaTransacciones().add(transaccion);
+		Persistencia.guardaRegistroLog("Transaccion hecha", 1, transaccion.toString());
+		Persistencia.guardarTransacciones(SingletonController.getInstance().subastasQuindio.getListaTransacciones());
+	}
+	
+
+
+	// CREA ARTICULO
+	public void registrarArticulo(Articulo articulo){
+		Vendedor vendedor = (Vendedor) subastasQuindio.getUsuarioLogeado();
+		vendedor.getArticulos().add(articulo);
+	}
+
+	// CREA UNA PUBLICACION Y LO AÑADE AL VENDEDOR
+	public void registrarPublicacion(Publicacion publicacion){
+		Vendedor vendedor = (Vendedor) subastasQuindio.getUsuarioLogeado();
+		vendedor.getPublicaciones().add(publicacion);
+		// AÑADIR LA MISMA PUBICACION AL ARRAYLIST GENERAL DEL PROYECTO
+		subastasQuindio.getListaPublicaciones().add(publicacion);
+	}
+	
+		// LOGS
+	
 	public static void guardarRegistroUsuarioLog(String nombre, String email) {
 		Persistencia.guardaRegistroLog("Se ha registrado un nuevo usuario", 1, nombre+"_"+email);
 	}
@@ -55,84 +174,47 @@ public class SingletonController {
 	public static void guardarExcepcion(String mensaje, String tipoExcepcion) {
 		Persistencia.guardaRegistroLog("¡Ha ocurrido una excepción!: ", 2, mensaje+" "+tipoExcepcion);
 	}
-
-
+	
+	
+		// ABRIR Y CERRAR VENTANAS
+	
+	// abre la ventana de login
 	public void openLogin() {
     	Main.openLogin();
     }
+	
+	// abre la ventana de crudAnuncios
 	public void openCrudAnuncios() {
 		Main.openCrudAnuncios();
 	}
+	
+	// abre la ventana de crudArticulos
 	public void openCrudArticulos() {
 		Main.openCrudArticulos();
-	}public void closeVentana() {
-		Main.closeWindow(mainStage);
 	}
+	
+	// abre la ventana de registro de compradores
 	public void openRegistro() {
     	Main.openRegistroUsuarios();
 	}
+	
+	// abre la ventana de registro de vendedores
 	public void openRegistroVendedores() {
     	Main.openRegistroVendedores();
 	}
-
-    public String login(String usuario, String contra) throws IOException {
-
-    	if (subastasQuindio.login(usuario, contra)) {
-			guardarCasaSubastasXML(subastasQuindio);
-    		Main.refreshMain(mainStage);
-    		Main.closeWindow(loginStage);
-    	} else { // Aqui va la excepcion de Usuario no existe
-    		return "Usuario no existe";
-
-		}
-    	return "";
-    }
-
-	public void nuevoArticuloRefresh() throws IOException {
-			guardarCasaSubastasXML(subastasQuindio);
-			guardarCasaSubastasBinario(subastasQuindio);
-			cargarCasaSubastasAnunciosXML();
-			Main.refreshArticulos(articuloStage);
-			Main.closeWindow(articuloStage);
-			Main.refreshAnuncios(anunciosStage);
+	
+	// cierra cualquier ventana
+	public void closeVentana() {
+		Main.closeWindow(mainStage);
 	}
-	public void nuevoAnuncioRefresh() throws IOException {
-			guardarCasaSubastasXML(subastasQuindio);
-			guardarCasaSubastasBinario(subastasQuindio);
-		    cargarCasaSubastasAnunciosXML();
-			Main.refreshAnuncios(anunciosStage);
-	}
-	public void atrasAnuncios() throws IOException {
-			guardarCasaSubastasXML(subastasQuindio);
-			guardarCasaSubastasBinario(subastasQuindio);
-		    cargarCasaSubastasAnunciosXML();
-			Main.closeWindow(anunciosStage);
-			Main.refreshMain(mainStage);
-	}
-	public void atrasArticulos() throws IOException {
-			guardarCasaSubastasXML(subastasQuindio);
-			guardarCasaSubastasBinario(subastasQuindio);
-		    cargarCasaSubastasAnunciosXML();
-			Main.closeWindow(articuloStage);
-			Main.openCrudAnuncios();
-	}
-    	
-    // REGISTRA UN USUARIO, NO UN COMPRADOR O VENDEDOR
-    // 	CAMBIAR LUEGO
-	public void registrarUsuario(String nombre, String contra, String email, int edad) throws IOException {
-		subastasQuindio.registrarComprador(new Comprador(nombre, contra, email, edad));
-		SingletonController.guardarRegistroUsuarioLog(nombre,email);
-		Main.closeWindow(loginStage);
-	}
-
-	public static void guardarUsuario(Usuario usuario) throws IOException {
-		Persistencia.guardarUsuarios(SingletonController.getInstance().subastasQuindio.getListaUsuarios());
-	}
-
+	
+	
+		// GETTERS Y SETTERS 
+	
+	
 	public CasaSubastas getSubastasQuindio() {
 		return subastasQuindio;
 	}
-
 
     public void setSubastasQuindio(CasaSubastas subastasQuindio) {
     	this.subastasQuindio = subastasQuindio;
@@ -175,23 +257,8 @@ public class SingletonController {
 		
 	}
 
-
-	public void registrarVendedor(String nombre, String contrasena, String email, int edad, String id) {
-		subastasQuindio.registrarVendedor(new Vendedor(nombre, contrasena, email, edad, id));
-		SingletonController.guardarRegistroUsuarioLog(nombre,email);
-		Main.closeWindow(loginStage);
-	}
-
-	public void registrarArticulo(Articulo articulo){
-		Vendedor vendedor = (Vendedor) subastasQuindio.getUsuarioLogeado();
-		vendedor.getArticulos().add(articulo);
-	}
-
-	public void registrarPublicacion(Publicacion publicacion){
-		Vendedor vendedor = (Vendedor) subastasQuindio.getUsuarioLogeado();
-		vendedor.getPublicaciones().add(publicacion);
-	}
-
+	// SERIALIZACION XML Y TEXTO PLANO
+		
 	public void guardarAnunciosXML(CasaSubastas subastasQuindio) throws IOException {
 		Persistencia.guardarPublicaciones(subastasQuindio);
 	}
@@ -207,9 +274,16 @@ public class SingletonController {
 	public void guardarCasaSubastasXML(CasaSubastas subastasQuindio) throws IOException {
 		Persistencia.guardarRecursoCasaSubastasXML(subastasQuindio);
 	}
+	
+	public void guardarCasaSubastasXMLRespaldo(CasaSubastas subastasQuindio) throws IOException {
+		Persistencia.guardarRecursoCasaSubastasXMLRespaldo(subastasQuindio);
+	}
+	
 	public void guardarCasaSubastasBinario(CasaSubastas subastasQuindio) throws IOException {
 		Persistencia.guardarRecursoCasaSubastasBinario(subastasQuindio);
 	}
+
+
 
 
 }

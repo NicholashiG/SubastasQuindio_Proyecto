@@ -26,7 +26,7 @@ public class ControllerRegistroVendedores implements Initializable {
     Text feedback;
 
 
-    public void registrar() {
+    public void registrar() throws NumberFormatException, IOException {
         if (usuario.getText() != "" && contra.getText() != "" && email.getText() != "" && edad.getText() != "" && id.getText() != "") {
 
             if (email.getText().contains("@") && isNumeric(edad.getText()) && isNumeric(id.getText())) {

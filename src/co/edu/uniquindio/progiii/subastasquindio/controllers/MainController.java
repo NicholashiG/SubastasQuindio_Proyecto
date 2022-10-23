@@ -34,26 +34,29 @@ public class MainController implements Initializable{
     private Hyperlink hyperlinkRegistroVendedor;
 
     @Override
+    
+    // ESTA FUNCION SE EJECUTA AL INCIO DE LA APLICACION
+    
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btnVerAnuncios.setVisible(false);
 
-       /* try {
-            guardarPublicaciones(SingletonController.getInstance().getSubastasQuindio());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }*/
-
         Usuario usuarioLogeado = control.getUsuarioLogeado();
+        // Pregunta si hay un usuario logeado
     if (usuarioLogeado != null)   {
+    		// si esta logeado hace invisible los botones
+    		// de registro y demas.
     		btnIniciarSesion.setVisible(false);
     		btnRegistrarse.setVisible(false);
             hyperlinkRegistroVendedor.setVisible(false);
     		bienvenida.setText("Bienvenido, " + usuarioLogeado.getNombreUsuario() + "!");
             if (usuarioLogeado.getClass() == Vendedor.class){
+            	// si es vendedor agrega opciones propias del vendedor
                 btnVerAnuncios.setVisible(true);
             }
     	}
 
+    	// SERIALIZACION AL INICIAR.
+    	
         try {
             control.setSubastasQuindio(control.cargarCasaSubastasAnunciosXML());
         } catch (IOException e) {
@@ -65,39 +68,42 @@ public class MainController implements Initializable{
             throw new RuntimeException(e);
         }
         try {
+            control.guardarCasaSubastasXMLRespaldo(control.subastasQuindio);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try {
             control.setSubastasQuindio(control.cargarCasaSubastasAnunciosXML());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-
-
-
-
     }
     
     
     public void iniciarSesion() {
-    	// ESTOY ENVIANDO EL STAGE AL SINGLETON PARA QUE LO MANEJE
-    		// PORQUE NO SE ME OCURRIO MEJOR IDEA KJDKAJSDKAJ
+    	// ENVIO EL STAGE AL SINGLETON
     control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
     control.openLogin();
     control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
     }
     
     public void registrarse() {
+    	// ENVIO EL STAGE AL SINGLETON
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
         control.openRegistro();
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
     }
 
     public void registrarseVendedor() {
+    	// ENVIO EL STAGE AL SINGLETON
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
         control.openRegistroVendedores();
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
     }
 
     public void verAnuncios(){
+    	// ENVIO EL STAGE AL SINGLETON
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
         control.openCrudAnuncios();
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
