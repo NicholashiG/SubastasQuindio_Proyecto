@@ -39,7 +39,7 @@ public class ControllerCrudArticulos implements Initializable {
     private void nuevo() throws IOException {
 
         if(choiceTipo.getValue() != null && txtDescripcion.getText() != "" && txtNombre.getText() != "" && txtRutaArchivo.getText() != ""){
-            File img = null;
+            File img = new File(txtRutaArchivo.getText());
             Vendedor vendedor = (Vendedor) SingletonController.getInstance().subastasQuindio.getUsuarioLogeado();
             Articulo articulo = new Articulo(txtNombre.getText(),
                                             choiceTipo.getValue(),
@@ -54,6 +54,7 @@ public class ControllerCrudArticulos implements Initializable {
 
             try {
                 control.guardarCasaSubastasXML(control.subastasQuindio);
+                control.guardarArticulos(articulo);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

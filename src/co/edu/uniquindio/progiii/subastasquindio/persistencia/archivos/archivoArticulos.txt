@@ -1,0 +1,3 @@
+prueba5@@DEPORTES@@adgadg@@C:\Users\user\Desktop\tw2.jpg@@JoshSell@@
+Articulo de ejemplo@@VEHICULOS@@Descripcion del articulo@@C:\Users\user\Desktop\tw2.jpg@@VendedorEjemplo@@
+ArticuloVideo@@DEPORTES@@Articulo de prueba para el video@@C:\Users\user\Desktop\tw2.jpg@@VendedorTest@@

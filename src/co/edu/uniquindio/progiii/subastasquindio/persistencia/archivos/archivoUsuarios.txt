@@ -5,3 +5,5 @@ NicoVende@@'1234@@nicoVende@mail.com@@58
 miguel@@'Zeus@@miguel.vargas@@@19
 NickJurado@@'1234@@nickjurado@mail.com@@19
 Camilo@@'1234@@camilo@mail.com@@1234
+VendedorEjemplo@@'123@@123@gmail.com@@20
+VendedorTest@@'123@@vendedor@gmail.com@@20

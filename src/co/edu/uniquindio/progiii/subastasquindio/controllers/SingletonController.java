@@ -115,6 +115,7 @@ public class SingletonController {
     	
     // REGISTRA UN COMPRADOR
 	public void registrarUsuario(String nombre, String contra, String email, int edad) throws IOException {
+		
 		subastasQuindio.registrarUsuario(new Comprador(nombre, contra, email, edad));
 		SingletonController.guardarRegistroUsuarioLog(nombre,email);
 		Main.closeWindow(loginStage);
@@ -127,9 +128,17 @@ public class SingletonController {
 		Main.closeWindow(loginStage);
 	}
 	
-
-	public static void guardarUsuario(Usuario usuario) throws IOException {
+	// Esta funcion se llama en el objeto de CasaSubastas
+	public static void guardarUsuarios() throws IOException {
 		Persistencia.guardarUsuarios(SingletonController.getInstance().subastasQuindio.getListaUsuarios());
+	}
+	
+	public static void guardarArticulos(Articulo articulo) throws IOException {
+		Persistencia.guardarArticulo(articulo);
+	}
+	
+	public static void cargarArticulos(Articulo articulo) throws IOException {
+		Persistencia.cargarArticulos();
 	}
 
 	

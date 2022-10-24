@@ -62,6 +62,29 @@ public class Articulo implements Serializable {
     public void setVendedor(Vendedor vendedor) {
         this.vendedor = vendedor;
     }
+    
+    // METODOS SET DE STRING
+	public void setTipo(String string) {
+		this.tipo = TipoPublicacion.valueOf(string);
+		
+	}
+	
+	public void setFoto(String string) {
+		this.foto = new File(string);
+	}
+	
+	public void setVendedor(String string) {
+	Vendedor vendedor = new Vendedor();
+	vendedor.setNombreUsuario(string);
+	this.vendedor = vendedor;
+	}
+
+    
+    public String toStringSerializable() {
+    	return nombre + "@@" + tipo.toString() + "@@" + descripcion + "@@" + foto.getAbsolutePath() + "@@" + vendedor.getNombreUsuario() + "@@";
+    			
+    }
+    
     public String toString1() {
         return
                 "nombre='" + nombre +
@@ -76,4 +99,11 @@ public class Articulo implements Serializable {
     public String toString() {
         return nombre;
     }
+
+
+
+
+
+    
+    
 }

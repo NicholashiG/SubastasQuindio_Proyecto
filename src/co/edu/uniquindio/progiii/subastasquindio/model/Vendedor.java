@@ -38,7 +38,7 @@ public class Vendedor extends Usuario implements Serializable, IUsuario {
 
     }
 
-    //Getters y setters
+	//Getters y setters
     public ArrayList<Publicacion> getPublicaciones() {
         return publicaciones;
     }

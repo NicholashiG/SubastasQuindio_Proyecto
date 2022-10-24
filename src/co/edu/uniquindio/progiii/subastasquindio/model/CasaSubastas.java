@@ -60,7 +60,8 @@ public class CasaSubastas implements Serializable {
 	// Registra a un usuario al la base de datos
 	public void registrarUsuario(Usuario user) throws IOException {
 		listaUsuarios.add(user);
-		SingletonController.guardarUsuario(user);
+		// Llama a la funcion que guarda usuarios
+		SingletonController.guardarUsuarios();
 	}
 	
 	

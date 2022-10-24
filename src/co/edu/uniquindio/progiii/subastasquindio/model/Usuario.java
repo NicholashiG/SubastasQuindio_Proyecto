@@ -2,6 +2,7 @@ package co.edu.uniquindio.progiii.subastasquindio.model;
 
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Usuario implements Serializable {
 
@@ -61,7 +62,22 @@ public class Usuario implements Serializable {
         this.edad = edad;
     }
 
-    @Override
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Usuario other = (Usuario) obj;
+		return Objects.equals(nombreUsuario, other.nombreUsuario);
+	}
+
+
+
+	@Override
     public String toString() {
         return
                 nombreUsuario +

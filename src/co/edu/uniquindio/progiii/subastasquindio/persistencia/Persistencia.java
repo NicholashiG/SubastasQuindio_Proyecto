@@ -1,6 +1,7 @@
 package co.edu.uniquindio.progiii.subastasquindio.persistencia;
 
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException;
+import co.edu.uniquindio.progiii.subastasquindio.model.Articulo;
 import co.edu.uniquindio.progiii.subastasquindio.model.CasaSubastas;
 import co.edu.uniquindio.progiii.subastasquindio.model.Publicacion;
 import co.edu.uniquindio.progiii.subastasquindio.model.Transaccion;
@@ -79,6 +80,12 @@ public class Persistencia {
 		}
 	}
 	
+	public static void guardarArticulo(Articulo articulo) throws IOException {
+		String contenido = "";
+		contenido = articulo.toStringSerializable()+"\n";
+		ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_ARTICULOS, contenido, true);
+	}
+	
 
 	public static void guardarTransacciones(ArrayList<Transaccion> listaTransacciones) throws IOException {
 		String contenido = "";
@@ -142,6 +149,27 @@ public class Persistencia {
 			transacciones.add(transaccion);
 		}
 		return transacciones;
+	}
+	
+	public static ArrayList<Articulo>  cargarArticulos() throws IOException {
+		ArrayList<Articulo> articulos =new ArrayList<Articulo>();
+		ArrayList<String> contenido = ArchivoUtil.leerArchivo(RUTA_ARCHIVO_ARTICULOS);
+		String linea = "";
+		for (int i = 0; i < contenido.size(); i++)
+		{
+			linea = contenido.get(i);
+			Articulo articulo = new Articulo();
+			articulo.setNombre(linea.split("@@")[0]);
+			articulo.setTipo(linea.split("@@")[1]);
+			articulo.setDescripcion(linea.split("@@")[2]);
+			// CARGA USUARIOS Y PUBLICACIONES EN STRING
+			articulo.setFoto(linea.split("@@")[3]);
+			articulo.setVendedor(linea.split("@@")[4]);
+			articulos.add(articulo);
+		}
+		
+		
+		return articulos;
 	}
 	
 

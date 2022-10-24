@@ -238,3 +238,51 @@ oct. 23, 2022 11:31:34 A. M. co.edu.uniquindio.progiii.subastasquindio.persiste
 INFO: 352@@2022-10-23@@11:31@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-10-23
 oct. 23, 2022 11:31:53 A. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: 402@@2022-10-23@@11:31@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-10-23
+oct. 23, 2022 9:51:59 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-23
+oct. 23, 2022 9:55:44 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: Prueba1,Se ha creado un nuevo artículo por JoshSell,-10-23
+oct. 23, 2022 9:58:54 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-23
+oct. 23, 2022 9:59:18 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: Prueba2,Se ha creado un nuevo artículo por JoshSell,-10-23
+oct. 23, 2022 10:00:54 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-23
+oct. 23, 2022 10:01:36 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: Prueba3,Se ha creado un nuevo artículo por JoshSell,-10-23
+oct. 23, 2022 10:03:22 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-23
+oct. 23, 2022 10:03:38 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: adgad,Se ha creado un nuevo artículo por JoshSell,-10-23
+oct. 23, 2022 10:05:08 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-23
+oct. 23, 2022 10:05:29 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: Prueba4,Se ha creado un nuevo artículo por JoshSell,-10-23
+oct. 23, 2022 10:07:22 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-10-23
+oct. 23, 2022 10:07:44 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: prueba5,Se ha creado un nuevo artículo por JoshSell,-10-23
+oct. 23, 2022 10:09:24 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende,Ha ingresado un usuario,-10-23
+oct. 23, 2022 10:19:18 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorEjemplo_123@gmail.com,Se ha registrado un nuevo usuario,-10-23
+oct. 23, 2022 10:21:25 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorEjemplo,Ha ingresado un usuario,-10-23
+oct. 23, 2022 10:22:47 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: Articulo de ejemplo,Se ha creado un nuevo artículo por VendedorEjemplo,-10-23
+oct. 23, 2022 10:24:52 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 410@@2022-10-23@@22:24@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-10-23
+oct. 23, 2022 10:25:31 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 132@@2022-10-23@@22:25@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-10-23
+oct. 23, 2022 10:29:32 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorTest_vendedor@gmail.com,Se ha registrado un nuevo usuario,-10-23
+oct. 23, 2022 10:30:41 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Contraseña incorrecta co.edu.uniquindio.progiii.subastasquindio.exceptions.WrongPasswordException: Contraseña incorrecta,¡Ha ocurrido una excepción!: ,-10-23
+oct. 23, 2022 10:30:56 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorTest,Ha ingresado un usuario,-10-23
+oct. 23, 2022 10:31:48 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: ArticuloVideo,Se ha creado un nuevo artículo por VendedorTest,-10-23
+oct. 23, 2022 10:37:36 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 955@@2022-10-23@@22:37@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-10-23
+oct. 23, 2022 10:38:24 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 519@@2022-10-23@@22:38@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-10-23
