@@ -212,6 +212,44 @@
             </void>
            </object>
           </void>
+          <void method="add">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo5">
+            <void property="descripcion">
+             <string>Es una arepa artesanal</string>
+            </void>
+            <void property="foto">
+             <string>/Users/nicolasjurado/Library/CloudStorage/OneDrive-Personal/Fotos NutriArepa/DSC_0046 copy.jpg</string>
+            </void>
+            <void property="nombre">
+             <string>Arepa</string>
+            </void>
+            <void property="tipo">
+             <object idref="TipoPublicacion1"/>
+            </void>
+            <void property="vendedor">
+             <object idref="Vendedor0"/>
+            </void>
+           </object>
+          </void>
+          <void method="add">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo6">
+            <void property="descripcion">
+             <string>Es una arepa artesanal</string>
+            </void>
+            <void property="foto">
+             <string>/Users/nicolasjurado/Library/CloudStorage/OneDrive-Personal/Fotos NutriArepa/DSC_0046 copy.jpg</string>
+            </void>
+            <void property="nombre">
+             <string>ArepaOK</string>
+            </void>
+            <void property="tipo">
+             <object idref="TipoPublicacion1"/>
+            </void>
+            <void property="vendedor">
+             <object idref="Vendedor0"/>
+            </void>
+           </object>
+          </void>
          </void>
          <void property="contrasena">
           <string>1234</string>
@@ -303,6 +341,32 @@
             </void>
            </object>
           </void>
+          <void method="add">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion2">
+            <void property="articulo">
+             <object idref="Articulo5"/>
+            </void>
+            <void property="estado">
+             <object idref="Estado1"/>
+            </void>
+            <void property="valorInicial">
+             <int>10000</int>
+            </void>
+           </object>
+          </void>
+          <void method="add">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion3">
+            <void property="articulo">
+             <object idref="Articulo6"/>
+            </void>
+            <void property="estado">
+             <object idref="Estado1"/>
+            </void>
+            <void property="valorInicial">
+             <int>10999</int>
+            </void>
+           </object>
+          </void>
          </void>
         </object>
        </void>
@@ -323,9 +387,9 @@
     <object idref="Publicacion1"/>
    </void>
    <void method="add">
-    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion2">
+    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion4">
      <void property="articulo">
-      <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo5">
+      <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo7">
        <void property="descripcion">
         <string>Es un arroz nigga</string>
        </void>
@@ -339,7 +403,7 @@
         <object class="co.edu.uniquindio.progiii.subastasquindio.model.Vendedor" id="Vendedor1">
          <void property="articulos">
           <void method="add">
-           <object idref="Articulo5"/>
+           <object idref="Articulo7"/>
           </void>
          </void>
          <void property="contrasena">
@@ -359,7 +423,7 @@
          </void>
          <void property="publicaciones">
           <void method="add">
-           <object idref="Publicacion2"/>
+           <object idref="Publicacion4"/>
           </void>
          </void>
         </object>
@@ -373,6 +437,12 @@
       <int>1</int>
      </void>
     </object>
+   </void>
+   <void method="add">
+    <object idref="Publicacion2"/>
+   </void>
+   <void method="add">
+    <object idref="Publicacion3"/>
    </void>
   </void>
   <void property="listaUsuarios">
@@ -402,7 +472,7 @@
     <object class="co.edu.uniquindio.progiii.subastasquindio.model.Vendedor" id="Vendedor2">
      <void property="articulos">
       <void method="add">
-       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo6">
+       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo8">
         <void property="descripcion">
          <string>Es un pan</string>
         </void>
@@ -418,7 +488,7 @@
        </object>
       </void>
       <void method="add">
-       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo7">
+       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo9">
         <void property="descripcion">
          <string>MacBook Pro nueva </string>
         </void>
@@ -453,7 +523,7 @@
       <void method="add">
        <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion">
         <void property="articulo">
-         <object idref="Articulo6"/>
+         <object idref="Articulo8"/>
         </void>
         <void property="estado">
          <object idref="Estado1"/>
@@ -466,7 +536,7 @@
       <void method="add">
        <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion">
         <void property="articulo">
-         <object idref="Articulo7"/>
+         <object idref="Articulo9"/>
         </void>
         <void property="estado">
          <object class="java.lang.Enum" method="valueOf">
@@ -502,7 +572,7 @@
     </object>
    </void>
    <void method="add">
-    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Comprador" id="Comprador0">
+    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Comprador">
      <void property="contrasena">
       <string>1234</string>
      </void>
@@ -609,7 +679,7 @@
    </void>
   </void>
   <void property="usuarioLogeado">
-   <object idref="Comprador0"/>
+   <object idref="Vendedor0"/>
   </void>
  </object>
 </java>

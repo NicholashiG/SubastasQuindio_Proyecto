@@ -2,3 +2,5 @@ prueba5@@DEPORTES@@adgadg@@C:\Users\user\Desktop\tw2.jpg@@JoshSell@@
 Articulo de ejemplo@@VEHICULOS@@Descripcion del articulo@@C:\Users\user\Desktop\tw2.jpg@@VendedorEjemplo@@
 ArticuloVideo@@DEPORTES@@Articulo de prueba para el video@@C:\Users\user\Desktop\tw2.jpg@@VendedorTest@@
 Arroz Negro@@HOGAR@@Es un arroz nigga@@/Users/nicolasjurado/Library/CloudStorage/OneDrive-Personal/Fotos NutriArepa/DSC_0040 copy.jpg@@JuanVende@@
+Arepa@@HOGAR@@Es una arepa artesanal@@/Users/nicolasjurado/Library/CloudStorage/OneDrive-Personal/Fotos NutriArepa/DSC_0046 copy.jpg@@JoshSell@@
+ArepaOK@@HOGAR@@Es una arepa artesanal@@/Users/nicolasjurado/Library/CloudStorage/OneDrive-Personal/Fotos NutriArepa/DSC_0046 copy.jpg@@JoshSell@@

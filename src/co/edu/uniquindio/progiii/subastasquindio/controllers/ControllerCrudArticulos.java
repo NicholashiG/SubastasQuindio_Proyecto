@@ -44,7 +44,7 @@ public class ControllerCrudArticulos implements Initializable {
             Articulo articulo = new Articulo(txtNombre.getText(),
                                             choiceTipo.getValue(),
                                             txtDescripcion.getText(),
-                                            img, vendedor);
+                                            img.getPath(), vendedor);
             control.registrarArticulo(articulo);
             listViewArticulos.getItems().add(articulo);
             control.getSubastasQuindio().setUsuarioLogeado(control.getUsuarioLogeado());

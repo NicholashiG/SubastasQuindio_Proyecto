@@ -9,7 +9,7 @@ public class Articulo implements Serializable {
 
     }
 
-    public Articulo(String nombre, TipoPublicacion tipo, String descripcion, File foto, Vendedor vendedor) {
+    public Articulo(String nombre, TipoPublicacion tipo, String descripcion, String foto, Vendedor vendedor) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.descripcion = descripcion;
@@ -20,7 +20,7 @@ public class Articulo implements Serializable {
     private String nombre;
     private TipoPublicacion tipo;
     private String descripcion;
-    private File foto;
+    private String foto;
     private Vendedor vendedor;
 
     public String getNombre() {
@@ -47,11 +47,11 @@ public class Articulo implements Serializable {
         this.descripcion = descripcion;
     }
 
-    public File getFoto() {
+    public String getFoto() {
         return foto;
     }
 
-    public void setFoto(File foto) {
+    public void setFoto(String foto) {
         this.foto = foto;
     }
 
@@ -69,10 +69,7 @@ public class Articulo implements Serializable {
 		
 	}
 	
-	public void setFoto(String string) {
-		this.foto = new File(string);
-	}
-	
+
 	public void setVendedor(String string) {
 	Vendedor vendedor = new Vendedor();
 	vendedor.setNombreUsuario(string);
@@ -81,7 +78,7 @@ public class Articulo implements Serializable {
 
     
     public String toStringSerializable() {
-    	return nombre + "@@" + tipo.toString() + "@@" + descripcion + "@@" + foto.getAbsolutePath() + "@@" + vendedor.getNombreUsuario() + "@@";
+    	return nombre + "@@" + tipo.toString() + "@@" + descripcion + "@@" + foto + "@@" + vendedor.getNombreUsuario() + "@@";
     			
     }
     
@@ -90,7 +87,7 @@ public class Articulo implements Serializable {
                 "nombre='" + nombre +
                 ", tipo=" + tipo +
                 ", descripcion='" + descripcion  +
-                ", foto=" + foto.getAbsolutePath() +
+                ", foto=" + foto +
                 ", vendedor=" + vendedor +
                 '}';
     }

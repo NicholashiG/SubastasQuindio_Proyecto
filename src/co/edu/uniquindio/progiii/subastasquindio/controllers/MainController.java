@@ -6,7 +6,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -55,6 +57,9 @@ public class MainController implements Initializable{
 
     @FXML
     private Label lblNombreArticulo;
+
+    @FXML
+    private Label lblVendedor;
 
     @FXML
     private Label lblPuja1;
@@ -133,11 +138,38 @@ public class MainController implements Initializable{
 
         listViewInicio.getItems().addAll(control.subastasQuindio.getListaPublicaciones());
         System.out.println(control.subastasQuindio.getListaPublicaciones());
+
+
+
+
     }
 
     @FXML
     void pujar(ActionEvent event) {
 
+    }
+    @FXML
+    void selectionListView(MouseEvent event) {
+        Publicacion publicacion = listViewInicio.getSelectionModel().getSelectedItem();
+        if (publicacion != null){
+            System.out.println(publicacion);
+            lblInfo.setVisible(false);
+            anchorPaneArticuloSelec.setVisible(true);
+            lblNombreArticulo.setText(publicacion.getArticulo().getNombre());
+            lblVendedor.setText("Vendido por: "+publicacion.getArticulo().getVendedor().getNombreUsuario());
+            lblDescripcion.setText(publicacion.getArticulo().getDescripcion());
+            //photoArticulo.setImage(new Image(publicacion.getArticulo().getFoto()));
+            lblTipoArticulo.setText(publicacion.getArticulo().getTipo().toString().toLowerCase());
+        }
+    }
+    @FXML
+    void txtPujaFilled(MouseEvent event) {
+        if(!txtValorPuja.getText().equals("")){
+            btnPujar.setDisable(false);
+        }
+        else{
+            btnPujar.setDisable(true);
+        }
     }
     public void iniciarSesion() {
     	// ENVIO EL STAGE AL SINGLETON

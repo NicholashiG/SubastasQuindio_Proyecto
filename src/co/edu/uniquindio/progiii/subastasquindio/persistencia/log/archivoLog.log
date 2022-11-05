@@ -312,3 +312,15 @@ Nov 05, 2022 2:35:30 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.A
 INFO: Artículo anunciado: Arroz Negro,Se ha creado un nuevo anuncio por JuanVende,-11-05
 Nov 05, 2022 2:35:50 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: NickJurado,Ha ingresado un usuario,-11-05
+Nov 05, 2022 3:15:49 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-05
+Nov 05, 2022 3:16:13 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: Arepa,Se ha creado un nuevo artículo por JoshSell,-11-05
+Nov 05, 2022 3:16:29 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Arepa,Se ha creado un nuevo anuncio por JoshSell,-11-05
+Nov 05, 2022 3:18:02 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-05
+Nov 05, 2022 3:18:29 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: ArepaOK,Se ha creado un nuevo artículo por JoshSell,-11-05
+Nov 05, 2022 3:18:41 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: ArepaOK,Se ha creado un nuevo anuncio por JoshSell,-11-05
