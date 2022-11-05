@@ -1,10 +1,12 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
 import co.edu.uniquindio.progiii.subastasquindio.model.Vendedor;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -19,19 +21,66 @@ import static co.edu.uniquindio.progiii.subastasquindio.persistencia.Persistenci
 public class MainController implements Initializable{
 
 	SingletonController control = SingletonController.getInstance();
-	
+
     @FXML
-    private Button btnIniciarSesion;
-    @FXML
-    private Button btnRegistrarse;
-    @FXML
-    private Button btnVerOfertas;
-    @FXML
-    private Button btnVerAnuncios;
+    private AnchorPane anchorPaneArticuloSelec;
+
     @FXML
     private Text bienvenida;
+
+    @FXML
+    private Button btnIniciarSesion;
+
+    @FXML
+    private Button btnPujar;
+
+    @FXML
+    private Button btnRegistrarse;
+
+    @FXML
+    private Button btnVerAnuncios;
+
+    @FXML
+    private Button btnVerOfertas;
+
     @FXML
     private Hyperlink hyperlinkRegistroVendedor;
+
+    @FXML
+    private Label lblDescripcion;
+
+    @FXML
+    private Label lblInfo;
+
+    @FXML
+    private Label lblNombreArticulo;
+
+    @FXML
+    private Label lblPuja1;
+
+    @FXML
+    private Label lblPuja2;
+
+    @FXML
+    private Label lblPuja3;
+
+    @FXML
+    private Label lblPuja4;
+
+    @FXML
+    private Label lblPuja5;
+
+    @FXML
+    private Label lblTipoArticulo;
+
+    @FXML
+    private ListView<?> listViewInicio;
+
+    @FXML
+    private ImageView photoArticulo;
+
+    @FXML
+    private TextField txtValorPuja;
 
     @Override
     
@@ -39,6 +88,7 @@ public class MainController implements Initializable{
     
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btnVerAnuncios.setVisible(false);
+        anchorPaneArticuloSelec.setVisible(false);
 
         Usuario usuarioLogeado = control.getUsuarioLogeado();
         // Pregunta si hay un usuario logeado
@@ -79,8 +129,11 @@ public class MainController implements Initializable{
         }
 
     }
-    
-    
+
+    @FXML
+    void pujar(ActionEvent event) {
+
+    }
     public void iniciarSesion() {
     	// ENVIO EL STAGE AL SINGLETON
     control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
