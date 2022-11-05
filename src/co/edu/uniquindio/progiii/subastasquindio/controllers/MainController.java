@@ -1,5 +1,6 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
+import co.edu.uniquindio.progiii.subastasquindio.model.Publicacion;
 import co.edu.uniquindio.progiii.subastasquindio.model.Vendedor;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -74,7 +75,7 @@ public class MainController implements Initializable{
     private Label lblTipoArticulo;
 
     @FXML
-    private ListView<?> listViewInicio;
+    private ListView<Publicacion> listViewInicio;
 
     @FXML
     private ImageView photoArticulo;
@@ -87,6 +88,8 @@ public class MainController implements Initializable{
     // ESTA FUNCION SE EJECUTA AL INCIO DE LA APLICACION
     
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        System.out.println("Se inicia la aplicación");
+        System.out.println("Se cargan los anuncios");
         btnVerAnuncios.setVisible(false);
         anchorPaneArticuloSelec.setVisible(false);
 
@@ -128,6 +131,8 @@ public class MainController implements Initializable{
             throw new RuntimeException(e);
         }
 
+        listViewInicio.getItems().addAll(control.subastasQuindio.getListaPublicaciones());
+        System.out.println(control.subastasQuindio.getListaPublicaciones());
     }
 
     @FXML

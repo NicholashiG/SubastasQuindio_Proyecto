@@ -286,3 +286,29 @@ oct. 23, 2022 10:37:36 P. M. co.edu.uniquindio.progiii.subastasquindio.persiste
 INFO: 955@@2022-10-23@@22:37@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-10-23
 oct. 23, 2022 10:38:24 P. M. co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: 519@@2022-10-23@@22:38@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-10-23
+Nov 05, 2022 2:22:39 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-05
+Nov 05, 2022 2:22:52 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Arroz,Se ha creado un nuevo anuncio por JoshSell,-11-05
+Nov 05, 2022 2:25:01 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-05
+Nov 05, 2022 2:26:17 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-05
+Nov 05, 2022 2:27:42 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-05
+Nov 05, 2022 2:27:59 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Sapo,Se ha creado un nuevo anuncio por JoshSell,-11-05
+Nov 05, 2022 2:29:30 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-05
+Nov 05, 2022 2:33:59 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-05
+Nov 05, 2022 2:34:21 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Usuario ingresado no existe en la base de datos co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException: Usuario ingresado no existe en la base de datos,¡Ha ocurrido una excepción!: ,-11-05
+Nov 05, 2022 2:34:51 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende,Ha ingresado un usuario,-11-05
+Nov 05, 2022 2:35:20 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: Arroz Negro,Se ha creado un nuevo artículo por JuanVende,-11-05
+Nov 05, 2022 2:35:30 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Arroz Negro,Se ha creado un nuevo anuncio por JuanVende,-11-05
+Nov 05, 2022 2:35:50 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-05
