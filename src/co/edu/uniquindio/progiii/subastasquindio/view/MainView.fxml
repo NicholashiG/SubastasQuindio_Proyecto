@@ -59,7 +59,7 @@
       </FlowPane>
       <Separator layoutX="-1.0" layoutY="80.0" prefHeight="10.0" prefWidth="1061.0" />
       <ListView fx:id="listViewInicio" layoutX="13.0" layoutY="100.0" prefHeight="575.0" prefWidth="489.0" />
-      <AnchorPane fx:id="anchorPaneArticuloSelec" layoutX="519.0" layoutY="102.0" prefHeight="573.0" prefWidth="523.0">
+      <AnchorPane fx:id="anchorPaneArticuloSelec" layoutX="519.0" layoutY="102.0" prefHeight="573.0" prefWidth="523.0" visible="false">
          <children>
             <ImageView fx:id="photoArticulo" fitHeight="158.0" fitWidth="228.0" layoutX="42.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                <image>
