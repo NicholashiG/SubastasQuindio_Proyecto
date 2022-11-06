@@ -23,6 +23,7 @@ public class Articulo implements Serializable {
     private String foto;
     private Vendedor vendedor;
 
+
     public String getNombre() {
         return nombre;
     }

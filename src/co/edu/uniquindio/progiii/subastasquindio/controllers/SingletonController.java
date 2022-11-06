@@ -2,6 +2,7 @@ package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
 import co.edu.uniquindio.progiii.subastasquindio.application.Main;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException;
+import co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.WrongPasswordException;
 import co.edu.uniquindio.progiii.subastasquindio.model.*;
 import co.edu.uniquindio.progiii.subastasquindio.persistencia.Persistencia;
@@ -167,7 +168,24 @@ public class SingletonController {
 		// AÑADIR LA MISMA PUBICACION AL ARRAYLIST GENERAL DEL PROYECTO
 		subastasQuindio.getListaPublicaciones().add(publicacion);
 	}
-	
+
+	// CREA UNA PUJA Y LA GUARDA EN LA PUBLICACIÓN Y EN EL USUARIO
+	public void registrarPuja(int valorPuja) {
+		try{
+			Comprador comprador = (Comprador) subastasQuindio.getUsuarioLogeado();
+			Publicacion publicacionSeleccionada = subastasQuindio.getPublicacionSeleccionada();
+			Puja puja = new Puja(publicacionSeleccionada, comprador, valorPuja);
+			comprador.getPujas().add(puja);
+			publicacionSeleccionada.getPujas().add(puja);
+			guardarNuevaPujaLog(puja);
+		}catch (ClassCastException e){
+			try{
+				throw new UsuarioException("El usuario es un vendedor, no un comprador");
+			}catch (UsuarioException uE){
+			}
+		}
+
+	}
 		// LOGS
 	
 	public static void guardarRegistroUsuarioLog(String nombre, String email) {
@@ -178,6 +196,10 @@ public class SingletonController {
 	}
 	public static void guardarInicioSesionUsuarioLog(String nombre) {
 		Persistencia.guardaRegistroLog("Ha ingresado un usuario", 1, nombre);
+	}
+
+	public static void guardarNuevaPujaLog(Puja puja) {
+		Persistencia.guardaRegistroLog("Se ha hecho una nueva puja", 1, puja.toStringLog());
 	}
 
 	public static void guardarExcepcion(String mensaje, String tipoExcepcion) {
@@ -291,7 +313,6 @@ public class SingletonController {
 	public void guardarCasaSubastasBinario(CasaSubastas subastasQuindio) throws IOException {
 		Persistencia.guardarRecursoCasaSubastasBinario(subastasQuindio);
 	}
-
 
 
 

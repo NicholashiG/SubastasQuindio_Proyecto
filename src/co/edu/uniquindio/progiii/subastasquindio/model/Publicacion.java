@@ -2,6 +2,7 @@ package co.edu.uniquindio.progiii.subastasquindio.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Publicacion implements Serializable {
 
@@ -30,6 +31,8 @@ public class Publicacion implements Serializable {
     private Estado estado;
 
     private Articulo articulo;
+
+    private ArrayList<Puja> pujas = new ArrayList<>();
 
     //Getters y Setters
     public LocalDate getFechaInicial() {
@@ -80,10 +83,19 @@ public class Publicacion implements Serializable {
         this.articulo = articulo;
     }
 
+    public ArrayList<Puja> getPujas() {
+        return pujas;
+    }
+
+    public void setPujas(ArrayList<Puja> pujas) {
+        this.pujas = pujas;
+    }
+
     @Override
     public String toString() {
         return
                 "Estado: " + estado.toString().toLowerCase() +
                 ", articulo: " + articulo;
     }
+
 }

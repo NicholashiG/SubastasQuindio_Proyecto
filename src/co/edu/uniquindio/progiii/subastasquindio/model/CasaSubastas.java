@@ -18,6 +18,8 @@ public class CasaSubastas implements Serializable {
 	ArrayList<Transaccion> listaTransacciones = new ArrayList<Transaccion>();
 	Usuario usuarioLogeado;
 
+	Publicacion publicacionSeleccionada;
+
 	
 	public CasaSubastas() {
 		
@@ -100,6 +102,12 @@ public class CasaSubastas implements Serializable {
 	public void setListaTransacciones(ArrayList<Transaccion> listaTransacciones) {
 		this.listaTransacciones = listaTransacciones;
 	}
-	
-	
+
+	public Publicacion getPublicacionSeleccionada() {
+		return publicacionSeleccionada;
+	}
+
+	public void setPublicacionSeleccionada(Publicacion publicacionSeleccionada) {
+		this.publicacionSeleccionada = publicacionSeleccionada;
+	}
 }

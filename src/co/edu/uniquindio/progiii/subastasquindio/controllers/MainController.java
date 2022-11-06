@@ -1,5 +1,6 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
+import co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException;
 import co.edu.uniquindio.progiii.subastasquindio.model.Publicacion;
 import co.edu.uniquindio.progiii.subastasquindio.model.Vendedor;
 import javafx.event.ActionEvent;
@@ -25,6 +26,8 @@ import static co.edu.uniquindio.progiii.subastasquindio.persistencia.Persistenci
 public class MainController implements Initializable{
 
 	SingletonController control = SingletonController.getInstance();
+
+
 
     @FXML
     private AnchorPane anchorPaneArticuloSelec;
@@ -101,6 +104,7 @@ public class MainController implements Initializable{
         btnVerAnuncios.setVisible(false);
         anchorPaneArticuloSelec.setVisible(false);
 
+
         Usuario usuarioLogeado = control.getUsuarioLogeado();
         // Pregunta si hay un usuario logeado
     if (usuarioLogeado != null)   {
@@ -149,11 +153,23 @@ public class MainController implements Initializable{
 
     @FXML
     void pujar(ActionEvent event) {
-
+        // Acción cuando no está logueado
+        if(btnIniciarSesion.isVisible()){
+            lblValorPujaInfo.setText("Debes estar logeado para hacer esto");
+            try {
+                throw new InvalidBidException("No está logueado");
+            } catch (InvalidBidException e) {
+            }
+        }
+        // Acción cuando sí está logueado
+        else{
+            control.registrarPuja(Integer.parseInt(txtValorPuja.getText()));
+        }
     }
     @FXML
     void selectionListView(MouseEvent event) {
         Publicacion publicacion = listViewInicio.getSelectionModel().getSelectedItem();
+        control.subastasQuindio.setPublicacionSeleccionada(publicacion);
         if (publicacion != null){
             System.out.println(publicacion);
             lblInfo.setVisible(false);
@@ -178,6 +194,8 @@ public class MainController implements Initializable{
             btnPujar.setDisable(true);
         }
     }
+
+
     public void iniciarSesion() {
     	// ENVIO EL STAGE AL SINGLETON
     control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
@@ -207,6 +225,7 @@ public class MainController implements Initializable{
 
     }
 
+    // Mira si es numérico (sacado de internet, está joya)
     private boolean isNumeric (String txt){
         boolean num =  txt.matches("[+-]?\\d*(\\.\\d+)?");
         return num;

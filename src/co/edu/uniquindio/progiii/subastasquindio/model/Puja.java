@@ -8,10 +8,17 @@ public class Puja implements Serializable {
     public Puja() {
     }
 
+    //Constructor con variables
+    public Puja(Publicacion publicacion, Comprador comprador, int dineroOfrecido) {
+        this.publicacion = publicacion;
+        this.comprador = comprador;
+        this.dineroOfrecido = dineroOfrecido;
+    }
+
     //Variables globales
     private Publicacion publicacion;
     private Comprador comprador;
-    private Double dineroOfrecido;
+    private int dineroOfrecido;
 
     //Getters y Setters
     public Publicacion getPublicacion() {
@@ -30,11 +37,15 @@ public class Puja implements Serializable {
         this.comprador = comprador;
     }
 
-    public Double getDineroOfrecido() {
+    public int getDineroOfrecido() {
         return dineroOfrecido;
     }
 
-    public void setDineroOfrecido(Double dineroOfrecido) {
+    public void setDineroOfrecido(int dineroOfrecido) {
         this.dineroOfrecido = dineroOfrecido;
+    }
+
+    public String toStringLog() {
+        return "Puja hecha por: "+comprador.getNombreUsuario()+" a el artículo "+publicacion.getArticulo().getNombre()+" por "+dineroOfrecido ;
     }
 }

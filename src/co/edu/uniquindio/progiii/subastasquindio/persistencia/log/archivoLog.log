@@ -324,3 +324,37 @@ Nov 05, 2022 3:18:29 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.A
 INFO: Artículo nuevo: ArepaOK,Se ha creado un nuevo artículo por JoshSell,-11-05
 Nov 05, 2022 3:18:41 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: Artículo anunciado: ArepaOK,Se ha creado un nuevo anuncio por JoshSell,-11-05
+Nov 06, 2022 1:39:05 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 1:48:38 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: No está logueado co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException: No está logueado,¡Ha ocurrido una excepción!: ,-11-06
+Nov 06, 2022 3:17:19 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: No está logueado co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException: No está logueado,¡Ha ocurrido una excepción!: ,-11-06
+Nov 06, 2022 3:17:31 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-06
+Nov 06, 2022 3:38:40 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-06
+Nov 06, 2022 3:39:32 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-06
+Nov 06, 2022 3:39:35 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo ArepaOK por 24,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 3:39:52 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 3:42:51 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 3:43:30 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Contraseña incorrecta co.edu.uniquindio.progiii.subastasquindio.exceptions.WrongPasswordException: Contraseña incorrecta,¡Ha ocurrido una excepción!: ,-11-06
+Nov 06, 2022 3:43:33 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 3:46:03 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Usuario ingresado no existe en la base de datos co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException: Usuario ingresado no existe en la base de datos,¡Ha ocurrido una excepción!: ,-11-06
+Nov 06, 2022 3:46:07 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Usuario ingresado no existe en la base de datos co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException: Usuario ingresado no existe en la base de datos,¡Ha ocurrido una excepción!: ,-11-06
+Nov 06, 2022 3:46:15 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-06
+Nov 06, 2022 3:46:19 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Arroz Negro por 1,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 3:46:34 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 3:46:38 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-06

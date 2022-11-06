@@ -678,6 +678,9 @@
     </object>
    </void>
   </void>
+  <void property="publicacionSeleccionada">
+   <object idref="Publicacion1"/>
+  </void>
   <void property="usuarioLogeado">
    <object idref="Vendedor0"/>
   </void>
