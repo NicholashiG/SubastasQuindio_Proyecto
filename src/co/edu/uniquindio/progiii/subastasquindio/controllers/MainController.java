@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -78,6 +79,8 @@ public class MainController implements Initializable{
 
     @FXML
     private Label lblTipoArticulo;
+    @FXML
+    private Label lblValorPujaInfo;
 
     @FXML
     private ListView<Publicacion> listViewInicio;
@@ -163,11 +166,15 @@ public class MainController implements Initializable{
         }
     }
     @FXML
-    void txtPujaFilled(MouseEvent event) {
-        if(!txtValorPuja.getText().equals("")){
+    void txtPujaFilled(KeyEvent event) {
+        if(!txtValorPuja.getText().equals("") && isNumeric(txtValorPuja.getText())){
             btnPujar.setDisable(false);
+            lblValorPujaInfo.setText("");
         }
         else{
+            if (!isNumeric(txtValorPuja.getText())){
+                lblValorPujaInfo.setText("Debe ingresar valores numéricos");
+            }
             btnPujar.setDisable(true);
         }
     }
@@ -198,6 +205,11 @@ public class MainController implements Initializable{
         control.openCrudAnuncios();
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
 
+    }
+
+    private boolean isNumeric (String txt){
+        boolean num =  txt.matches("[+-]?\\d*(\\.\\d+)?");
+        return num;
     }
 }
  
