@@ -96,27 +96,27 @@
                   <Font size="19.0" />
                </font>
             </Label>
-            <Label fx:id="lblPuja1" layoutX="22.0" layoutY="356.0" prefHeight="17.0" prefWidth="128.0" text="Puja 1:">
+            <Label fx:id="lblPuja1" layoutX="22.0" layoutY="356.0" prefHeight="22.0" prefWidth="461.0" text="Puja 1:">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label fx:id="lblPuja2" layoutX="21.0" layoutY="389.0" prefHeight="17.0" prefWidth="128.0" text="Puja 2:">
+            <Label fx:id="lblPuja2" layoutX="21.0" layoutY="389.0" prefHeight="22.0" prefWidth="471.0" text="Puja 2:">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label fx:id="lblPuja5" layoutX="20.0" layoutY="487.0" prefHeight="17.0" prefWidth="128.0" text="Puja 5:">
+            <Label fx:id="lblPuja5" layoutX="20.0" layoutY="487.0" prefHeight="22.0" prefWidth="461.0" text="Puja 5:">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label fx:id="lblPuja3" layoutX="21.0" layoutY="422.0" prefHeight="17.0" prefWidth="128.0" text="Puja 3:">
+            <Label fx:id="lblPuja3" layoutX="21.0" layoutY="422.0" prefHeight="22.0" prefWidth="461.0" text="Puja 3:">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label fx:id="lblPuja4" layoutX="21.0" layoutY="454.0" prefHeight="17.0" prefWidth="128.0" text="Puja 4:">
+            <Label fx:id="lblPuja4" layoutX="21.0" layoutY="454.0" prefHeight="22.0" prefWidth="471.0" text="Puja 4:">
                <font>
                   <Font size="17.0" />
                </font>

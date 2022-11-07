@@ -179,6 +179,16 @@ public class MainController implements Initializable{
             lblDescripcion.setText(publicacion.getArticulo().getDescripcion());
             //photoArticulo.setImage(new Image(publicacion.getArticulo().getFoto()));
             lblTipoArticulo.setText(publicacion.getArticulo().getTipo().toString().toLowerCase());
+            try {
+                lblPuja1.setText("Puja 1: " + String.valueOf(publicacion.getPujas().get(publicacion.getPujas().size()-1)));
+                lblPuja2.setText("Puja 2: " + String.valueOf(publicacion.getPujas().get((int) (Math.random()*10))));
+                lblPuja3.setText("Puja 3: " + String.valueOf(publicacion.getPujas().get(0)));
+                lblPuja4.setText("Puja 4: " + String.valueOf(publicacion.getPujas().get((int) (Math.random()*10))));
+                lblPuja5.setText("Puja 5: " + String.valueOf(publicacion.getPujas().get((int) (Math.random()*10))));
+            }catch (Exception e){
+                System.out.println(e.toString());
+            }
+
         }
     }
     @FXML

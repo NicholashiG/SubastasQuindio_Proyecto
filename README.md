@@ -9,8 +9,6 @@
 
 ## To Do! (Por el documento del proyecto)
 
-- Gestionar pujas (ver pujas relacionadas por cada anuncio)
-- Pujar por un producto
 - Comprar producto
 - Se debe permitir exportar la información de los anuncios creados y compras realizadas. En la exportación se hace por medio de archivos de .csv y se debe poder elegir la ruta donde se generará el archivo
 - Excepciones
