@@ -48,4 +48,9 @@ public class Puja implements Serializable {
     public String toStringLog() {
         return "Puja hecha por: "+comprador.getNombreUsuario()+" a el artículo "+publicacion.getArticulo().getNombre()+" por "+dineroOfrecido ;
     }
+
+    @Override
+    public String toString() {
+        return comprador.getNombreUsuario() + " $" + dineroOfrecido;
+    }
 }

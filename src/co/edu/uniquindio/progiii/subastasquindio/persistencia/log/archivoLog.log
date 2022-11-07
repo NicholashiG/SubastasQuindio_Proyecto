@@ -358,3 +358,105 @@ Nov 06, 2022 3:46:34 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.A
 INFO: JoshSell,Ha ingresado un usuario,-11-06
 Nov 06, 2022 3:46:38 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-06
+Nov 06, 2022 9:00:52 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:01:01 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo ArepaOK por 123,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:01:06 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo ArepaOK por 1234,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:01:22 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:02:17 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:03:28 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:03:32 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo ArepaOK por 12,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:03:35 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo ArepaOK por 123,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:03:37 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo ArepaOK por 1234,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:04:06 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:06:08 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:06:14 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Arepa por 1,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:06:20 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Arepa por 2,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:06:25 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Arepa por 3,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:06:45 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:06:50 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Arepa por 5,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:11:04 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:11:09 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo ArepaOK por 1234,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:11:12 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo ArepaOK por 12345,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:11:29 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:13:22 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:13:29 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Arroz Negro por 1,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:13:31 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Arroz Negro por 2,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:13:33 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Arroz Negro por 3,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:13:52 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:15:29 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:15:35 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Sapo por 1,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:15:37 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Sapo por 2,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:15:56 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:18:02 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:19:11 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:19:57 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:20:35 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:20:47 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Sapo por 1,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:20:48 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Sapo por 2,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:20:50 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Sapo por 3,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:20:50 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Sapo por 3,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:20:51 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Sapo por 4,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:21:08 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:21:29 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:23:16 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: CompradorTest1_comprador@mail.com,Se ha registrado un nuevo usuario,-11-06
+Nov 06, 2022 9:23:26 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: CompradorTest1,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:23:33 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: CompradorTest1 a el artículo ArepaOK por 1,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:23:35 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: CompradorTest1 a el artículo ArepaOK por 13,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:23:52 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:25:47 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: CompradorTest1,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:25:53 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: CompradorTest1 a el artículo Arepa por 1,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:25:55 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: CompradorTest1 a el artículo Arepa por 145,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:25:57 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: CompradorTest1 a el artículo Arepa por 1451,Se ha hecho una nueva puja,-11-06
+Nov 06, 2022 9:26:18 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende,Ha ingresado un usuario,-11-06
+Nov 06, 2022 9:26:56 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-06

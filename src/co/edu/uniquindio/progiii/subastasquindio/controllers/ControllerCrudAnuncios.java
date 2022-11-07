@@ -4,11 +4,13 @@ import co.edu.uniquindio.progiii.subastasquindio.model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -79,6 +81,22 @@ public class ControllerCrudAnuncios implements Initializable {
     @FXML
     private void verPujas(){
 
+    }
+
+    @FXML
+    void selectionListView(MouseEvent event) {
+        choicePujaGanadora.getItems().clear();
+        Publicacion publicacionSeleccionada = listViewAnuncios.getSelectionModel().getSelectedItem();
+        ArrayList<Publicacion> publicaciones = control.subastasQuindio.getListaPublicaciones();
+        if (publicacionSeleccionada != null){
+            for (Publicacion publicacion: publicaciones){
+                if (publicacion.equals(publicacionSeleccionada)){
+                    System.out.println(publicacion.getPujas());
+                    choicePujaGanadora.getItems().addAll(publicacion.getPujas());
+                }
+            }
+
+        }
     }
 
     // TRANSACCION DE PRUEBA !!

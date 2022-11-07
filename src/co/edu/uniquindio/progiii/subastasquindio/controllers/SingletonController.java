@@ -177,7 +177,13 @@ public class SingletonController {
 			Puja puja = new Puja(publicacionSeleccionada, comprador, valorPuja);
 			comprador.getPujas().add(puja);
 			publicacionSeleccionada.getPujas().add(puja);
+			System.out.println(publicacionSeleccionada.getPujas());
 			guardarNuevaPujaLog(puja);
+			try {
+				this.guardarCasaSubastasXML(this.subastasQuindio);
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
 		}catch (ClassCastException e){
 			try{
 				throw new UsuarioException("El usuario es un vendedor, no un comprador");
