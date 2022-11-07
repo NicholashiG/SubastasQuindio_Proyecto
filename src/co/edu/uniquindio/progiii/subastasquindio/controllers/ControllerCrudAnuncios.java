@@ -99,6 +99,30 @@ public class ControllerCrudAnuncios implements Initializable {
         }
     }
 
+    @FXML
+    void addPujaGanadora(MouseEvent event) {
+        Puja pujaGanadora = choicePujaGanadora.getValue();
+        if(pujaGanadora != null){
+            setPujaGanadora(pujaGanadora);
+        }
+    }
+
+    private void setPujaGanadora(Puja puja){
+        Publicacion publicacionSeleccionada = listViewAnuncios.getSelectionModel().getSelectedItem();
+        ArrayList<Publicacion> publicaciones = control.subastasQuindio.getListaPublicaciones();
+        if (publicacionSeleccionada != null){
+            for (Publicacion publicacion: publicaciones){
+                if (publicacion.equals(publicacionSeleccionada)){
+                    publicacion.setPujaGanadora(puja);
+                    publicacion.setEstado(Estado.EN_ESPERA_PUJA_GANADORA);
+                    publicacionSeleccionada.setPujaGanadora(puja);
+                    publicacionSeleccionada.setEstado(Estado.EN_ESPERA_PUJA_GANADORA);
+                }
+            }
+
+        }
+    }
+
     // TRANSACCION DE PRUEBA !!
     // USA UNA 
     @FXML

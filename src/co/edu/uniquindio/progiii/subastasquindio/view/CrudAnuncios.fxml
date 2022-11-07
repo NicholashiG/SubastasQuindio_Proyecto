@@ -123,7 +123,7 @@
                         <Insets bottom="7.0" left="7.0" right="7.0" top="9.0" />
                      </VBox.margin>
                   </ChoiceBox>
-                  <ChoiceBox fx:id="choicePujaGanadora" layoutX="17.0" layoutY="19.0" prefHeight="31.0" prefWidth="250.0">
+                  <ChoiceBox fx:id="choicePujaGanadora" layoutX="17.0" layoutY="19.0" onMouseClicked="#addPujaGanadora" prefHeight="31.0" prefWidth="250.0">
                      <VBox.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="9.0" />
                      </VBox.margin>

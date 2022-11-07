@@ -334,222 +334,228 @@
              <object idref="Articulo2"/>
             </void>
             <void property="estado">
-             <object idref="Estado1"/>
+             <object class="java.lang.Enum" method="valueOf">
+              <class>co.edu.uniquindio.progiii.subastasquindio.model.Estado</class>
+              <string>EN_ESPERA_PUJA_GANADORA</string>
+             </object>
             </void>
-            <void property="pujas">
-             <void method="add">
-              <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja0">
-               <void property="comprador">
-                <object class="co.edu.uniquindio.progiii.subastasquindio.model.Comprador" id="Comprador0">
-                 <void property="contrasena">
-                  <string>1234</string>
-                 </void>
-                 <void property="edad">
-                  <int>19</int>
-                 </void>
-                 <void property="email">
-                  <string>nickjurado@mail.com</string>
-                 </void>
-                 <void property="nombreUsuario">
-                  <string>NickJurado</string>
-                 </void>
-                 <void property="pujas">
-                  <void method="add">
-                   <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja1">
-                    <void property="comprador">
-                     <object idref="Comprador0"/>
-                    </void>
-                    <void property="dineroOfrecido">
-                     <int>1</int>
-                    </void>
-                    <void property="publicacion">
-                     <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion2">
-                      <void property="articulo">
-                       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo7">
-                        <void property="descripcion">
-                         <string>Es un arroz nigga</string>
+            <void property="pujaGanadora">
+             <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja0">
+              <void property="comprador">
+               <object class="co.edu.uniquindio.progiii.subastasquindio.model.Comprador" id="Comprador0">
+                <void property="contrasena">
+                 <string>1234</string>
+                </void>
+                <void property="edad">
+                 <int>19</int>
+                </void>
+                <void property="email">
+                 <string>nickjurado@mail.com</string>
+                </void>
+                <void property="nombreUsuario">
+                 <string>NickJurado</string>
+                </void>
+                <void property="pujas">
+                 <void method="add">
+                  <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja1">
+                   <void property="comprador">
+                    <object idref="Comprador0"/>
+                   </void>
+                   <void property="dineroOfrecido">
+                    <int>1</int>
+                   </void>
+                   <void property="publicacion">
+                    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion2">
+                     <void property="articulo">
+                      <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo7">
+                       <void property="descripcion">
+                        <string>Es un arroz nigga</string>
+                       </void>
+                       <void property="nombre">
+                        <string>Arroz Negro</string>
+                       </void>
+                       <void property="tipo">
+                        <object idref="TipoPublicacion1"/>
+                       </void>
+                       <void property="vendedor">
+                        <object class="co.edu.uniquindio.progiii.subastasquindio.model.Vendedor" id="Vendedor1">
+                         <void property="articulos">
+                          <void method="add">
+                           <object idref="Articulo7"/>
+                          </void>
+                         </void>
+                         <void property="contrasena">
+                          <string>1234</string>
+                         </void>
+                         <void property="edad">
+                          <int>35</int>
+                         </void>
+                         <void property="email">
+                          <string>@</string>
+                         </void>
+                         <void property="id">
+                          <string>1</string>
+                         </void>
+                         <void property="nombreUsuario">
+                          <string>JuanVende</string>
+                         </void>
+                         <void property="publicaciones">
+                          <void method="add">
+                           <object idref="Publicacion2"/>
+                          </void>
+                         </void>
+                        </object>
+                       </void>
+                      </object>
+                     </void>
+                     <void property="estado">
+                      <object idref="Estado1"/>
+                     </void>
+                     <void property="pujas">
+                      <void method="add">
+                       <object idref="Puja1"/>
+                      </void>
+                      <void method="add">
+                       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja2">
+                        <void property="comprador">
+                         <object idref="Comprador0"/>
                         </void>
-                        <void property="nombre">
-                         <string>Arroz Negro</string>
+                        <void property="dineroOfrecido">
+                         <int>2</int>
                         </void>
-                        <void property="tipo">
-                         <object idref="TipoPublicacion1"/>
-                        </void>
-                        <void property="vendedor">
-                         <object class="co.edu.uniquindio.progiii.subastasquindio.model.Vendedor" id="Vendedor1">
-                          <void property="articulos">
-                           <void method="add">
-                            <object idref="Articulo7"/>
-                           </void>
-                          </void>
-                          <void property="contrasena">
-                           <string>1234</string>
-                          </void>
-                          <void property="edad">
-                           <int>35</int>
-                          </void>
-                          <void property="email">
-                           <string>@</string>
-                          </void>
-                          <void property="id">
-                           <string>1</string>
-                          </void>
-                          <void property="nombreUsuario">
-                           <string>JuanVende</string>
-                          </void>
-                          <void property="publicaciones">
-                           <void method="add">
-                            <object idref="Publicacion2"/>
-                           </void>
-                          </void>
-                         </object>
+                        <void property="publicacion">
+                         <object idref="Publicacion2"/>
                         </void>
                        </object>
                       </void>
-                      <void property="estado">
-                       <object idref="Estado1"/>
+                      <void method="add">
+                       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja3">
+                        <void property="comprador">
+                         <object idref="Comprador0"/>
+                        </void>
+                        <void property="dineroOfrecido">
+                         <int>3</int>
+                        </void>
+                        <void property="publicacion">
+                         <object idref="Publicacion2"/>
+                        </void>
+                       </object>
                       </void>
-                      <void property="pujas">
-                       <void method="add">
-                        <object idref="Puja1"/>
-                       </void>
-                       <void method="add">
-                        <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja2">
-                         <void property="comprador">
-                          <object idref="Comprador0"/>
-                         </void>
-                         <void property="dineroOfrecido">
-                          <int>2</int>
-                         </void>
-                         <void property="publicacion">
-                          <object idref="Publicacion2"/>
-                         </void>
-                        </object>
-                       </void>
-                       <void method="add">
-                        <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja3">
-                         <void property="comprador">
-                          <object idref="Comprador0"/>
-                         </void>
-                         <void property="dineroOfrecido">
-                          <int>3</int>
-                         </void>
-                         <void property="publicacion">
-                          <object idref="Publicacion2"/>
-                         </void>
-                        </object>
-                       </void>
-                      </void>
-                      <void property="valorInicial">
-                       <int>1</int>
-                      </void>
-                     </object>
-                    </void>
-                   </object>
-                  </void>
-                  <void method="add">
-                   <object idref="Puja2"/>
-                  </void>
-                  <void method="add">
-                   <object idref="Puja3"/>
-                  </void>
-                  <void method="add">
-                   <object idref="Puja0"/>
-                  </void>
-                  <void method="add">
-                   <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja4">
-                    <void property="comprador">
-                     <object idref="Comprador0"/>
-                    </void>
-                    <void property="dineroOfrecido">
-                     <int>2</int>
-                    </void>
-                    <void property="publicacion">
-                     <object idref="Publicacion1"/>
-                    </void>
-                   </object>
-                  </void>
-                  <void method="add">
-                   <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja5">
-                    <void property="comprador">
-                     <object idref="Comprador0"/>
-                    </void>
-                    <void property="dineroOfrecido">
-                     <int>1</int>
-                    </void>
-                    <void property="publicacion">
-                     <object idref="Publicacion1"/>
-                    </void>
-                   </object>
-                  </void>
-                  <void method="add">
-                   <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja6">
-                    <void property="comprador">
-                     <object idref="Comprador0"/>
-                    </void>
-                    <void property="dineroOfrecido">
-                     <int>2</int>
-                    </void>
-                    <void property="publicacion">
-                     <object idref="Publicacion1"/>
-                    </void>
-                   </object>
-                  </void>
-                  <void method="add">
-                   <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja7">
-                    <void property="comprador">
-                     <object idref="Comprador0"/>
-                    </void>
-                    <void property="dineroOfrecido">
-                     <int>3</int>
-                    </void>
-                    <void property="publicacion">
-                     <object idref="Publicacion1"/>
-                    </void>
-                   </object>
-                  </void>
-                  <void method="add">
-                   <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja8">
-                    <void property="comprador">
-                     <object idref="Comprador0"/>
-                    </void>
-                    <void property="dineroOfrecido">
-                     <int>3</int>
-                    </void>
-                    <void property="publicacion">
-                     <object idref="Publicacion1"/>
-                    </void>
-                   </object>
-                  </void>
-                  <void method="add">
-                   <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja9">
-                    <void property="comprador">
-                     <object idref="Comprador0"/>
-                    </void>
-                    <void property="dineroOfrecido">
-                     <int>4</int>
-                    </void>
-                    <void property="publicacion">
-                     <object idref="Publicacion1"/>
-                    </void>
-                   </object>
-                  </void>
+                     </void>
+                     <void property="valorInicial">
+                      <int>1</int>
+                     </void>
+                    </object>
+                   </void>
+                  </object>
                  </void>
-                </object>
-               </void>
-               <void property="dineroOfrecido">
-                <int>1</int>
-               </void>
-               <void property="publicacion">
-                <object idref="Publicacion1"/>
-               </void>
-              </object>
-             </void>
+                 <void method="add">
+                  <object idref="Puja2"/>
+                 </void>
+                 <void method="add">
+                  <object idref="Puja3"/>
+                 </void>
+                 <void method="add">
+                  <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja4">
+                   <void property="comprador">
+                    <object idref="Comprador0"/>
+                   </void>
+                   <void property="dineroOfrecido">
+                    <int>1</int>
+                   </void>
+                   <void property="publicacion">
+                    <object idref="Publicacion1"/>
+                   </void>
+                  </object>
+                 </void>
+                 <void method="add">
+                  <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja5">
+                   <void property="comprador">
+                    <object idref="Comprador0"/>
+                   </void>
+                   <void property="dineroOfrecido">
+                    <int>2</int>
+                   </void>
+                   <void property="publicacion">
+                    <object idref="Publicacion1"/>
+                   </void>
+                  </object>
+                 </void>
+                 <void method="add">
+                  <object idref="Puja0"/>
+                 </void>
+                 <void method="add">
+                  <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja6">
+                   <void property="comprador">
+                    <object idref="Comprador0"/>
+                   </void>
+                   <void property="dineroOfrecido">
+                    <int>2</int>
+                   </void>
+                   <void property="publicacion">
+                    <object idref="Publicacion1"/>
+                   </void>
+                  </object>
+                 </void>
+                 <void method="add">
+                  <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja7">
+                   <void property="comprador">
+                    <object idref="Comprador0"/>
+                   </void>
+                   <void property="dineroOfrecido">
+                    <int>3</int>
+                   </void>
+                   <void property="publicacion">
+                    <object idref="Publicacion1"/>
+                   </void>
+                  </object>
+                 </void>
+                 <void method="add">
+                  <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja8">
+                   <void property="comprador">
+                    <object idref="Comprador0"/>
+                   </void>
+                   <void property="dineroOfrecido">
+                    <int>3</int>
+                   </void>
+                   <void property="publicacion">
+                    <object idref="Publicacion1"/>
+                   </void>
+                  </object>
+                 </void>
+                 <void method="add">
+                  <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja9">
+                   <void property="comprador">
+                    <object idref="Comprador0"/>
+                   </void>
+                   <void property="dineroOfrecido">
+                    <int>4</int>
+                   </void>
+                   <void property="publicacion">
+                    <object idref="Publicacion1"/>
+                   </void>
+                  </object>
+                 </void>
+                </void>
+               </object>
+              </void>
+              <void property="dineroOfrecido">
+               <int>1</int>
+              </void>
+              <void property="publicacion">
+               <object idref="Publicacion1"/>
+              </void>
+             </object>
+            </void>
+            <void property="pujas">
              <void method="add">
               <object idref="Puja4"/>
              </void>
              <void method="add">
               <object idref="Puja5"/>
+             </void>
+             <void method="add">
+              <object idref="Puja0"/>
              </void>
              <void method="add">
               <object idref="Puja6"/>
