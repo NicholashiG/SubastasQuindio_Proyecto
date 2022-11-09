@@ -191,20 +191,5 @@ public class ControllerCrudAnuncios implements Initializable {
         listViewAnuncios.getItems().addAll(vendedor.getPublicaciones());
 
     }
-
-    public URL getUrlGlobal() {
-        return urlGlobal;
-    }
-
-    public void setUrlGlobal(URL urlGlobal) {
-        this.urlGlobal = urlGlobal;
-    }
-
-    public ResourceBundle getRbGlobal() {
-        return rbGlobal;
-    }
-
-    public void setRbGlobal(ResourceBundle rbGlobal) {
-        this.rbGlobal = rbGlobal;
-    }
+    
 }
