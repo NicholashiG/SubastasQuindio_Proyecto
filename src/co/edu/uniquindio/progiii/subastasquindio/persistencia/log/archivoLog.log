@@ -486,3 +486,17 @@ Nov 08, 2022 9:09:55 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.A
 INFO: Artículo nuevo: Juan,Se ha creado un nuevo artículo por JoshSell,-11-08
 Nov 08, 2022 9:10:07 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: Artículo anunciado: Juan,Se ha creado un nuevo anuncio por JoshSell,-11-08
+Nov 08, 2022 9:29:52 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: No está logueado co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException: No está logueado,¡Ha ocurrido una excepción!: ,-11-08
+Nov 08, 2022 9:29:53 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: No está logueado co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException: No está logueado,¡Ha ocurrido una excepción!: ,-11-08
+Nov 08, 2022 9:30:47 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-08
+Nov 08, 2022 9:30:50 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-08
+Nov 08, 2022 9:30:55 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-08
+Nov 08, 2022 9:31:11 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-08
+Nov 08, 2022 9:31:14 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo PruebaImg1 por 1,Se ha hecho una nueva puja,-11-08

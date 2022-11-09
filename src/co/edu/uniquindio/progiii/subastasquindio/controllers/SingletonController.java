@@ -170,15 +170,16 @@ public class SingletonController {
 	}
 
 	// CREA UNA PUJA Y LA GUARDA EN LA PUBLICACIÓN Y EN EL USUARIO
-	public void registrarPuja(int valorPuja) {
+	public boolean registrarPuja(int valorPuja) {
+		boolean realizado = false;
 		try{
 			Comprador comprador = (Comprador) subastasQuindio.getUsuarioLogeado();
 			Publicacion publicacionSeleccionada = subastasQuindio.getPublicacionSeleccionada();
 			Puja puja = new Puja(publicacionSeleccionada, comprador, valorPuja);
 			comprador.getPujas().add(puja);
 			publicacionSeleccionada.getPujas().add(puja);
-			System.out.println(publicacionSeleccionada.getPujas());
 			guardarNuevaPujaLog(puja);
+			realizado = true;
 			try {
 				this.guardarCasaSubastasXML(this.subastasQuindio);
 			} catch (IOException e) {
@@ -186,11 +187,12 @@ public class SingletonController {
 			}
 		}catch (ClassCastException e){
 			try{
+				realizado = false;
 				throw new UsuarioException("El usuario es un vendedor, no un comprador");
 			}catch (UsuarioException uE){
 			}
 		}
-
+		return realizado;
 	}
 		// LOGS
 	

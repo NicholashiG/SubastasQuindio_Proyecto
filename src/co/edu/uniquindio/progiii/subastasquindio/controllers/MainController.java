@@ -164,7 +164,13 @@ public class MainController implements Initializable{
         }
         // Acción cuando sí está logueado
         else{
-            control.registrarPuja(Integer.parseInt(txtValorPuja.getText()));
+            boolean pujaRealizada = control.registrarPuja(Integer.parseInt(txtValorPuja.getText()));
+            if (pujaRealizada){
+                lblValorPujaInfo.setText("La puja se realizó con éxito :D");
+            }
+            else{
+                lblValorPujaInfo.setText("No se ha podido realizar la puja :(, cambia a comprador");
+            }
         }
     }
     @FXML
