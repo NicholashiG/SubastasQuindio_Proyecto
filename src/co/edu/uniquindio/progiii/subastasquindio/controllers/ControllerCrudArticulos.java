@@ -44,7 +44,7 @@ public class ControllerCrudArticulos implements Initializable {
             Articulo articulo = new Articulo(txtNombre.getText(),
                                             choiceTipo.getValue(),
                                             txtDescripcion.getText(),
-                                            img.getPath(), vendedor);
+                                            img.getAbsolutePath(), vendedor);
             control.registrarArticulo(articulo);
             listViewArticulos.getItems().add(articulo);
             control.getSubastasQuindio().setUsuarioLogeado(control.getUsuarioLogeado());
@@ -94,7 +94,7 @@ public class ControllerCrudArticulos implements Initializable {
                 throw new FileNotFoundException("Seleccione un archivo válido");
             }
             else{
-                txtRutaArchivo.setText(direccion.toString());
+                txtRutaArchivo.setText(direccion.getAbsolutePath());
                 btnEscogerImg.setText(direccion.getName());
             }
         }catch (Exception e){

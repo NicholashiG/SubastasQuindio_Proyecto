@@ -15,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -177,7 +178,20 @@ public class MainController implements Initializable{
             lblNombreArticulo.setText(publicacion.getArticulo().getNombre());
             lblVendedor.setText("Vendido por: "+publicacion.getArticulo().getVendedor().getNombreUsuario());
             lblDescripcion.setText(publicacion.getArticulo().getDescripcion());
-            //photoArticulo.setImage(new Image(publicacion.getArticulo().getFoto()));
+            try{
+                String dir = publicacion.getArticulo().getFoto();
+                if (dir != null){
+                    File file = new File(dir);
+                    Image image = new Image(file.toURI().toString());
+                    photoArticulo.setImage(image);
+                }
+                else {
+                    Image image1 = new Image(getClass().getResourceAsStream("../view/images/DefaultImg.jpeg"));
+                    photoArticulo.setImage(image1);
+                }
+
+            }catch(NullPointerException e){
+            }
             lblTipoArticulo.setText(publicacion.getArticulo().getTipo().toString().toLowerCase());
             try {
                 lblPuja1.setText("Puja 1: " + String.valueOf(publicacion.getPujas().get(publicacion.getPujas().size()-1)));

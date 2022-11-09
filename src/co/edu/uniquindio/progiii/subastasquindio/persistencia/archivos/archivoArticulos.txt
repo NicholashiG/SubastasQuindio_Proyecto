@@ -4,3 +4,6 @@ ArticuloVideo@@DEPORTES@@Articulo de prueba para el video@@C:\Users\user\Desktop
 Arroz Negro@@HOGAR@@Es un arroz nigga@@/Users/nicolasjurado/Library/CloudStorage/OneDrive-Personal/Fotos NutriArepa/DSC_0040 copy.jpg@@JuanVende@@
 Arepa@@HOGAR@@Es una arepa artesanal@@/Users/nicolasjurado/Library/CloudStorage/OneDrive-Personal/Fotos NutriArepa/DSC_0046 copy.jpg@@JoshSell@@
 ArepaOK@@HOGAR@@Es una arepa artesanal@@/Users/nicolasjurado/Library/CloudStorage/OneDrive-Personal/Fotos NutriArepa/DSC_0046 copy.jpg@@JoshSell@@
+PruebaImg1@@TECNOLOGIA@@Es la primera prueba para conocer si la imagen funciona@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/LogoSubastasQuindio.png@@JoshSell@@
+PruebaImg2@@TECNOLOGIA@@Es la segunda prueba de la imagen@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/1.png@@JoshSell@@
+Juan@@DEPORTES@@1@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/1.png@@JoshSell@@

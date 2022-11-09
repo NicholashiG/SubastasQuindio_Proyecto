@@ -250,6 +250,63 @@
             </void>
            </object>
           </void>
+          <void method="add">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo7">
+            <void property="descripcion">
+             <string>Es la primera prueba para conocer si la imagen funciona</string>
+            </void>
+            <void property="foto">
+             <string>/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/LogoSubastasQuindio.png</string>
+            </void>
+            <void property="nombre">
+             <string>PruebaImg1</string>
+            </void>
+            <void property="tipo">
+             <object idref="TipoPublicacion4"/>
+            </void>
+            <void property="vendedor">
+             <object idref="Vendedor0"/>
+            </void>
+           </object>
+          </void>
+          <void method="add">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo8">
+            <void property="descripcion">
+             <string>Es la segunda prueba de la imagen</string>
+            </void>
+            <void property="foto">
+             <string>/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/1.png</string>
+            </void>
+            <void property="nombre">
+             <string>PruebaImg2</string>
+            </void>
+            <void property="tipo">
+             <object idref="TipoPublicacion4"/>
+            </void>
+            <void property="vendedor">
+             <object idref="Vendedor0"/>
+            </void>
+           </object>
+          </void>
+          <void method="add">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo9">
+            <void property="descripcion">
+             <string>1</string>
+            </void>
+            <void property="foto">
+             <string>/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/1.png</string>
+            </void>
+            <void property="nombre">
+             <string>Juan</string>
+            </void>
+            <void property="tipo">
+             <object idref="TipoPublicacion0"/>
+            </void>
+            <void property="vendedor">
+             <object idref="Vendedor0"/>
+            </void>
+           </object>
+          </void>
          </void>
          <void property="contrasena">
           <string>1234</string>
@@ -367,7 +424,7 @@
                    <void property="publicacion">
                     <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion2">
                      <void property="articulo">
-                      <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo7">
+                      <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo10">
                        <void property="descripcion">
                         <string>Es un arroz nigga</string>
                        </void>
@@ -381,7 +438,7 @@
                         <object class="co.edu.uniquindio.progiii.subastasquindio.model.Vendedor" id="Vendedor1">
                          <void property="articulos">
                           <void method="add">
-                           <object idref="Articulo7"/>
+                           <object idref="Articulo10"/>
                           </void>
                          </void>
                          <void property="contrasena">
@@ -700,6 +757,45 @@
           <void method="add">
            <object idref="Publicacion4"/>
           </void>
+          <void method="add">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion5">
+            <void property="articulo">
+             <object idref="Articulo7"/>
+            </void>
+            <void property="estado">
+             <object idref="Estado1"/>
+            </void>
+            <void property="valorInicial">
+             <int>1</int>
+            </void>
+           </object>
+          </void>
+          <void method="add">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion6">
+            <void property="articulo">
+             <object idref="Articulo8"/>
+            </void>
+            <void property="estado">
+             <object idref="Estado1"/>
+            </void>
+            <void property="valorInicial">
+             <int>1</int>
+            </void>
+           </object>
+          </void>
+          <void method="add">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion7">
+            <void property="articulo">
+             <object idref="Articulo9"/>
+            </void>
+            <void property="estado">
+             <object idref="Estado1"/>
+            </void>
+            <void property="valorInicial">
+             <int>1</int>
+            </void>
+           </object>
+          </void>
          </void>
         </object>
        </void>
@@ -727,6 +823,15 @@
    </void>
    <void method="add">
     <object idref="Publicacion4"/>
+   </void>
+   <void method="add">
+    <object idref="Publicacion5"/>
+   </void>
+   <void method="add">
+    <object idref="Publicacion6"/>
+   </void>
+   <void method="add">
+    <object idref="Publicacion7"/>
    </void>
   </void>
   <void property="listaUsuarios">
@@ -756,7 +861,7 @@
     <object class="co.edu.uniquindio.progiii.subastasquindio.model.Vendedor" id="Vendedor2">
      <void property="articulos">
       <void method="add">
-       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo8">
+       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo11">
         <void property="descripcion">
          <string>Es un pan</string>
         </void>
@@ -772,7 +877,7 @@
        </object>
       </void>
       <void method="add">
-       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo9">
+       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo12">
         <void property="descripcion">
          <string>MacBook Pro nueva </string>
         </void>
@@ -807,7 +912,7 @@
       <void method="add">
        <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion">
         <void property="articulo">
-         <object idref="Articulo8"/>
+         <object idref="Articulo11"/>
         </void>
         <void property="estado">
          <object idref="Estado1"/>
@@ -820,7 +925,7 @@
       <void method="add">
        <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion">
         <void property="articulo">
-         <object idref="Articulo9"/>
+         <object idref="Articulo12"/>
         </void>
         <void property="estado">
          <object class="java.lang.Enum" method="valueOf">

@@ -462,3 +462,27 @@ Nov 06, 2022 9:26:56 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.A
 INFO: JoshSell,Ha ingresado un usuario,-11-06
 Nov 06, 2022 9:37:16 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: JoshSell,Ha ingresado un usuario,-11-06
+Nov 08, 2022 8:48:49 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-08
+Nov 08, 2022 8:49:52 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: PruebaImg1,Se ha creado un nuevo artículo por JoshSell,-11-08
+Nov 08, 2022 8:50:11 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: PruebaImg1,Se ha creado un nuevo anuncio por JoshSell,-11-08
+Nov 08, 2022 9:01:17 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-08
+Nov 08, 2022 9:04:13 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-08
+Nov 08, 2022 9:04:43 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: PruebaImg2,Se ha creado un nuevo artículo por JoshSell,-11-08
+Nov 08, 2022 9:05:12 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: PruebaImg2,Se ha creado un nuevo anuncio por JoshSell,-11-08
+Nov 08, 2022 9:08:06 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-08
+Nov 08, 2022 9:08:28 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Seleccione un archivo válido co.edu.uniquindio.progiii.subastasquindio.exceptions.FileNotFoundException: Seleccione un archivo válido,¡Ha ocurrido una excepción!: ,-11-08
+Nov 08, 2022 9:09:40 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-08
+Nov 08, 2022 9:09:55 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: Juan,Se ha creado un nuevo artículo por JoshSell,-11-08
+Nov 08, 2022 9:10:07 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Juan,Se ha creado un nuevo anuncio por JoshSell,-11-08
