@@ -67,6 +67,23 @@ public class ControllerCrudAnuncios implements Initializable {
     @FXML
     private void eliminar(){
 
+        Vendedor vendedor = (Vendedor) control.getUsuarioLogeado();
+        ArrayList<Publicacion> publicaciones = vendedor.getPublicaciones();
+        ArrayList<Publicacion> publicacionesGlobales = control.subastasQuindio.getListaPublicaciones();
+        Publicacion publicacionSeleccionada = listViewAnuncios.getSelectionModel().getSelectedItem();
+        for (int i = 0; i< publicaciones.size(); i++){
+            if (publicaciones.get(i).getArticulo().getNombre().equals(publicacionSeleccionada.getArticulo().getNombre())){
+                publicaciones.remove(i);
+            }
+
+        }
+        for (int i = 0; i< publicacionesGlobales.size(); i++){
+            if (publicacionesGlobales.get(i).getArticulo().getDescripcion().equals(publicacionSeleccionada.getArticulo().getDescripcion()) && publicacionesGlobales.get(i).getArticulo().getNombre().equals(publicacionSeleccionada.getArticulo().getNombre())){
+                publicacionesGlobales.remove(i);
+            }
+
+        }
+
     }
     @FXML
     private void guardarCambios(){

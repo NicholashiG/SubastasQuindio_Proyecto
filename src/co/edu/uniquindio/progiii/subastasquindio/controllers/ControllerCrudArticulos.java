@@ -1,5 +1,6 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
+import co.edu.uniquindio.progiii.subastasquindio.application.Main;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.FileNotFoundException;
 import co.edu.uniquindio.progiii.subastasquindio.model.Articulo;
 import co.edu.uniquindio.progiii.subastasquindio.model.TipoPublicacion;
@@ -14,6 +15,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ControllerCrudArticulos implements Initializable {
@@ -72,7 +74,15 @@ public class ControllerCrudArticulos implements Initializable {
     }
     @FXML
     private void eliminar(){
+        Vendedor vendedor = (Vendedor) control.getUsuarioLogeado();
+        ArrayList<Articulo> articulos = vendedor.getArticulos();
+        Articulo articuloSeleccionado = listViewArticulos.getSelectionModel().getSelectedItem();
+        for (int i = 0; i< articulos.size(); i++){
+            if (articulos.get(i).getNombre().equals(articuloSeleccionado.getNombre())){
+                articulos.remove(i);
+            }
 
+        }
     }
     @FXML
     private void guardarCambios(){
