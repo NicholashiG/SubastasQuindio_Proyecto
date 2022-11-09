@@ -18,6 +18,10 @@ public class ControllerCrudAnuncios implements Initializable {
 
     SingletonController control = SingletonController.getInstance();
 
+    URL urlGlobal;
+
+    ResourceBundle rbGlobal;
+
     @FXML
     private ChoiceBox<Articulo> choiceArticulo;
 
@@ -74,6 +78,8 @@ public class ControllerCrudAnuncios implements Initializable {
         for (int i = 0; i< publicaciones.size(); i++){
             if (publicaciones.get(i).getArticulo().getNombre().equals(publicacionSeleccionada.getArticulo().getNombre())){
                 publicaciones.remove(i);
+                listViewAnuncios.getItems().clear();
+                this.initialize(urlGlobal, rbGlobal);
             }
 
         }
@@ -173,7 +179,8 @@ public class ControllerCrudAnuncios implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        this.urlGlobal = url;
+        this.rbGlobal = resourceBundle;
         Vendedor vendedor = (Vendedor) control.subastasQuindio.getUsuarioLogeado();
         control.subastasQuindio.setUsuarioLogeado(vendedor);
         choiceArticulo.getItems().addAll(vendedor.getArticulos());
@@ -183,5 +190,21 @@ public class ControllerCrudAnuncios implements Initializable {
         choiceEstado.getItems().add(Estado.EN_ESPERA_PUJA_GANADORA);
         listViewAnuncios.getItems().addAll(vendedor.getPublicaciones());
 
+    }
+
+    public URL getUrlGlobal() {
+        return urlGlobal;
+    }
+
+    public void setUrlGlobal(URL urlGlobal) {
+        this.urlGlobal = urlGlobal;
+    }
+
+    public ResourceBundle getRbGlobal() {
+        return rbGlobal;
+    }
+
+    public void setRbGlobal(ResourceBundle rbGlobal) {
+        this.rbGlobal = rbGlobal;
     }
 }

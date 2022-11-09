@@ -21,6 +21,10 @@ import java.util.ResourceBundle;
 public class ControllerCrudArticulos implements Initializable {
 
     SingletonController control = SingletonController.getInstance();
+
+    URL urlGlobal;
+
+    ResourceBundle rbGlobal;
     @FXML
     private ChoiceBox<TipoPublicacion> choiceTipo;
 
@@ -80,6 +84,8 @@ public class ControllerCrudArticulos implements Initializable {
         for (int i = 0; i< articulos.size(); i++){
             if (articulos.get(i).getNombre().equals(articuloSeleccionado.getNombre())){
                 articulos.remove(i);
+                listViewArticulos.getItems().clear();
+                this.initialize(urlGlobal, rbGlobal);
             }
 
         }
@@ -117,6 +123,8 @@ public class ControllerCrudArticulos implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.urlGlobal = url;
+        this.rbGlobal = resourceBundle;
         Vendedor vendedor = (Vendedor) control.subastasQuindio.getUsuarioLogeado();
         choiceTipo.getItems().add(TipoPublicacion.BIEN_RAIZ);
         choiceTipo.getItems().add(TipoPublicacion.DEPORTES);
