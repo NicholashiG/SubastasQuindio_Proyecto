@@ -22,7 +22,7 @@
         <object class="co.edu.uniquindio.progiii.subastasquindio.model.Vendedor" id="Vendedor0">
          <void property="articulos">
           <void method="add">
-           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo1">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo">
             <void property="descripcion">
              <string>Es un pan</string>
             </void>
@@ -41,7 +41,7 @@
            <object idref="Articulo0"/>
           </void>
           <void method="add">
-           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo2">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo1">
             <void property="descripcion">
              <string>Es un sapo</string>
             </void>
@@ -60,7 +60,7 @@
            </object>
           </void>
           <void method="add">
-           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo2">
             <void property="descripcion">
              <string>Es un chechere</string>
             </void>
@@ -184,26 +184,13 @@
           <void method="add">
            <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion">
             <void property="articulo">
-             <object idref="Articulo1"/>
-            </void>
-            <void property="estado">
-             <object class="java.lang.Enum" id="Estado0" method="valueOf">
-              <class>co.edu.uniquindio.progiii.subastasquindio.model.Estado</class>
-              <string>VENDIDO</string>
-             </object>
-            </void>
-            <void property="valorInicial">
-             <int>123</int>
-            </void>
-           </object>
-          </void>
-          <void method="add">
-           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion">
-            <void property="articulo">
              <object idref="Articulo3"/>
             </void>
             <void property="estado">
-             <object idref="Estado0"/>
+             <object class="java.lang.Enum" method="valueOf">
+              <class>co.edu.uniquindio.progiii.subastasquindio.model.Estado</class>
+              <string>VENDIDO</string>
+             </object>
             </void>
             <void property="valorInicial">
              <int>13</int>
@@ -232,7 +219,7 @@
              </object>
             </void>
             <void property="estado">
-             <object class="java.lang.Enum" id="Estado1" method="valueOf">
+             <object class="java.lang.Enum" id="Estado0" method="valueOf">
               <class>co.edu.uniquindio.progiii.subastasquindio.model.Estado</class>
               <string>ACTIVO</string>
              </object>
@@ -285,7 +272,7 @@
                        </object>
                       </void>
                       <void property="estado">
-                       <object idref="Estado1"/>
+                       <object idref="Estado0"/>
                       </void>
                       <void property="pujas">
                        <void method="add">
@@ -389,7 +376,7 @@
              </object>
             </void>
             <void property="estado">
-             <object idref="Estado1"/>
+             <object idref="Estado0"/>
             </void>
             <void property="pujas">
              <void method="add">
@@ -462,7 +449,7 @@
                        </object>
                       </void>
                       <void property="estado">
-                       <object idref="Estado1"/>
+                       <object idref="Estado0"/>
                       </void>
                       <void property="pujas">
                        <void method="add">
@@ -519,7 +506,7 @@
                     <void property="publicacion">
                      <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion4">
                       <void property="articulo">
-                       <object idref="Articulo2"/>
+                       <object idref="Articulo1"/>
                       </void>
                       <void property="estado">
                        <object class="java.lang.Enum" method="valueOf">
@@ -658,13 +645,32 @@
             </void>
            </object>
           </void>
+          <void method="add">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion5">
+            <void property="articulo">
+             <object idref="Articulo2"/>
+            </void>
+            <void property="estado">
+             <object idref="Estado0"/>
+            </void>
+            <void property="fechaFinal">
+             <string>2022-12-04</string>
+            </void>
+            <void property="fechaInicial">
+             <string>2022-11-11</string>
+            </void>
+            <void property="valorInicial">
+             <int>10000</int>
+            </void>
+           </object>
+          </void>
          </void>
         </object>
        </void>
       </object>
      </void>
      <void property="estado">
-      <object idref="Estado1"/>
+      <object idref="Estado0"/>
      </void>
      <void property="valorInicial">
       <int>1</int>
@@ -679,6 +685,9 @@
    </void>
    <void method="add">
     <object idref="Publicacion2"/>
+   </void>
+   <void method="add">
+    <object idref="Publicacion5"/>
    </void>
   </void>
   <void property="listaUsuarios">
@@ -762,7 +771,7 @@
          <object idref="Articulo5"/>
         </void>
         <void property="estado">
-         <object idref="Estado1"/>
+         <object idref="Estado0"/>
         </void>
         <void property="valorInicial">
          <int>500</int>
@@ -905,7 +914,7 @@
    </void>
   </void>
   <void property="publicacionSeleccionada">
-   <object idref="Publicacion1"/>
+   <object idref="Publicacion5"/>
   </void>
   <void property="usuarioLogeado">
    <object idref="Vendedor0"/>

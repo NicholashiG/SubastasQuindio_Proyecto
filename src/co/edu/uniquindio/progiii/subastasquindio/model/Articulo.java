@@ -63,34 +63,34 @@ public class Articulo implements Serializable {
     public void setVendedor(Vendedor vendedor) {
         this.vendedor = vendedor;
     }
-    
+
     // METODOS SET DE STRING
-	public void setTipo(String string) {
-		this.tipo = TipoPublicacion.valueOf(string);
-		
-	}
-	
+    public void setTipo(String string) {
+        this.tipo = TipoPublicacion.valueOf(string);
 
-	public void setVendedor(String string) {
-	Vendedor vendedor = new Vendedor();
-	vendedor.setNombreUsuario(string);
-	this.vendedor = vendedor;
-	}
-
-    
-    public String toStringSerializable() {
-    	return nombre + "@@" + tipo.toString() + "@@" + descripcion + "@@" + foto + "@@" + vendedor.getNombreUsuario() + "@@";
-    			
     }
-    
+
+
+    public void setVendedor(String string) {
+        Vendedor vendedor = new Vendedor();
+        vendedor.setNombreUsuario(string);
+        this.vendedor = vendedor;
+    }
+
+
+    public String toStringSerializable() {
+        return nombre + "@@" + tipo.toString() + "@@" + descripcion + "@@" + foto + "@@" + vendedor.getNombreUsuario() + "@@";
+
+    }
+
     public String toString1() {
         return
                 "nombre='" + nombre +
-                ", tipo=" + tipo +
-                ", descripcion='" + descripcion  +
-                ", foto=" + foto +
-                ", vendedor=" + vendedor +
-                '}';
+                        ", tipo=" + tipo +
+                        ", descripcion='" + descripcion +
+                        ", foto=" + foto +
+                        ", vendedor=" + vendedor +
+                        '}';
     }
 
     @Override
@@ -99,9 +99,4 @@ public class Articulo implements Serializable {
     }
 
 
-
-
-
-    
-    
 }

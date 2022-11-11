@@ -22,12 +22,9 @@ import java.util.ResourceBundle;
 
 import co.edu.uniquindio.progiii.subastasquindio.model.Usuario;
 
-import static co.edu.uniquindio.progiii.subastasquindio.persistencia.Persistencia.guardarPublicaciones;
+public class MainController implements Initializable {
 
-public class MainController implements Initializable{
-
-	SingletonController control = SingletonController.getInstance();
-
+    SingletonController control = SingletonController.getInstance();
 
 
     @FXML
@@ -96,9 +93,9 @@ public class MainController implements Initializable{
     private TextField txtValorPuja;
 
     @Override
-    
+
     // ESTA FUNCION SE EJECUTA AL INCIO DE LA APLICACION
-    
+
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println("Se inicia la aplicación");
         System.out.println("Se cargan los anuncios");
@@ -108,21 +105,21 @@ public class MainController implements Initializable{
 
         Usuario usuarioLogeado = control.getUsuarioLogeado();
         // Pregunta si hay un usuario logeado
-    if (usuarioLogeado != null)   {
-    		// si esta logeado hace invisible los botones
-    		// de registro y demas.
-    		btnIniciarSesion.setVisible(false);
-    		btnRegistrarse.setVisible(false);
+        if (usuarioLogeado != null) {
+            // si esta logeado hace invisible los botones
+            // de registro y demas.
+            btnIniciarSesion.setVisible(false);
+            btnRegistrarse.setVisible(false);
             hyperlinkRegistroVendedor.setVisible(false);
-    		bienvenida.setText("Bienvenido, " + usuarioLogeado.getNombreUsuario() + "!");
-            if (usuarioLogeado.getClass() == Vendedor.class){
-            	// si es vendedor agrega opciones propias del vendedor
+            bienvenida.setText("Bienvenido, " + usuarioLogeado.getNombreUsuario() + "!");
+            if (usuarioLogeado.getClass() == Vendedor.class) {
+                // si es vendedor agrega opciones propias del vendedor
                 btnVerAnuncios.setVisible(true);
             }
-    	}
+        }
 
-    	// SERIALIZACION AL INICIAR.
-    	
+        // SERIALIZACION AL INICIAR.
+
         try {
             control.setSubastasQuindio(control.cargarCasaSubastasAnunciosXML());
         } catch (IOException e) {
@@ -148,14 +145,14 @@ public class MainController implements Initializable{
         System.out.println(control.subastasQuindio.getListaPublicaciones());
 
 
-
-
     }
 
     @FXML
     void pujar(ActionEvent event) {
         // Acción cuando no está logueado
-        if(btnIniciarSesion.isVisible()){
+        // compara si el botón de iniciar sesión está visible, esto nos dice que no hay un
+        // usuario que haya iniciado sesión
+        if (btnIniciarSesion.isVisible()) {
             lblValorPujaInfo.setText("Debes estar logeado para hacer esto");
             try {
                 throw new InvalidBidException("No está logueado");
@@ -163,62 +160,74 @@ public class MainController implements Initializable{
             }
         }
         // Acción cuando sí está logueado
-        else{
+        // como el botón de iniciar sesión no está visible, hay un usuario logueado, por lo que
+        // puede pujar
+        else {
             boolean pujaRealizada = control.registrarPuja(Integer.parseInt(txtValorPuja.getText()));
-            if (pujaRealizada){
+            // compara si la puja fue realizada con éxito o hubo un error y lo muestra en la pantalla
+            if (pujaRealizada) {
                 lblValorPujaInfo.setText("La puja se realizó con éxito :D");
-            }
-            else{
+            } else {
                 lblValorPujaInfo.setText("No se ha podido realizar la puja :(, cambia a comprador");
             }
         }
     }
+
     @FXML
     void selectionListView(MouseEvent event) {
+        // Cada que haya una acción en el listView, se va a actualizar la publicación seleccionada
         Publicacion publicacion = listViewInicio.getSelectionModel().getSelectedItem();
+        // se añade la publicación seleccionada en el singleton para hacer procesos desde otras ventanas
         control.subastasQuindio.setPublicacionSeleccionada(publicacion);
-        if (publicacion != null){
+        if (publicacion != null) {
             System.out.println(publicacion);
             lblInfo.setVisible(false);
             anchorPaneArticuloSelec.setVisible(true);
             lblNombreArticulo.setText(publicacion.getArticulo().getNombre());
-            lblVendedor.setText("Vendido por: "+publicacion.getArticulo().getVendedor().getNombreUsuario());
+            lblVendedor.setText("Vendido por: " + publicacion.getArticulo().getVendedor().getNombreUsuario());
             lblDescripcion.setText(publicacion.getArticulo().getDescripcion());
-            try{
+            try {
+                // Si hay una foto existente en el artículo, se pone tal foto
                 String dir = publicacion.getArticulo().getFoto();
-                if (dir != null){
+                if (dir != null) {
                     File file = new File(dir);
                     Image image = new Image(file.toURI().toString());
                     photoArticulo.setImage(image);
-                }
-                else {
+                    // de lo contrario, se pone una foto por default
+                } else {
                     Image image1 = new Image(getClass().getResourceAsStream("../view/images/DefaultImg.jpeg"));
                     photoArticulo.setImage(image1);
                 }
 
-            }catch(NullPointerException e){
+            } catch (NullPointerException e) {
             }
             lblTipoArticulo.setText(publicacion.getArticulo().getTipo().toString().toLowerCase());
             try {
-                lblPuja1.setText("Puja 1: " + String.valueOf(publicacion.getPujas().get(publicacion.getPujas().size()-1)));
-                lblPuja2.setText("Puja 2: " + String.valueOf(publicacion.getPujas().get((int) (Math.random()*10))));
+                // se añaden 5 pujas en la pantalla
+                // La primera puja es la última puja hecha
+                // La segunda, cuarta y quinta son pujas al azar y, en caso de no existir, se deja vacío
+                // la tercera puja será la primera puja hecha a esa publicación
+                lblPuja1.setText("Puja 1: " + String.valueOf(publicacion.getPujas().get(publicacion.getPujas().size() - 1)));
+                lblPuja2.setText("Puja 2: " + String.valueOf(publicacion.getPujas().get((int) (Math.random() * 10))));
                 lblPuja3.setText("Puja 3: " + String.valueOf(publicacion.getPujas().get(0)));
-                lblPuja4.setText("Puja 4: " + String.valueOf(publicacion.getPujas().get((int) (Math.random()*10))));
-                lblPuja5.setText("Puja 5: " + String.valueOf(publicacion.getPujas().get((int) (Math.random()*10))));
-            }catch (Exception e){
+                lblPuja4.setText("Puja 4: " + String.valueOf(publicacion.getPujas().get((int) (Math.random() * 10))));
+                lblPuja5.setText("Puja 5: " + String.valueOf(publicacion.getPujas().get((int) (Math.random() * 10))));
+            } catch (Exception e) {
                 System.out.println(e.toString());
             }
 
         }
     }
+
     @FXML
     void txtPujaFilled(KeyEvent event) {
-        if(!txtValorPuja.getText().equals("") && isNumeric(txtValorPuja.getText())){
+        // Este método compara si el campo de la puja está lleno y con valores numéricos
+        // en caso de que eso se cumpla, el botón se activa
+        if (!txtValorPuja.getText().equals("") && isNumeric(txtValorPuja.getText())) {
             btnPujar.setDisable(false);
             lblValorPujaInfo.setText("");
-        }
-        else{
-            if (!isNumeric(txtValorPuja.getText())){
+        } else {
+            if (!isNumeric(txtValorPuja.getText())) {
                 lblValorPujaInfo.setText("Debe ingresar valores numéricos");
             }
             btnPujar.setDisable(true);
@@ -227,28 +236,28 @@ public class MainController implements Initializable{
 
 
     public void iniciarSesion() {
-    	// ENVIO EL STAGE AL SINGLETON
-    control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
-    control.openLogin();
-    control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
+        // ENVIO EL STAGE AL SINGLETON
+        control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
+        control.openLogin();
+        control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
     }
-    
+
     public void registrarse() {
-    	// ENVIO EL STAGE AL SINGLETON
+        // ENVIO EL STAGE AL SINGLETON
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
         control.openRegistro();
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
     }
 
     public void registrarseVendedor() {
-    	// ENVIO EL STAGE AL SINGLETON
+        // ENVIO EL STAGE AL SINGLETON
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
         control.openRegistroVendedores();
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
     }
 
-    public void verAnuncios(){
-    	// ENVIO EL STAGE AL SINGLETON
+    public void verAnuncios() {
+        // ENVIO EL STAGE AL SINGLETON
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
         control.openCrudAnuncios();
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
@@ -256,8 +265,8 @@ public class MainController implements Initializable{
     }
 
     // Mira si es numérico (sacado de internet, está joya)
-    private boolean isNumeric (String txt){
-        boolean num =  txt.matches("[+-]?\\d*(\\.\\d+)?");
+    private boolean isNumeric(String txt) {
+        boolean num = txt.matches("[+-]?\\d*(\\.\\d+)?");
         return num;
     }
 }

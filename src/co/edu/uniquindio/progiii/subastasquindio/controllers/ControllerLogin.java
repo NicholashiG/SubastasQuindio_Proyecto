@@ -13,28 +13,35 @@ import javafx.stage.Stage;
 
 public class ControllerLogin implements Initializable {
 
-	SingletonController control = SingletonController.getInstance();
-	
-	
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+    SingletonController control = SingletonController.getInstance();
 
-	}
 
-	@FXML TextField usuario;
-	@FXML PasswordField contra;
-	@FXML TextField email;
-	@FXML TextField edad;
-	@FXML Text feedback;
-	public void login() throws IOException {
-		if (usuario.getText() != "" && contra.getText() != "") {
-	    	// ESTOY ENVIANDO EL STAGE AL SINGLETON PARA QUE MANEJE TODO
-			control.setLoginStage( (Stage) usuario.getScene().getWindow() );
-			feedback.setText(control.login(usuario.getText(), contra.getText()));
-			control.setLoginStage((Stage) usuario.getScene().getWindow());
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
 
-		}
-		else { feedback.setText("Los campos no pueden estar vacios"); }
-	}
-	
+    }
+
+    @FXML
+    TextField usuario;
+    @FXML
+    PasswordField contra;
+    @FXML
+    TextField email;
+    @FXML
+    TextField edad;
+    @FXML
+    Text feedback;
+
+    public void login() throws IOException {
+        if (usuario.getText() != "" && contra.getText() != "") {
+            // ESTOY ENVIANDO EL STAGE AL SINGLETON PARA QUE MANEJE TODO
+            control.setLoginStage((Stage) usuario.getScene().getWindow());
+            feedback.setText(control.login(usuario.getText(), contra.getText()));
+            control.setLoginStage((Stage) usuario.getScene().getWindow());
+
+        } else {
+            feedback.setText("Los campos no pueden estar vacios");
+        }
+    }
+
 }

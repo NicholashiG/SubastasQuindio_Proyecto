@@ -11,7 +11,7 @@ public class Publicacion implements Serializable {
 
     }
 
-    public Publicacion(LocalDate fechaInicial, LocalDate fechaFinal, int valorInicial, Puja pujaGanadora, Estado estado, Articulo articulo) {
+    public Publicacion(String fechaInicial, String fechaFinal, int valorInicial, Puja pujaGanadora, Estado estado, Articulo articulo) {
         this.fechaInicial = fechaInicial;
         this.fechaFinal = fechaFinal;
         this.valorInicial = valorInicial;
@@ -22,9 +22,9 @@ public class Publicacion implements Serializable {
 
     //Variables globales
     private
-    LocalDate fechaInicial;
+    String fechaInicial;
     private
-    LocalDate fechaFinal;
+    String fechaFinal;
     private int valorInicial;
     private Puja pujaGanadora;
 
@@ -35,19 +35,19 @@ public class Publicacion implements Serializable {
     private ArrayList<Puja> pujas = new ArrayList<>();
 
     //Getters y Setters
-    public LocalDate getFechaInicial() {
+    public String getFechaInicial() {
         return fechaInicial;
     }
 
-    public void setFechaInicial(LocalDate fechaInicial) {
+    public void setFechaInicial(String fechaInicial) {
         this.fechaInicial = fechaInicial;
     }
 
-    public LocalDate getFechaFinal() {
+    public String getFechaFinal() {
         return fechaFinal;
     }
 
-    public void setFechaFinal(LocalDate fechaFinal) {
+    public void setFechaFinal(String fechaFinal) {
         this.fechaFinal = fechaFinal;
     }
 
@@ -95,7 +95,7 @@ public class Publicacion implements Serializable {
     public String toString() {
         return
                 "Estado: " + estado.toString().toLowerCase() +
-                ", articulo: " + articulo;
+                        ", articulo: " + articulo;
     }
 
 }

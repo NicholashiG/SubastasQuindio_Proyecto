@@ -18,11 +18,11 @@ public class Comprador extends Usuario implements Serializable, IUsuario {
     //Variables globales
     private ArrayList<Puja> pujas = new ArrayList<>();
 
-    public void pujar(){
+    public void pujar() {
 
     }
 
-    public void borrarPuja(){
+    public void borrarPuja() {
 
     }
 

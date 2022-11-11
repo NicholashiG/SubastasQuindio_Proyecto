@@ -33,23 +33,27 @@ public class ControllerCrudUsuarios implements Initializable {
 
 
     @FXML
-    private void nuevo(){
+    private void nuevo() {
 
     }
+
     @FXML
-    private void editar(){
+    private void editar() {
 
     }
+
     @FXML
-    private void eliminar(){
+    private void eliminar() {
 
     }
+
     @FXML
-    private void guardarCambios(){
+    private void guardarCambios() {
 
     }
+
     @FXML
-    private void atras(){
+    private void atras() {
 
     }
 

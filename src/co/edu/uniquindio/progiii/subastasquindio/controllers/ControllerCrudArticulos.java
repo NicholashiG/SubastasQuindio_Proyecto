@@ -44,19 +44,19 @@ public class ControllerCrudArticulos implements Initializable {
     @FXML
     private void nuevo() throws IOException {
 
-        if(choiceTipo.getValue() != null && txtDescripcion.getText() != "" && txtNombre.getText() != "" && txtRutaArchivo.getText() != ""){
+        if (choiceTipo.getValue() != null && txtDescripcion.getText() != "" && txtNombre.getText() != "" && txtRutaArchivo.getText() != "") {
             File img = new File(txtRutaArchivo.getText());
             Vendedor vendedor = (Vendedor) SingletonController.getInstance().subastasQuindio.getUsuarioLogeado();
             Articulo articulo = new Articulo(txtNombre.getText(),
-                                            choiceTipo.getValue(),
-                                            txtDescripcion.getText(),
-                                            img.getAbsolutePath(), vendedor);
+                    choiceTipo.getValue(),
+                    txtDescripcion.getText(),
+                    img.getAbsolutePath(), vendedor);
             control.registrarArticulo(articulo);
             listViewArticulos.getItems().add(articulo);
             control.getSubastasQuindio().setUsuarioLogeado(control.getUsuarioLogeado());
             control.setArticuloStage((Stage) txtDescripcion.getScene().getWindow());
             control.nuevoArticuloRefresh();
-            SingletonController.guardarCambiosCrudLog("Se ha creado un nuevo artículo por "+control.getUsuarioLogeado().getNombreUsuario(), "Artículo nuevo: "+txtNombre.getText());
+            SingletonController.guardarCambiosCrudLog("Se ha creado un nuevo artículo por " + control.getUsuarioLogeado().getNombreUsuario(), "Artículo nuevo: " + txtNombre.getText());
 
             try {
                 control.guardarCasaSubastasXML(control.subastasQuindio);
@@ -64,36 +64,39 @@ public class ControllerCrudArticulos implements Initializable {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        }
-
-        else {
+        } else {
             System.out.println("No está completo");
         }
 
 
     }
+
     @FXML
-    private void editar(){
+    private void editar() {
 
     }
+
     @FXML
-    private void eliminar(){
+    private void eliminar() {
         Vendedor vendedor = (Vendedor) control.getUsuarioLogeado();
         ArrayList<Articulo> articulos = vendedor.getArticulos();
         Articulo articuloSeleccionado = listViewArticulos.getSelectionModel().getSelectedItem();
-        for (int i = 0; i< articulos.size(); i++){
-            if (articulos.get(i).getNombre().equals(articuloSeleccionado.getNombre())){
+        for (int i = 0; i < articulos.size(); i++) {
+            if (articulos.get(i).getNombre().equals(articuloSeleccionado.getNombre())) {
                 articulos.remove(i);
                 listViewArticulos.getItems().clear();
+                // actualiza la ventana
                 this.initialize(urlGlobal, rbGlobal);
             }
 
         }
     }
+
     @FXML
-    private void guardarCambios(){
+    private void guardarCambios() {
 
     }
+
     @FXML
     private void atras() throws IOException {
         control.setArticuloStage((Stage) txtDescripcion.getScene().getWindow());
@@ -102,21 +105,22 @@ public class ControllerCrudArticulos implements Initializable {
 
     @FXML
     private void escogerImagen() throws Exception {
+
+        // método que crea un filePicker para que el usuario pueda escoger
+        // la imagen
         FilePicker filePicker = new FilePicker();
         try {
             File direccion = filePicker.getDireccionArchivo();
-            if (direccion==null){
+            if (direccion == null) {
                 txtRutaArchivo.setText("Seleccione un archivo");
                 throw new FileNotFoundException("Seleccione un archivo válido");
-            }
-            else{
+            } else {
                 txtRutaArchivo.setText(direccion.getAbsolutePath());
                 btnEscogerImg.setText(direccion.getName());
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
 
 
     }

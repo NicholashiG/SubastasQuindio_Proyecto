@@ -512,3 +512,25 @@ Nov 08, 2022 10:32:41 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.
 INFO: JoshSell,Ha ingresado un usuario,-11-08
 Nov 08, 2022 10:34:59 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: JoshSell,Ha ingresado un usuario,-11-08
+Nov 11, 2022 9:02:09 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-11
+Nov 11, 2022 9:02:32 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Chayomi,Se ha creado un nuevo anuncio por JoshSell,-11-11
+Nov 11, 2022 9:26:17 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-11
+Nov 11, 2022 9:26:19 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 900@@2022-11-11@@9:26@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-11-11
+Nov 11, 2022 9:26:21 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 18@@2022-11-11@@9:26@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-11-11
+Nov 11, 2022 9:26:21 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 842@@2022-11-11@@9:26@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-11-11
+Nov 11, 2022 9:26:25 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 150@@2022-11-11@@9:26@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-11-11
+Nov 11, 2022 9:26:26 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 922@@2022-11-11@@9:26@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-11-11
+Nov 11, 2022 9:26:26 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 303@@2022-11-11@@9:26@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-11-11
+Nov 11, 2022 9:26:27 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 478@@2022-11-11@@9:26@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-11-11
+Nov 11, 2022 9:26:33 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: 512@@2022-11-11@@9:26@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-11-11

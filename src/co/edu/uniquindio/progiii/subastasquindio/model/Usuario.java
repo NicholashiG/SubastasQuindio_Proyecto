@@ -16,20 +16,17 @@ public class Usuario implements Serializable {
     private String email;
     private int edad;
 
-    
 
-		// ESTE TAMBIEN ES TEMPORAL PORQUE SOY TONTO SKJSJS
-	public Usuario(String nombreUsuario, String contrasena, String email, int edad) {
-			super();
-			this.nombreUsuario = nombreUsuario;
-			this.contrasena = contrasena;
-			this.email = email;
-			this.edad = edad;
-		}
+    public Usuario(String nombreUsuario, String contrasena, String email, int edad) {
+        super();
+        this.nombreUsuario = nombreUsuario;
+        this.contrasena = contrasena;
+        this.email = email;
+        this.edad = edad;
+    }
 
 
-
-	//Getters y Setters
+    //Getters y Setters
     public String getNombreUsuario() {
         return nombreUsuario;
     }
@@ -63,26 +60,25 @@ public class Usuario implements Serializable {
     }
 
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Usuario other = (Usuario) obj;
-		return Objects.equals(nombreUsuario, other.nombreUsuario);
-	}
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Usuario other = (Usuario) obj;
+        return Objects.equals(nombreUsuario, other.nombreUsuario);
+    }
 
 
-
-	@Override
+    @Override
     public String toString() {
         return
                 nombreUsuario +
-                "@@'" + contrasena +
-                "@@" + email +
-                "@@" + edad;
+                        "@@'" + contrasena +
+                        "@@" + email +
+                        "@@" + edad;
     }
 }
