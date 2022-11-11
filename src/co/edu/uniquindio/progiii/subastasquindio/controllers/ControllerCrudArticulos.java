@@ -40,6 +40,8 @@ public class ControllerCrudArticulos implements Initializable {
     private Label txtRutaArchivo;
     @FXML
     private Button btnEscogerImg;
+    @FXML
+    private Button btnEliminar;
 
     @FXML
     private void nuevo() throws IOException {
@@ -68,6 +70,7 @@ public class ControllerCrudArticulos implements Initializable {
             System.out.println("No está completo");
         }
 
+        this.initialize(urlGlobal, rbGlobal);
 
     }
 
@@ -86,10 +89,11 @@ public class ControllerCrudArticulos implements Initializable {
                 articulos.remove(i);
                 listViewArticulos.getItems().clear();
                 // actualiza la ventana
-                this.initialize(urlGlobal, rbGlobal);
             }
 
         }
+        this.initialize(urlGlobal, rbGlobal);
+
     }
 
     @FXML
@@ -129,6 +133,8 @@ public class ControllerCrudArticulos implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.urlGlobal = url;
         this.rbGlobal = resourceBundle;
+        btnEliminar.setDisable(true);
+        choiceTipo.getItems().clear();
         Vendedor vendedor = (Vendedor) control.subastasQuindio.getUsuarioLogeado();
         choiceTipo.getItems().add(TipoPublicacion.BIEN_RAIZ);
         choiceTipo.getItems().add(TipoPublicacion.DEPORTES);
@@ -136,6 +142,9 @@ public class ControllerCrudArticulos implements Initializable {
         choiceTipo.getItems().add(TipoPublicacion.TECNOLOGIA);
         choiceTipo.getItems().add(TipoPublicacion.VEHICULOS);
         listViewArticulos.getItems().addAll(vendedor.getArticulos());
+        if (listViewArticulos.getItems().size() >=1){
+            btnEliminar.setDisable(false);
+        }
     }
 
 }

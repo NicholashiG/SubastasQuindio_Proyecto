@@ -1,6 +1,7 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
 import co.edu.uniquindio.progiii.subastasquindio.application.Main;
+import co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyBidsException;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.WrongPasswordException;
@@ -173,16 +174,25 @@ public class SingletonController {
     }
 
     // CREA UNA PUJA Y LA GUARDA EN LA PUBLICACIÓN Y EN EL USUARIO
-    public boolean registrarPuja(int valorPuja) {
-        boolean realizado = false;
+    public int registrarPuja(int valorPuja) {
+        /* Valores de realizado: 0. Error
+                                 1. Correcto
+                                 2. Error usuario vendedor
+                                 3. Error muchas pujas
+
+        */
+        int realizado = 0;
         try {
             Comprador comprador = (Comprador) subastasQuindio.getUsuarioLogeado();
+            if (comprador.getPujas().size() > 3){
+                throw new TooManyBidsException("El usuario "+comprador.getNombreUsuario()+" tiene 3 pujas");
+            }
             Publicacion publicacionSeleccionada = subastasQuindio.getPublicacionSeleccionada();
             Puja puja = new Puja(publicacionSeleccionada, comprador, valorPuja);
             comprador.getPujas().add(puja);
             publicacionSeleccionada.getPujas().add(puja);
             guardarNuevaPujaLog(puja);
-            realizado = true;
+            realizado = 1;
             try {
                 this.guardarCasaSubastasXML(this.subastasQuindio);
             } catch (IOException e) {
@@ -190,10 +200,17 @@ public class SingletonController {
             }
         } catch (ClassCastException e) {
             try {
-                realizado = false;
+                realizado = 2;
                 throw new UsuarioException("El usuario es un vendedor, no un comprador");
             } catch (UsuarioException uE) {
             }
+        } catch (TooManyBidsException e) {
+            try {
+                realizado = 3;
+                throw new TooManyBidsException();
+            }catch(TooManyBidsException e1){
+            }
+
         }
         return realizado;
     }

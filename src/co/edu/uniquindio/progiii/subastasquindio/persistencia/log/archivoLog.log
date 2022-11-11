@@ -534,3 +534,145 @@ Nov 11, 2022 9:26:27 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.A
 INFO: 478@@2022-11-11@@9:26@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-11-11
 Nov 11, 2022 9:26:33 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: 512@@2022-11-11@@9:26@@Comprador123@@Articulo de prueba@@Vendedor123,Transaccion hecha,-11-11
+Nov 11, 2022 2:43:25 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-11
+Nov 11, 2022 2:44:40 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-11
+Nov 11, 2022 2:44:52 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario NickJurado tiene 3 pujas co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyBidsException: El usuario NickJurado tiene 3 pujas,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 2:45:42 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-11
+Nov 11, 2022 2:45:51 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 2:46:33 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-11
+Nov 11, 2022 2:46:38 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario NickJurado tiene 3 pujas co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyBidsException: El usuario NickJurado tiene 3 pujas,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 2:54:56 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1_vendedor@mail.com,Se ha registrado un nuevo usuario,-11-11
+Nov 11, 2022 2:55:05 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 2:55:34 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Seleccione un archivo válido co.edu.uniquindio.progiii.subastasquindio.exceptions.FileNotFoundException: Seleccione un archivo válido,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 2:55:46 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: Pub1,Se ha creado un nuevo artículo por VendedorPrueba1,-11-11
+Nov 11, 2022 2:56:07 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: Pub2,Se ha creado un nuevo artículo por VendedorPrueba1,-11-11
+Nov 11, 2022 2:56:24 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: Pub3,Se ha creado un nuevo artículo por VendedorPrueba1,-11-11
+Nov 11, 2022 2:56:54 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: Pub4,Se ha creado un nuevo artículo por VendedorPrueba1,-11-11
+Nov 11, 2022 2:58:23 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Pub1,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 2:58:29 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Pub2,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 2:58:33 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Pub3,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 2:58:37 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Pub4,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 2:58:57 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Pub4,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:00:53 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:01:06 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Pub4,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:02:06 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:02:34 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario VendedorPrueba1 tiene 3 pujas existentes co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyPostsException: El usuario VendedorPrueba1 tiene 3 pujas existentes,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 3:03:07 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:05:41 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Usuario ingresado no existe en la base de datos co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException: Usuario ingresado no existe en la base de datos,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 3:05:57 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Usuario ingresado no existe en la base de datos co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException: Usuario ingresado no existe en la base de datos,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 3:06:12 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1_vededor@mail.co,Se ha registrado un nuevo usuario,-11-11
+Nov 11, 2022 3:06:17 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:06:32 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: 1,Se ha creado un nuevo artículo por VendedorPrueba1,-11-11
+Nov 11, 2022 3:06:41 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: 2,Se ha creado un nuevo artículo por VendedorPrueba1,-11-11
+Nov 11, 2022 3:06:52 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: 3,Se ha creado un nuevo artículo por VendedorPrueba1,-11-11
+Nov 11, 2022 3:07:01 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: 4,Se ha creado un nuevo artículo por VendedorPrueba1,-11-11
+Nov 11, 2022 3:07:10 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: 1,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:07:12 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: 2,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:07:15 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: 3,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:07:19 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario VendedorPrueba1 tiene 3 pujas existentes co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyPostsException: El usuario VendedorPrueba1 tiene 3 pujas existentes,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 3:07:46 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario VendedorPrueba1 tiene 3 pujas existentes co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyPostsException: El usuario VendedorPrueba1 tiene 3 pujas existentes,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 3:07:51 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario VendedorPrueba1 tiene 3 pujas existentes co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyPostsException: El usuario VendedorPrueba1 tiene 3 pujas existentes,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 3:07:54 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: 4,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:09:18 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:10:53 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:12:06 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:12:22 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: 3,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:12:27 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario VendedorPrueba1 tiene 3 pujas existentes co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyPostsException: El usuario VendedorPrueba1 tiene 3 pujas existentes,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 3:13:55 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:14:10 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario VendedorPrueba1 tiene 3 pujas existentes co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyPostsException: El usuario VendedorPrueba1 tiene 3 pujas existentes,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 3:15:18 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:17:29 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:18:39 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:18:59 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: 2,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:19:03 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: 3,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:19:06 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario VendedorPrueba1 tiene 3 pujas existentes co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyPostsException: El usuario VendedorPrueba1 tiene 3 pujas existentes,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 3:20:13 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: 1,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:20:16 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: 2,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:20:18 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: 3,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:20:21 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario VendedorPrueba1 tiene 3 pujas existentes co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyPostsException: El usuario VendedorPrueba1 tiene 3 pujas existentes,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 3:20:31 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: 1,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:21:40 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:24:27 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:26:04 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:27:33 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:28:17 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:29:54 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:31:42 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Usuario ingresado no existe en la base de datos co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException: Usuario ingresado no existe en la base de datos,¡Ha ocurrido una excepción!: ,-11-11
+Nov 11, 2022 3:31:49 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:32:04 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: 1,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11
+Nov 11, 2022 3:33:41 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:35:12 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-11
+Nov 11, 2022 3:35:23 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: 1,Se ha creado un nuevo artículo por VendedorPrueba1,-11-11
+Nov 11, 2022 3:35:35 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo nuevo: 2,Se ha creado un nuevo artículo por VendedorPrueba1,-11-11
+Nov 11, 2022 3:36:03 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: 1,Se ha creado un nuevo anuncio por VendedorPrueba1,-11-11

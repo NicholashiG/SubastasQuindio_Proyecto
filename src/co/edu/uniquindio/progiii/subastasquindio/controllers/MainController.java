@@ -1,6 +1,7 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException;
+import co.edu.uniquindio.progiii.subastasquindio.model.Comprador;
 import co.edu.uniquindio.progiii.subastasquindio.model.Publicacion;
 import co.edu.uniquindio.progiii.subastasquindio.model.Vendedor;
 import javafx.event.ActionEvent;
@@ -163,12 +164,22 @@ public class MainController implements Initializable {
         // como el botón de iniciar sesión no está visible, hay un usuario logueado, por lo que
         // puede pujar
         else {
-            boolean pujaRealizada = control.registrarPuja(Integer.parseInt(txtValorPuja.getText()));
+            int pujaRealizada = control.registrarPuja(Integer.parseInt(txtValorPuja.getText()));
             // compara si la puja fue realizada con éxito o hubo un error y lo muestra en la pantalla
-            if (pujaRealizada) {
+            /* Valores de condiciones: 1. Correcto
+                                       2. Error usuario vendedor
+                                       3. Error muchas pujas
+            */
+            if (pujaRealizada == 1) {
                 lblValorPujaInfo.setText("La puja se realizó con éxito :D");
             } else {
-                lblValorPujaInfo.setText("No se ha podido realizar la puja :(, cambia a comprador");
+                if (pujaRealizada == 2) {
+                    lblValorPujaInfo.setText("No se ha podido realizar la puja :(, cambia a comprador");
+                } else {
+                    if (pujaRealizada == 3) {
+                        lblValorPujaInfo.setText("No se ha podido realizar la puja, tienes muchas pujas hechas");
+                    }
+                }
             }
         }
     }

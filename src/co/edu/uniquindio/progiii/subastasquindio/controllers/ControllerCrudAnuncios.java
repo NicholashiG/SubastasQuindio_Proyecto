@@ -1,5 +1,6 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
+import co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyPostsException;
 import co.edu.uniquindio.progiii.subastasquindio.model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -41,25 +42,52 @@ public class ControllerCrudAnuncios implements Initializable {
     @FXML
     private TextField txtValorInicial;
 
+    @FXML
+    private Label lblInfo;
+
+    @FXML
+    private Button btnEliminar;
 
     @FXML
     private void nuevo() {
-        // Se crea un nuevo anuncio, para ello ve que todos los campos necesitados no estén vacíos
-        // Las fechas se ponen en texto para así no tener problemas luego con la persistencia
-        if (choiceArticulo.getValue() != null && dateInicial.getAccessibleText() != "" && dateFinal.getAccessibleText() != "" && txtValorInicial.getText() != "" && choiceEstado.getValue() != null) {
-            Publicacion publicacion = new Publicacion(dateInicial.getValue().format(DateTimeFormatter.ISO_DATE), dateFinal.getValue().format(DateTimeFormatter.ISO_DATE), Integer.parseInt(txtValorInicial.getText()), null, choiceEstado.getValue(), choiceArticulo.getValue());
-            control.registrarPublicacion(publicacion);
-            // Añadimos la publicación al ListView
-            listViewAnuncios.getItems().add(publicacion);
-            SingletonController.guardarCambiosCrudLog("Se ha creado un nuevo anuncio por " + control.getUsuarioLogeado().getNombreUsuario(), "Artículo anunciado: " + choiceArticulo.getValue().getNombre());
+        if (listViewAnuncios.getItems().size() == 3){
             try {
                 // Guardamos la casa subastas para que todas las ventanas estén actualizadas
                 control.guardarCasaSubastasXML(control.subastasQuindio);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+            try {
+
+                lblInfo.setText("Tienes 3 publicaciones, borra una para crearla");
+                throw new TooManyPostsException("El usuario "+control.getUsuarioLogeado().getNombreUsuario()+" tiene 3 pujas existentes");
+            } catch (TooManyPostsException e) {
+            }
+        }
+        else{
+            lblInfo.setText("");
+            // Se crea un nuevo anuncio, para ello ve que todos los campos necesitados no estén vacíos
+            // Las fechas se ponen en texto para así no tener problemas luego con la persistencia
+            if (choiceArticulo.getValue() != null && dateInicial.getAccessibleText() != "" && dateFinal.getAccessibleText() != "" && txtValorInicial.getText() != "" && choiceEstado.getValue() != null) {
+                Publicacion publicacion = new Publicacion(dateInicial.getValue().format(DateTimeFormatter.ISO_DATE), dateFinal.getValue().format(DateTimeFormatter.ISO_DATE), Integer.parseInt(txtValorInicial.getText()), null, choiceEstado.getValue(), choiceArticulo.getValue());
+                control.registrarPublicacion(publicacion);
+                // Añadimos la publicación al ListView
+                listViewAnuncios.getItems().add(publicacion);
+                SingletonController.guardarCambiosCrudLog("Se ha creado un nuevo anuncio por " + control.getUsuarioLogeado().getNombreUsuario(), "Artículo anunciado: " + choiceArticulo.getValue().getNombre());
+                try {
+                    // Guardamos la casa subastas para que todas las ventanas estén actualizadas
+                    control.guardarCasaSubastasXML(control.subastasQuindio);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            else{
+                lblInfo.setText("Tienes que llenar todos los campos");
+            }
+
         }
 
+        this.initialize(urlGlobal, rbGlobal);
 
     }
 
@@ -70,6 +98,7 @@ public class ControllerCrudAnuncios implements Initializable {
 
     @FXML
     private void eliminar() {
+
         // Obtenemos el usuario logueado desde el singleton
         Vendedor vendedor = (Vendedor) control.getUsuarioLogeado();
         // Obtenemos las publicaciones tanto del vendedor, como las guardadas en la casa subastas
@@ -77,15 +106,16 @@ public class ControllerCrudAnuncios implements Initializable {
         ArrayList<Publicacion> publicaciones = vendedor.getPublicaciones();
         ArrayList<Publicacion> publicacionesGlobales = control.subastasQuindio.getListaPublicaciones();
         Publicacion publicacionSeleccionada = listViewAnuncios.getSelectionModel().getSelectedItem();
+
         for (int i = 0; i < publicaciones.size(); i++) {
             // Eliminamos la publicación seleccionada de la lista del vendedor
             if (publicaciones.get(i).getArticulo().getNombre().equals(publicacionSeleccionada.getArticulo().getNombre())) {
                 publicaciones.remove(i);
                 listViewAnuncios.getItems().clear();
+                choiceArticulo.getItems().clear();
                 // Al eliminar toca actualizar la ventana, por lo que se llama de nuevo al
                 // método initialize y se le mandan los parámetros que se obtienen desde el
                 // mismo initialize
-                this.initialize(urlGlobal, rbGlobal);
             }
 
         }
@@ -96,7 +126,7 @@ public class ControllerCrudAnuncios implements Initializable {
             }
 
         }
-
+        this.initialize(urlGlobal, rbGlobal);
     }
 
     @FXML
@@ -198,14 +228,21 @@ public class ControllerCrudAnuncios implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.urlGlobal = url;
         this.rbGlobal = resourceBundle;
+        btnEliminar.setDisable(true);
+        listViewAnuncios.getItems().clear();
+        choiceEstado.getItems().clear();
         Vendedor vendedor = (Vendedor) control.subastasQuindio.getUsuarioLogeado();
         control.subastasQuindio.setUsuarioLogeado(vendedor);
         choiceArticulo.getItems().addAll(vendedor.getArticulos());
+        System.out.println(vendedor.getArticulos());
         choiceEstado.getItems().add(Estado.ACTIVO);
         choiceEstado.getItems().add(Estado.VENDIDO);
         choiceEstado.getItems().add(Estado.INACTIVO);
         choiceEstado.getItems().add(Estado.EN_ESPERA_PUJA_GANADORA);
         listViewAnuncios.getItems().addAll(vendedor.getPublicaciones());
+        if (listViewAnuncios.getItems().size() >=1){
+            btnEliminar.setDisable(false);
+        }
 
     }
 

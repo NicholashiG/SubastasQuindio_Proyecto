@@ -8,3 +8,4 @@ Camilo@@'1234@@camilo@mail.com@@1234
 VendedorEjemplo@@'123@@123@gmail.com@@20
 VendedorTest@@'123@@vendedor@gmail.com@@20
 CompradorTest1@@'1234@@comprador@mail.com@@19
+VendedorPrueba1@@'1234@@vededor@mail.co@@43

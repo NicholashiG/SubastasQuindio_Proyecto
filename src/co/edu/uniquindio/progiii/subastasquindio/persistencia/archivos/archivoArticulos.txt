@@ -7,3 +7,13 @@ ArepaOK@@HOGAR@@Es una arepa artesanal@@/Users/nicolasjurado/Library/CloudStorag
 PruebaImg1@@TECNOLOGIA@@Es la primera prueba para conocer si la imagen funciona@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/LogoSubastasQuindio.png@@JoshSell@@
 PruebaImg2@@TECNOLOGIA@@Es la segunda prueba de la imagen@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/1.png@@JoshSell@@
 Juan@@DEPORTES@@1@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/1.png@@JoshSell@@
+Pub1@@HOGAR@@Es la primera publicación@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/1.png@@VendedorPrueba1@@
+Pub2@@HOGAR@@Es la publicación 2@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/LogoSubastasQuindio.png@@VendedorPrueba1@@
+Pub3@@DEPORTES@@Es la publicación 3@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/LogoSubastasQuindio.png@@VendedorPrueba1@@
+Pub4@@BIEN_RAIZ@@Es la publicación que generará error@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/1.png@@VendedorPrueba1@@
+1@@BIEN_RAIZ@@12@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/LogoSubastasQuindio.png@@VendedorPrueba1@@
+2@@BIEN_RAIZ@@12@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/LogoSubastasQuindio.png@@VendedorPrueba1@@
+3@@DEPORTES@@13@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/1.png@@VendedorPrueba1@@
+4@@BIEN_RAIZ@@e31e3@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/LogoSubastasQuindio.png@@VendedorPrueba1@@
+1@@BIEN_RAIZ@@23@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/LogoSubastasQuindio.png@@VendedorPrueba1@@
+2@@DEPORTES@@13@@/Users/nicolasjurado/Documents/GitHub/SubastasQuindio_Proyecto/src/co/edu/uniquindio/progiii/subastasquindio/view/images/1.png@@VendedorPrueba1@@
