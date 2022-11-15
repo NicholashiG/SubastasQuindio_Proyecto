@@ -694,3 +694,11 @@ Nov 15, 2022 6:04:39 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.A
 INFO: JoshSell,Ha ingresado un usuario,-11-15
 Nov 15, 2022 6:04:46 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: JoshSell,Ha cerrado sesión un usuario,-11-15
+Nov 15, 2022 6:08:39 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Contraseña incorrecta co.edu.uniquindio.progiii.subastasquindio.exceptions.WrongPasswordException: Contraseña incorrecta,¡Ha ocurrido una excepción!: ,-11-15
+Nov 15, 2022 6:08:43 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-15
+Nov 15, 2022 6:08:52 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha cerrado sesión un usuario,-11-15
+Nov 15, 2022 6:09:01 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: No está logueado co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException: No está logueado,¡Ha ocurrido una excepción!: ,-11-15

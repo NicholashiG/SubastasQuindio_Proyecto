@@ -202,6 +202,11 @@ public class MainController implements Initializable {
 
     @FXML
     void selectionListView(MouseEvent event) {
+        lblPuja1.setText("Puja 1: ");
+        lblPuja2.setText("Puja 2: ");
+        lblPuja3.setText("Puja 3: ");
+        lblPuja4.setText("Puja 4: ");
+        lblPuja5.setText("Puja 5: ");
         // Cada que haya una acción en el listView, se va a actualizar la publicación seleccionada
         Publicacion publicacion = listViewInicio.getSelectionModel().getSelectedItem();
         // se añade la publicación seleccionada en el singleton para hacer procesos desde otras ventanas

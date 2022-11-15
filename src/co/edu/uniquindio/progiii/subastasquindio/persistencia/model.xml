@@ -981,7 +981,7 @@
    <object idref="Publicacion0"/>
   </void>
   <void property="usuarioLogeado">
-   <object idref="Vendedor0"/>
+   <object idref="Comprador1"/>
   </void>
  </object>
 </java>
