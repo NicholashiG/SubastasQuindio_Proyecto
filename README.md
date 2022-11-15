@@ -1,8 +1,13 @@
 # To Do!
 
-- ~~Conectar la interfaz principal con el CRUD de usuarios (En la aplicación servidor)~~
+- Conectar la interfaz principal con el CRUD de usuarios (En la aplicación servidor)
+- Implementar el resto de acciones en los CRUDs
 - Añadir las excepciones faltantes
-- ~~Implementar el resto de acciones en los CRUDs~~
+- Añadir las fechas
+- Añadir la función de cerrar sesión en la pantalla principal
+- Mostrar solo los anuncios que estén actuvos
+- Crear las transacciones (se hacen al momento de escoger la puja ganadora)
+
 
 ----------------------
 
