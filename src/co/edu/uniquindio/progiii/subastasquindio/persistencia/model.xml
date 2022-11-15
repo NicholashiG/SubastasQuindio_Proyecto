@@ -978,10 +978,10 @@
    </void>
   </void>
   <void property="publicacionSeleccionada">
-   <object idref="Publicacion5"/>
+   <object idref="Publicacion0"/>
   </void>
   <void property="usuarioLogeado">
-   <object idref="Vendedor2"/>
+   <object idref="Vendedor0"/>
   </void>
  </object>
 </java>

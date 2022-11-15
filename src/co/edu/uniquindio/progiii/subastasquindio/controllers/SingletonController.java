@@ -228,6 +228,10 @@ public class SingletonController {
         Persistencia.guardaRegistroLog("Ha ingresado un usuario", 1, nombre);
     }
 
+    public void guardarSalidaUsuarioLog(String nombre) {
+        Persistencia.guardaRegistroLog("Ha cerrado sesión un usuario", 1, nombre);
+    }
+
     public static void guardarNuevaPujaLog(Puja puja) {
         Persistencia.guardaRegistroLog("Se ha hecho una nueva puja", 1, puja.toStringLog());
     }
@@ -315,7 +319,10 @@ public class SingletonController {
 
     public Usuario getUsuarioLogeado() {
         return subastasQuindio.getUsuarioLogeado();
+    }
 
+    public void setUsuarioLogeado(Usuario usuario) {
+        subastasQuindio.setUsuarioLogeado(usuario);
     }
 
     // SERIALIZACION XML Y TEXTO PLANO

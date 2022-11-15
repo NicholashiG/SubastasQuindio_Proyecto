@@ -1,5 +1,6 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
+import co.edu.uniquindio.progiii.subastasquindio.application.Main;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException;
 import co.edu.uniquindio.progiii.subastasquindio.model.Comprador;
 import co.edu.uniquindio.progiii.subastasquindio.model.Publicacion;
@@ -39,6 +40,9 @@ public class MainController implements Initializable {
 
     @FXML
     private Button btnPujar;
+
+    @FXML
+    private Button btnCerrarSesion;
 
     @FXML
     private Button btnRegistrarse;
@@ -93,15 +97,26 @@ public class MainController implements Initializable {
     @FXML
     private TextField txtValorPuja;
 
+    private URL url;
+    private ResourceBundle rb;
+
     @Override
 
     // ESTA FUNCION SE EJECUTA AL INCIO DE LA APLICACION
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.url = url;
+        this.rb = resourceBundle;
+        listViewInicio.getItems().clear();
+        btnIniciarSesion.setVisible(true);
+        btnRegistrarse.setVisible(true);
+        hyperlinkRegistroVendedor.setVisible(true);
+        bienvenida.setText("");
         System.out.println("Se inicia la aplicación");
         System.out.println("Se cargan los anuncios");
         btnVerAnuncios.setVisible(false);
         anchorPaneArticuloSelec.setVisible(false);
+        btnCerrarSesion.setVisible(false);
 
 
         Usuario usuarioLogeado = control.getUsuarioLogeado();
@@ -111,6 +126,7 @@ public class MainController implements Initializable {
             // de registro y demas.
             btnIniciarSesion.setVisible(false);
             btnRegistrarse.setVisible(false);
+            btnCerrarSesion.setVisible(true);
             hyperlinkRegistroVendedor.setVisible(false);
             bienvenida.setText("Bienvenido, " + usuarioLogeado.getNombreUsuario() + "!");
             if (usuarioLogeado.getClass() == Vendedor.class) {
@@ -143,7 +159,7 @@ public class MainController implements Initializable {
         }
 
         listViewInicio.getItems().addAll(control.subastasQuindio.getListaPublicaciones());
-        System.out.println(control.subastasQuindio.getListaPublicaciones());
+        //System.out.println(control.subastasQuindio.getListaPublicaciones());
 
 
     }
@@ -272,6 +288,14 @@ public class MainController implements Initializable {
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
         control.openCrudAnuncios();
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
+
+    }
+
+    @FXML
+    private void cerrarSesion(){
+        control.guardarSalidaUsuarioLog(control.getUsuarioLogeado().getNombreUsuario());
+        control.setUsuarioLogeado(null);
+        this.initialize(url, rb);
 
     }
 

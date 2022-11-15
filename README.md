@@ -4,9 +4,9 @@
 - Implementar el resto de acciones en los CRUDs
 - Añadir las excepciones faltantes
 - Añadir las fechas
-- Añadir la función de cerrar sesión en la pantalla principal
 - Mostrar solo los anuncios que estén actuvos
 - Crear las transacciones (se hacen al momento de escoger la puja ganadora)
+- Guardar transacciones y anuncios como .csv e importarlas en caso de querer hacerlo (se debe escoger la ruta)
 
 
 ----------------------
