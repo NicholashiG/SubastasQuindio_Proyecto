@@ -702,3 +702,31 @@ Nov 15, 2022 6:08:52 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.A
 INFO: NickJurado,Ha cerrado sesión un usuario,-11-15
 Nov 15, 2022 6:09:01 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 WARNING: No está logueado co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException: No está logueado,¡Ha ocurrido una excepción!: ,-11-15
+Nov 15, 2022 6:40:13 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-15
+Nov 15, 2022 6:40:28 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Se ha vendido Arepa de JoshSell al comprador CompradorTest1, Felicitaciones!,Se ha generado una nueva transacción,-11-15
+Nov 15, 2022 6:40:44 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Se ha vendido PruebaImg1 de JoshSell al comprador NickJurado, Felicitaciones!,Se ha generado una nueva transacción,-11-15
+Nov 15, 2022 6:40:56 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha cerrado sesión un usuario,-11-15
+Nov 15, 2022 6:42:30 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-15
+Nov 15, 2022 6:42:37 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Se ha vendido Arepa de JoshSell al comprador CompradorTest1, Felicitaciones!,Se ha generado una nueva transacción,-11-15
+Nov 15, 2022 6:42:41 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Se ha vendido PruebaImg1 de JoshSell al comprador NickJurado, Felicitaciones!,Se ha generado una nueva transacción,-11-15
+Nov 15, 2022 6:45:39 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-15
+Nov 15, 2022 6:45:48 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: No se ha podido encontrar el artículo porque está vendido co.edu.uniquindio.progiii.subastasquindio.exceptions.PostNotFoundException: No se ha podido encontrar el artículo porque está vendido,¡Ha ocurrido una excepción!: ,-11-15
+Nov 15, 2022 6:47:35 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-15
+Nov 15, 2022 6:47:43 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: No se ha podido encontrar el artículo porque está vendido co.edu.uniquindio.progiii.subastasquindio.exceptions.PostNotFoundException: No se ha podido encontrar el artículo porque está vendido,¡Ha ocurrido una excepción!: ,-11-15
+Nov 15, 2022 6:53:33 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-15
+Nov 15, 2022 6:53:39 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: No se ha podido seleccionar la puja porque el artículo está vendido co.edu.uniquindio.progiii.subastasquindio.exceptions.CannotSelectPujaGanadora: No se ha podido seleccionar la puja porque el artículo está vendido,¡Ha ocurrido una excepción!: ,-11-15
+Nov 15, 2022 6:53:47 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha cerrado sesión un usuario,-11-15

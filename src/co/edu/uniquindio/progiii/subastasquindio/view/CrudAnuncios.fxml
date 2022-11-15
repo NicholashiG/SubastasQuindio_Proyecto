@@ -134,6 +134,6 @@
       </FlowPane>
       <Button fx:id="btnVerPujas" layoutX="472.0" layoutY="457.0" mnemonicParsing="false" onAction="#verPujas" text="Ver Pujas" />
       <Button fx:id="btnNuevoArticulo" layoutX="670.0" layoutY="109.0" mnemonicParsing="false" onAction="#nuevoArticulo" text="Nuevo Artículo" />
-      <Label fx:id="lblInfo" layoutX="457.0" layoutY="417.0" prefHeight="17.0" prefWidth="383.0" />
+      <Label fx:id="lblInfo" layoutX="457.0" layoutY="407.0" prefHeight="37.0" prefWidth="383.0" text="Recuerda dar click en el botón de guardar cambios para la puja ganadora" textAlignment="CENTER" wrapText="true" />
    </children>
 </AnchorPane>

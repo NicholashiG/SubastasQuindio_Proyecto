@@ -2,9 +2,7 @@ package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
 import co.edu.uniquindio.progiii.subastasquindio.application.Main;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException;
-import co.edu.uniquindio.progiii.subastasquindio.model.Comprador;
-import co.edu.uniquindio.progiii.subastasquindio.model.Publicacion;
-import co.edu.uniquindio.progiii.subastasquindio.model.Vendedor;
+import co.edu.uniquindio.progiii.subastasquindio.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -20,9 +18,8 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
-
-import co.edu.uniquindio.progiii.subastasquindio.model.Usuario;
 
 public class MainController implements Initializable {
 
@@ -158,7 +155,12 @@ public class MainController implements Initializable {
             throw new RuntimeException(e);
         }
 
-        listViewInicio.getItems().addAll(control.subastasQuindio.getListaPublicaciones());
+        // Se agregan solamente las publicaciones que estén activas
+        for (Publicacion publicacion: control.subastasQuindio.getListaPublicaciones()){
+            if (publicacion.getEstado() == Estado.ACTIVO){
+                listViewInicio.getItems().add(publicacion);
+            }
+        }
         //System.out.println(control.subastasQuindio.getListaPublicaciones());
 
 

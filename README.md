@@ -4,8 +4,6 @@
 - Implementar el resto de acciones en los CRUDs
 - Añadir las excepciones faltantes
 - Añadir las fechas
-- Mostrar solo los anuncios que estén actuvos
-- Crear las transacciones (se hacen al momento de escoger la puja ganadora)
 - Guardar transacciones y anuncios como .csv e importarlas en caso de querer hacerlo (se debe escoger la ruta)
 
 
@@ -13,7 +11,6 @@
 
 ## To Do! (Por el documento del proyecto)
 
-- Comprar producto
 - Se debe permitir exportar la información de los anuncios creados y compras realizadas. En la exportación se hace por medio de archivos de .csv y se debe poder elegir la ruta donde se generará el archivo
 - Implementación de Hilos y Sockets
 - El sistema debe tener implementado hilos para el manejo de persistencia, es decir cuando se guarde y cargue la información en archivo serializado

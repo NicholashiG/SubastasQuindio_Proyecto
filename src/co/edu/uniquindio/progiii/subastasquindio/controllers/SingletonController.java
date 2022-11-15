@@ -184,8 +184,8 @@ public class SingletonController {
         int realizado = 0;
         try {
             Comprador comprador = (Comprador) subastasQuindio.getUsuarioLogeado();
-            if (comprador.getPujas().size() > 3){
-                throw new TooManyBidsException("El usuario "+comprador.getNombreUsuario()+" tiene 3 pujas");
+            if (comprador.getPujas().size() > 3) {
+                throw new TooManyBidsException("El usuario " + comprador.getNombreUsuario() + " tiene 3 pujas");
             }
             Publicacion publicacionSeleccionada = subastasQuindio.getPublicacionSeleccionada();
             Puja puja = new Puja(publicacionSeleccionada, comprador, valorPuja);
@@ -208,11 +208,23 @@ public class SingletonController {
             try {
                 realizado = 3;
                 throw new TooManyBidsException();
-            }catch(TooManyBidsException e1){
+            } catch (TooManyBidsException e1) {
             }
 
         }
         return realizado;
+    }
+
+    public void registrarTransaccion(Publicacion publicacionSeleccionada, Puja puja) {
+        new Transaccion(puja.getComprador(), publicacionSeleccionada.getArticulo().getVendedor(), publicacionSeleccionada);
+        guardarTransaccionLog(publicacionSeleccionada.getArticulo().getVendedor().getNombreUsuario(), puja.getComprador().getNombreUsuario(), publicacionSeleccionada.getArticulo().getNombre());
+        try {
+            this.guardarCasaSubastasXML(this.subastasQuindio);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
     // LOGS
 
@@ -222,6 +234,10 @@ public class SingletonController {
 
     public static void guardarCambiosCrudLog(String mensaje, String nombreObjeto) {
         Persistencia.guardaRegistroLog(mensaje, 1, nombreObjeto);
+    }
+
+    public static void guardarTransaccionLog(String vendedor, String comprador, String objeto) {
+        Persistencia.guardaRegistroLog("Se ha generado una nueva transacción", 1, "Se ha vendido " + objeto + " de " + vendedor + " al comprador " + comprador + ", Felicitaciones!");
     }
 
     public static void guardarInicioSesionUsuarioLog(String nombre) {

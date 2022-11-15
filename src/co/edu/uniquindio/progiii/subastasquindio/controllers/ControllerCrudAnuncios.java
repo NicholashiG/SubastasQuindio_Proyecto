@@ -1,5 +1,7 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
+import co.edu.uniquindio.progiii.subastasquindio.exceptions.CannotSelectPujaGanadora;
+import co.edu.uniquindio.progiii.subastasquindio.exceptions.PostNotFoundException;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyPostsException;
 import co.edu.uniquindio.progiii.subastasquindio.model.*;
 import javafx.fxml.FXML;
@@ -131,7 +133,12 @@ public class ControllerCrudAnuncios implements Initializable {
 
     @FXML
     private void guardarCambios() {
-
+        // Método que guarda la puja ganadora
+        Puja pujaGanadora = choicePujaGanadora.getValue();
+        if (pujaGanadora != null) {
+            setPujaGanadora(pujaGanadora);
+            this.initialize(urlGlobal, rbGlobal);
+        }
     }
 
     @FXML
@@ -166,31 +173,40 @@ public class ControllerCrudAnuncios implements Initializable {
 
     @FXML
     void addPujaGanadora(MouseEvent event) {
-        // Método que cada que haya un click dentro del ChoiceBox de puja,
-        // es decir, cada que se seleccione una puja ganadora, haga un set de la puja
-        // en la publicación seleccionada
-        Puja pujaGanadora = choicePujaGanadora.getValue();
-        if (pujaGanadora != null) {
-            setPujaGanadora(pujaGanadora);
-        }
+
     }
 
     private void setPujaGanadora(Puja puja) {
         // Método que setea la puja en la publicación seleccionada y cambia el estado de tal
         // puja a en espera
         Publicacion publicacionSeleccionada = listViewAnuncios.getSelectionModel().getSelectedItem();
-        ArrayList<Publicacion> publicaciones = control.subastasQuindio.getListaPublicaciones();
-        if (publicacionSeleccionada != null) {
-            for (Publicacion publicacion : publicaciones) {
-                if (publicacion.equals(publicacionSeleccionada)) {
-                    publicacion.setPujaGanadora(puja);
-                    publicacion.setEstado(Estado.EN_ESPERA_PUJA_GANADORA);
-                    publicacionSeleccionada.setPujaGanadora(puja);
-                    publicacionSeleccionada.setEstado(Estado.EN_ESPERA_PUJA_GANADORA);
+        if (publicacionSeleccionada.getPujaGanadora()==null){
+            ArrayList<Publicacion> publicaciones = control.subastasQuindio.getListaPublicaciones();
+            if (publicacionSeleccionada != null) {
+                for (Publicacion publicacion : publicaciones) {
+                    if (publicacion.equals(publicacionSeleccionada)) {
+                        publicacion.setPujaGanadora(puja);
+                        publicacion.setEstado(Estado.VENDIDO);
+                        publicacionSeleccionada.setPujaGanadora(puja);
+                        publicacionSeleccionada.setEstado(Estado.VENDIDO);
+                        crearTransaccion(publicacionSeleccionada, puja);
+                    }
                 }
-            }
 
+            }
         }
+        else{
+            lblInfo.setText("Este artículo ya está vendido");
+            try {
+                throw new CannotSelectPujaGanadora("No se ha podido seleccionar la puja porque el artículo está vendido");
+            } catch (CannotSelectPujaGanadora e) {
+            }
+        }
+
+    }
+
+    private void crearTransaccion(Publicacion publicacionSeleccionada, Puja puja) {
+        control.registrarTransaccion(publicacionSeleccionada, puja);
     }
 
     // TRANSACCION DE PRUEBA !!
