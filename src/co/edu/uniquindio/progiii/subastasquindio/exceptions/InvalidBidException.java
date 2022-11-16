@@ -8,8 +8,6 @@ import co.edu.uniquindio.progiii.subastasquindio.controllers.SingletonController
 
 public class InvalidBidException extends Exception{
 
-	SingletonController control = SingletonController.getInstance();
-	
 	public InvalidBidException() {
 		super();
 	}

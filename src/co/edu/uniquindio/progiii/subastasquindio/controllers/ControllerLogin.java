@@ -34,7 +34,7 @@ public class ControllerLogin implements Initializable {
 
     public void login() throws IOException {
         if (usuario.getText() != "" && contra.getText() != "") {
-            // ESTOY ENVIANDO EL STAGE AL SINGLETON PARA QUE MANEJE TODO
+            // Envio la informacion al singleton para que lo controle todo desde ahi.
             control.setLoginStage((Stage) usuario.getScene().getWindow());
             feedback.setText(control.login(usuario.getText(), contra.getText()));
             control.setLoginStage((Stage) usuario.getScene().getWindow());

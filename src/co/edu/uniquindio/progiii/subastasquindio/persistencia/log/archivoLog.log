@@ -730,3 +730,15 @@ Nov 15, 2022 6:53:39 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.A
 WARNING: No se ha podido seleccionar la puja porque el artículo está vendido co.edu.uniquindio.progiii.subastasquindio.exceptions.CannotSelectPujaGanadora: No se ha podido seleccionar la puja porque el artículo está vendido,¡Ha ocurrido una excepción!: ,-11-15
 Nov 15, 2022 6:53:47 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: JoshSell,Ha cerrado sesión un usuario,-11-15
+Nov 16, 2022 12:04:11 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: Usuario ingresado no existe en la base de datos co.edu.uniquindio.progiii.subastasquindio.exceptions.UserNotFoundException: Usuario ingresado no existe en la base de datos,¡Ha ocurrido una excepción!: ,-11-16
+Nov 16, 2022 12:04:18 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: CompradorTest1,Ha ingresado un usuario,-11-16
+Nov 16, 2022 12:04:44 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario CompradorTest1 tiene 3 pujas co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyBidsException: El usuario CompradorTest1 tiene 3 pujas,¡Ha ocurrido una excepción!: ,-11-16
+Nov 16, 2022 12:08:19 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: CompradorTest1,Ha cerrado sesión un usuario,-11-16
+Nov 16, 2022 12:08:41 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-16
+Nov 16, 2022 12:08:47 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: Camilo a el artículo Arroz por 1,Se ha hecho una nueva puja,-11-16

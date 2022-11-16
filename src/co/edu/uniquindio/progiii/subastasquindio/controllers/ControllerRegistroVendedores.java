@@ -33,9 +33,8 @@ public class ControllerRegistroVendedores implements Initializable {
         if (usuario.getText() != "" && contra.getText() != "" && email.getText() != "" && edad.getText() != "" && id.getText() != "") {
 
             if (email.getText().contains("@") && isNumeric(edad.getText()) && isNumeric(id.getText())) {
-                // ESTOY ENVIANDO EL STAGE AL SINGLETON PARA QUE MANEJE TODO
-                // VOY A USAR EL MISMO LOGIN STAGE PORQUE SOLO SE PUEDE ABRIR
-                // UNO A LA VEZ Y ADEMAS ME DA PEREZA HACER OTRO
+                // Se envia el Stage al Singleton para que lo controle todo.
+                // Se puede reutilizae el mismo Stage de Login y Registro, porque solo se usa uno a la vez
                 control.setLoginStage((Stage) usuario.getScene().getWindow());
                 control.registrarVendedor(usuario.getText(), contra.getText(), email.getText(), Integer.parseInt(edad.getText()), id.getText());
                 try {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="18.0.1.1" class="java.beans.XMLDecoder">
+<java version="17.0.3" class="java.beans.XMLDecoder">
  <object class="co.edu.uniquindio.progiii.subastasquindio.model.CasaSubastas" id="CasaSubastas0">
   <void property="listaPublicaciones">
    <void method="add">
-    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion">
+    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion0">
      <void property="articulo">
       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo0">
        <void property="descripcion">
@@ -198,7 +198,7 @@
            </object>
           </void>
           <void method="add">
-           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion0">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion1">
             <void property="articulo">
              <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo">
               <void property="descripcion">
@@ -247,7 +247,7 @@
                     <int>1</int>
                    </void>
                    <void property="publicacion">
-                    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion1">
+                    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion2">
                      <void property="articulo">
                       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo">
                        <void property="descripcion">
@@ -286,7 +286,7 @@
                          <int>13</int>
                         </void>
                         <void property="publicacion">
-                         <object idref="Publicacion1"/>
+                         <object idref="Publicacion2"/>
                         </void>
                        </object>
                       </void>
@@ -310,7 +310,7 @@
                     <int>1</int>
                    </void>
                    <void property="publicacion">
-                    <object idref="Publicacion0"/>
+                    <object idref="Publicacion1"/>
                    </void>
                   </object>
                  </void>
@@ -323,7 +323,7 @@
                     <int>145</int>
                    </void>
                    <void property="publicacion">
-                    <object idref="Publicacion0"/>
+                    <object idref="Publicacion1"/>
                    </void>
                   </object>
                  </void>
@@ -337,7 +337,7 @@
                <int>1451</int>
               </void>
               <void property="publicacion">
-               <object idref="Publicacion0"/>
+               <object idref="Publicacion1"/>
               </void>
              </object>
             </void>
@@ -358,7 +358,7 @@
            </object>
           </void>
           <void method="add">
-           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion2">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion3">
             <void property="articulo">
              <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo">
               <void property="descripcion">
@@ -407,7 +407,7 @@
                     <int>1</int>
                    </void>
                    <void property="publicacion">
-                    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion3">
+                    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion4">
                      <void property="articulo">
                       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo4">
                        <void property="descripcion">
@@ -443,7 +443,7 @@
                          </void>
                          <void property="publicaciones">
                           <void method="add">
-                           <object idref="Publicacion3"/>
+                           <object idref="Publicacion4"/>
                           </void>
                          </void>
                         </object>
@@ -466,7 +466,7 @@
                          <int>2</int>
                         </void>
                         <void property="publicacion">
-                         <object idref="Publicacion3"/>
+                         <object idref="Publicacion4"/>
                         </void>
                        </object>
                       </void>
@@ -479,7 +479,7 @@
                          <int>3</int>
                         </void>
                         <void property="publicacion">
-                         <object idref="Publicacion3"/>
+                         <object idref="Publicacion4"/>
                         </void>
                        </object>
                       </void>
@@ -506,7 +506,7 @@
                     <int>1</int>
                    </void>
                    <void property="publicacion">
-                    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion4">
+                    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion5">
                      <void property="articulo">
                       <object idref="Articulo1"/>
                      </void>
@@ -525,7 +525,7 @@
                         <int>1</int>
                        </void>
                        <void property="publicacion">
-                        <object idref="Publicacion4"/>
+                        <object idref="Publicacion5"/>
                        </void>
                       </object>
                      </void>
@@ -542,7 +542,7 @@
                          <int>2</int>
                         </void>
                         <void property="publicacion">
-                         <object idref="Publicacion4"/>
+                         <object idref="Publicacion5"/>
                         </void>
                        </object>
                       </void>
@@ -558,7 +558,7 @@
                          <int>2</int>
                         </void>
                         <void property="publicacion">
-                         <object idref="Publicacion4"/>
+                         <object idref="Publicacion5"/>
                         </void>
                        </object>
                       </void>
@@ -571,7 +571,7 @@
                          <int>3</int>
                         </void>
                         <void property="publicacion">
-                         <object idref="Publicacion4"/>
+                         <object idref="Publicacion5"/>
                         </void>
                        </object>
                       </void>
@@ -584,7 +584,7 @@
                          <int>3</int>
                         </void>
                         <void property="publicacion">
-                         <object idref="Publicacion4"/>
+                         <object idref="Publicacion5"/>
                         </void>
                        </object>
                       </void>
@@ -597,7 +597,7 @@
                          <int>4</int>
                         </void>
                         <void property="publicacion">
-                         <object idref="Publicacion4"/>
+                         <object idref="Publicacion5"/>
                         </void>
                        </object>
                       </void>
@@ -637,7 +637,7 @@
                <int>1</int>
               </void>
               <void property="publicacion">
-               <object idref="Publicacion2"/>
+               <object idref="Publicacion3"/>
               </void>
              </object>
             </void>
@@ -652,7 +652,7 @@
            </object>
           </void>
           <void method="add">
-           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion5">
+           <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion6">
             <void property="articulo">
              <object idref="Articulo2"/>
             </void>
@@ -678,25 +678,58 @@
      <void property="estado">
       <object idref="Estado1"/>
      </void>
+     <void property="pujas">
+      <void method="add">
+       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Puja" id="Puja16">
+        <void property="comprador">
+         <object class="co.edu.uniquindio.progiii.subastasquindio.model.Comprador" id="Comprador2">
+          <void property="contrasena">
+           <string>1234</string>
+          </void>
+          <void property="edad">
+           <int>1234</int>
+          </void>
+          <void property="email">
+           <string>camilo@mail.com</string>
+          </void>
+          <void property="nombreUsuario">
+           <string>Camilo</string>
+          </void>
+          <void property="pujas">
+           <void method="add">
+            <object idref="Puja16"/>
+           </void>
+          </void>
+         </object>
+        </void>
+        <void property="dineroOfrecido">
+         <int>1</int>
+        </void>
+        <void property="publicacion">
+         <object idref="Publicacion0"/>
+        </void>
+       </object>
+      </void>
+     </void>
      <void property="valorInicial">
       <int>1</int>
      </void>
     </object>
    </void>
    <void method="add">
+    <object idref="Publicacion4"/>
+   </void>
+   <void method="add">
+    <object idref="Publicacion1"/>
+   </void>
+   <void method="add">
     <object idref="Publicacion3"/>
    </void>
    <void method="add">
-    <object idref="Publicacion0"/>
+    <object idref="Publicacion6"/>
    </void>
    <void method="add">
-    <object idref="Publicacion2"/>
-   </void>
-   <void method="add">
-    <object idref="Publicacion5"/>
-   </void>
-   <void method="add">
-    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion6">
+    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Publicacion" id="Publicacion7">
      <void property="articulo">
       <object class="co.edu.uniquindio.progiii.subastasquindio.model.Articulo" id="Articulo5">
        <void property="descripcion">
@@ -735,7 +768,7 @@
          </void>
          <void property="publicaciones">
           <void method="add">
-           <object idref="Publicacion6"/>
+           <object idref="Publicacion7"/>
           </void>
          </void>
         </object>
@@ -887,20 +920,7 @@
     <object idref="Comprador1"/>
    </void>
    <void method="add">
-    <object class="co.edu.uniquindio.progiii.subastasquindio.model.Comprador">
-     <void property="contrasena">
-      <string>1234</string>
-     </void>
-     <void property="edad">
-      <int>1234</int>
-     </void>
-     <void property="email">
-      <string>camilo@mail.com</string>
-     </void>
-     <void property="nombreUsuario">
-      <string>Camilo</string>
-     </void>
-    </object>
+    <object idref="Comprador2"/>
    </void>
    <void method="add">
     <object class="co.edu.uniquindio.progiii.subastasquindio.model.Vendedor" id="Vendedor4">
@@ -987,7 +1007,7 @@
    <object idref="Publicacion0"/>
   </void>
   <void property="usuarioLogeado">
-   <object idref="Vendedor0"/>
+   <object idref="Comprador2"/>
   </void>
  </object>
 </java>
