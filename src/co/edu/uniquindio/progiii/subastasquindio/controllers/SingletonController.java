@@ -28,6 +28,8 @@ public class SingletonController {
     Stage articuloStage;
     Stage anunciosStage;
 
+    Stage pujasStage;
+
 
     // instancia única del controlador
     private static SingletonController instancia = null;
@@ -119,6 +121,16 @@ public class SingletonController {
         Main.openCrudAnuncios();
     }
 
+    public void atrasPujas() throws IOException {
+        // se guarda el modelo al salir
+        guardarCasaSubastasXML(subastasQuindio);
+        guardarCasaSubastasBinario(subastasQuindio);
+        cargarCasaSubastasAnunciosXML();
+        // Recarga las ventanas
+        Main.closeWindow(pujasStage);
+        Main.refreshMain(mainStage);
+    }
+
     // REGISTRA UN COMPRADOR
     public void registrarUsuario(String nombre, String contra, String email, int edad) throws IOException {
 
@@ -195,6 +207,7 @@ public class SingletonController {
             realizado = 1;
             try {
                 this.guardarCasaSubastasXML(this.subastasQuindio);
+                this.cargarCasaSubastasAnunciosXML();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -272,6 +285,9 @@ public class SingletonController {
     // abre la ventana de crudArticulos
     public void openCrudArticulos() {
         Main.openCrudArticulos();
+    }// abre la ventana de crudArticulos
+    public void openCrudPujas() {
+        Main.openCrudPujas();
     }
 
     // abre la ventana de registro de compradores
@@ -323,6 +339,14 @@ public class SingletonController {
 
     public void setArticuloStage(Stage articuloStage) {
         this.articuloStage = articuloStage;
+    }
+
+    public Stage getPujasStage() {
+        return pujasStage;
+    }
+
+    public void setPujasStage(Stage pujasStage) {
+        this.pujasStage = pujasStage;
     }
 
     public Stage getAnunciosStage() {

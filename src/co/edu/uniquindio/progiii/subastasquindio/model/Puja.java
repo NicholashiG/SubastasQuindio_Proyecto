@@ -20,6 +20,8 @@ public class Puja implements Serializable {
     private Comprador comprador;
     private int dineroOfrecido;
 
+    private boolean isGanadora;
+
     //Getters y Setters
     public Publicacion getPublicacion() {
         return publicacion;
@@ -43,6 +45,14 @@ public class Puja implements Serializable {
 
     public void setDineroOfrecido(int dineroOfrecido) {
         this.dineroOfrecido = dineroOfrecido;
+    }
+
+    public boolean isGanadora() {
+        return isGanadora;
+    }
+
+    public void setGanadora(boolean ganadora) {
+        isGanadora = ganadora;
     }
 
     public String toStringLog() {

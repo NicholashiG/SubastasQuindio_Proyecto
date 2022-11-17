@@ -94,6 +94,18 @@ public class Main extends Application {
         }
     }
 
+    // ABRE LA VENTANA DE CRUD PUJAS
+    public static void openCrudPujas() {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/progiii/subastasquindio/view/CrudPujas.fxml"));
+        try {
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     // Refresca la ventana de  main (Metodo temporal)
     public static void refreshMain(Stage mainStage) {

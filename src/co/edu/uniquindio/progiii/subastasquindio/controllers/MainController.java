@@ -51,6 +51,9 @@ public class MainController implements Initializable {
     private Button btnVerOfertas;
 
     @FXML
+    private Button btnVerPujas;
+
+    @FXML
     private Hyperlink hyperlinkRegistroVendedor;
 
     @FXML
@@ -106,6 +109,7 @@ public class MainController implements Initializable {
         this.rb = resourceBundle;
         listViewInicio.getItems().clear();
         btnIniciarSesion.setVisible(true);
+        btnVerPujas.setVisible(false);
         btnRegistrarse.setVisible(true);
         hyperlinkRegistroVendedor.setVisible(true);
         bienvenida.setText("");
@@ -129,6 +133,10 @@ public class MainController implements Initializable {
             if (usuarioLogeado.getClass() == Vendedor.class) {
                 // si es vendedor agrega opciones propias del vendedor
                 btnVerAnuncios.setVisible(true);
+            }
+            if (usuarioLogeado.getClass() == Comprador.class) {
+                // si es vendedor agrega opciones propias del vendedor
+                btnVerPujas.setVisible(true);
             }
         }
 
@@ -296,6 +304,14 @@ public class MainController implements Initializable {
         control.openCrudAnuncios();
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
 
+    }
+
+    public void verPujas() {
+        System.out.println("Aaaaaa");
+        // ENVIO EL STAGE AL SINGLETON
+        control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
+        control.openCrudPujas();
+        control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
     }
 
     @FXML

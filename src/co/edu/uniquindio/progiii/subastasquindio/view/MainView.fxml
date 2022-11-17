@@ -135,5 +135,6 @@
             <Font size="24.0" />
          </font>
       </Label>
+      <Button fx:id="btnVerPujas" layoutX="952.0" layoutY="652.0" mnemonicParsing="false" onAction="#verPujas" prefHeight="25.0" prefWidth="100.0" text="Ver mis pujas" visible="false" />
    </children>
 </AnchorPane>

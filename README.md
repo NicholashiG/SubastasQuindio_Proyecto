@@ -1,7 +1,6 @@
 # To Do!
 
 - Conectar la interfaz principal con el CRUD de usuarios (En la aplicación servidor)
-- Implementar el resto de acciones en los CRUDs
 - Añadir las excepciones faltantes
 - Añadir las fechas
 - Guardar transacciones y anuncios como .csv e importarlas en caso de querer hacerlo (se debe escoger la ruta)
