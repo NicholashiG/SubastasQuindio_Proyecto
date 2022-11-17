@@ -1,6 +1,8 @@
+# Repositorio aplicación servidor
+[Servidor Subastas Quindío](https://github.com/AlphaS-C/SuibastasQuindio_Server "Servidor Subastas Quindío")
+
 # To Do!
 
-- Conectar la interfaz principal con el CRUD de usuarios (En la aplicación servidor)
 - Añadir las excepciones faltantes
 - Añadir las fechas
 - Guardar transacciones y anuncios como .csv e importarlas en caso de querer hacerlo (se debe escoger la ruta)
