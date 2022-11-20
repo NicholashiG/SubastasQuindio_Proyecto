@@ -940,3 +940,87 @@ Nov 20, 2022 3:16:12 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.A
 INFO: JoshSell,Ha ingresado un usuario,-11-20
 Nov 20, 2022 3:17:03 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: JoshSell,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:21:14 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:36:40 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:37:12 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:37:24 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:37:34 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Chayomi por 2200000,Se ha hecho una nueva puja,-11-20
+Nov 20, 2022 3:37:36 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:37:52 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:38:01 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Se ha vendido Chayomi de JoshSell al comprador NickJurado, Felicitaciones!,Se ha generado una nueva transacción,-11-20
+Nov 20, 2022 3:38:06 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:38:15 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:39:59 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:41:57 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:42:05 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo 1 por 20000,Se ha hecho una nueva puja,-11-20
+Nov 20, 2022 3:42:06 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:42:18 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:42:26 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Se ha vendido 1 de VendedorPrueba1 al comprador NickJurado, Felicitaciones!,Se ha generado una nueva transacción,-11-20
+Nov 20, 2022 3:42:32 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: VendedorPrueba1,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:42:40 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:43:57 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:44:11 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:44:18 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:44:27 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Se ha vendido Arroz Negro de JuanVende al comprador NickJurado, Felicitaciones!,Se ha generado una nueva transacción,-11-20
+Nov 20, 2022 3:44:33 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:44:39 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:45:02 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:45:10 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:45:18 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:45:26 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:45:39 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JuanVende,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:45:51 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:46:05 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Artículo anunciado: Casa Grande,Se ha creado un nuevo anuncio por JoshSell,-11-20
+Nov 20, 2022 3:46:11 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:46:17 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:46:23 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario NickJurado tiene 3 pujas co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyBidsException: El usuario NickJurado tiene 3 pujas,¡Ha ocurrido una excepción!: ,-11-20
+Nov 20, 2022 3:48:32 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: No está logueado co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException: No está logueado,¡Ha ocurrido una excepción!: ,-11-20
+Nov 20, 2022 3:48:38 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:48:43 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: NickJurado a el artículo Casa Grande por 2000000,Se ha hecho una nueva puja,-11-20
+Nov 20, 2022 3:48:46 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:48:51 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha ingresado un usuario,-11-20
+Nov 20, 2022 3:48:57 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Se ha vendido Casa Grande de JoshSell al comprador NickJurado, Felicitaciones!,Se ha generado una nueva transacción,-11-20
+Nov 20, 2022 3:49:03 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha cerrado sesión un usuario,-11-20
+Nov 20, 2022 3:49:14 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: NickJurado,Ha ingresado un usuario,-11-20

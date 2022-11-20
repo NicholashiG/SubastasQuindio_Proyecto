@@ -292,4 +292,15 @@ public class Persistencia {
         System.out.println(ruta);
         ArchivoUtil.guardarArchivo(ruta, contenido, false);
     }
+
+    public static void guardarComprasCSV(String dir, ArrayList<Transaccion> transaccionesComprador) throws IOException {
+        String contenido = "";
+
+        for (Transaccion transaccion : transaccionesComprador) {
+            contenido += transaccion.toStringCSV() + "\n";
+        }
+        String ruta = dir+"/compras.csv";
+        System.out.println(ruta);
+        ArchivoUtil.guardarArchivo(ruta, contenido, false);
+    }
 }

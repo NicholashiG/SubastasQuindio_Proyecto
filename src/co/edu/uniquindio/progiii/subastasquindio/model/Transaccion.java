@@ -39,6 +39,16 @@ public class Transaccion implements Serializable {
     }
 
 
+    public String toStringCSV() {
+        return
+                id +
+                "," + comprador +
+                "," + vendedor +
+                "," + publicacion +
+                "," + fecha +
+                "," + hora;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)

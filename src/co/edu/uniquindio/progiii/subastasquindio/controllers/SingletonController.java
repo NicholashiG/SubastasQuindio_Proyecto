@@ -167,9 +167,9 @@ public class SingletonController {
 
 
     // Método que crea una transacción y la guarda en persistencia y log
-    public static void crearTransaccion(Comprador comprador, Vendedor vendedor, Publicacion publicacion) throws IOException {
+    public void crearTransaccion(Comprador comprador, Vendedor vendedor, Publicacion publicacion) throws IOException {
         Transaccion transaccion = new Transaccion(comprador, vendedor, publicacion);
-        SingletonController.getInstance().subastasQuindio.getListaTransacciones().add(transaccion);
+        this.getSubastasQuindio().getListaTransacciones().add(transaccion);
         Persistencia.guardaRegistroLog("Transaccion hecha", 1, transaccion.toString());
         Persistencia.guardarTransacciones(SingletonController.getInstance().subastasQuindio.getListaTransacciones());
     }
@@ -412,6 +412,19 @@ public class SingletonController {
     public void guardarAnunciosCSV(String dir) throws IOException {
         Vendedor vendedor = (Vendedor) this.getSubastasQuindio().getUsuarioLogeado();
         Persistencia.guardarAnunciosCSV(dir, vendedor.getPublicaciones() );
+    }
+
+    public void guardarComprasCSV(String dir) throws IOException {
+        Comprador comprador = (Comprador) this.getSubastasQuindio().getUsuarioLogeado();
+        ArrayList<Transaccion> transaccionesComprador= new ArrayList<>();
+        ArrayList<Transaccion> transacciones= this.getSubastasQuindio().getListaTransacciones();
+        System.out.println(transacciones);
+        for (Transaccion transaccion: transacciones) {
+            if (transaccion.getComprador().equals(comprador)){
+                transaccionesComprador.add(transaccion);
+            }
+        }
+        Persistencia.guardarComprasCSV(dir, transaccionesComprador);
     }
 }
 	

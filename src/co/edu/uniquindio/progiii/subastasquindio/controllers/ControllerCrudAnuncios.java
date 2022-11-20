@@ -224,7 +224,7 @@ public class ControllerCrudAnuncios implements Initializable {
         articulo.setNombre("Articulo de prueba");
         Publicacion publicacion = new Publicacion();
         publicacion.setArticulo(articulo);
-        SingletonController.crearTransaccion(comprador, vendedor, publicacion);
+        control.crearTransaccion(comprador, vendedor, publicacion);
 
     }
 
@@ -251,7 +251,7 @@ public class ControllerCrudAnuncios implements Initializable {
         try {
             File direccion = filePicker.getDireccionArchivo();
             if (direccion == null) {
-                throw new FileNotFoundException("Seleccione un archivo válido");
+                throw new FileNotFoundException("Seleccione una dirección válida");
             } else {
                 dir=direccion.getParent();
                 System.out.println(dir);

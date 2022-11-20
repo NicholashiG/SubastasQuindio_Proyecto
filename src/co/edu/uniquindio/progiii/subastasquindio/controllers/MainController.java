@@ -1,7 +1,9 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
+import co.edu.uniquindio.progiii.subastasquindio.exceptions.FileNotFoundException;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException;
 import co.edu.uniquindio.progiii.subastasquindio.model.*;
+import co.edu.uniquindio.progiii.subastasquindio.services.DirPicker;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -95,6 +97,9 @@ public class MainController implements Initializable {
     @FXML
     private TextField txtValorPuja;
 
+    @FXML
+    private Button btnGuardarCompras;
+
     private URL url;
     private ResourceBundle rb;
 
@@ -109,6 +114,7 @@ public class MainController implements Initializable {
         btnIniciarSesion.setVisible(true);
         btnVerPujas.setVisible(false);
         btnRegistrarse.setVisible(true);
+        btnGuardarCompras.setVisible(false);
         hyperlinkRegistroVendedor.setVisible(true);
         bienvenida.setText("");
         System.out.println("Iniciando aplicacion...");
@@ -134,6 +140,7 @@ public class MainController implements Initializable {
             if (usuarioLogeado.getClass() == Comprador.class) {
                 // si es vendedor agrega opciones propias del vendedor
                 btnVerPujas.setVisible(true);
+                btnGuardarCompras.setVisible(true);
             }
         }
 
@@ -314,6 +321,33 @@ public class MainController implements Initializable {
         control.logoff();
         control.refreshMain();
 
+    }
+
+    @FXML
+    private void guardarComprasCSV() throws Exception {
+        String dir = escogerDireccion();
+        control.guardarComprasCSV(dir);
+    }
+
+    private String escogerDireccion() throws Exception {
+        String dir = "";
+        // método que crea un filePicker para que el usuario pueda escoger
+        // la imagen
+        DirPicker filePicker = new DirPicker();
+        try {
+            File direccion = filePicker.getDireccionArchivo();
+            if (direccion == null) {
+                throw new FileNotFoundException("Seleccione una dirección válida");
+            } else {
+                dir=direccion.getParent();
+                System.out.println(dir);
+
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        return dir;
     }
 
     // Mira si es numérico (sacado de internet, está joya)

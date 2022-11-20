@@ -41,7 +41,9 @@ public class Publicacion implements Serializable {
         this.articulo = articulo;
     }
 
-    
+
+
+
     public int registrarPuja(int valorPuja) {
         /* Valores de realizado: 0. Error
                                  1. Correcto
@@ -59,7 +61,7 @@ public class Publicacion implements Serializable {
             if (comprador.getPujas().size() > 3) {
                 throw new TooManyBidsException("El usuario " + comprador.getNombreUsuario() + " tiene 3 pujas");
             }
-            if (valorPuja < 
+            if (this.getPujas().size()>0&&valorPuja <
             	this.getPujas().get( this.getPujas().size() - 1 ).getDineroOfrecido())
             	return 4;
             
