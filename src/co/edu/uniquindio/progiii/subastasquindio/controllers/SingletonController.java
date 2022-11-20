@@ -409,6 +409,10 @@ public class SingletonController {
     }
 
 
+    public void guardarAnunciosCSV(String dir) throws IOException {
+        Vendedor vendedor = (Vendedor) this.getSubastasQuindio().getUsuarioLogeado();
+        Persistencia.guardarAnunciosCSV(dir, vendedor.getPublicaciones() );
+    }
 }
 	
 

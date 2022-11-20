@@ -175,4 +175,16 @@ public class Publicacion implements Serializable {
                         ", articulo: " + articulo;
     }
 
+
+
+    public String toStringCSV() {
+        return
+                fechaInicial +
+                "," + fechaFinal +
+                "," + valorInicial +
+                "," + pujaGanadora +
+                "," + estado +
+                "," + articulo +
+                "," + pujas;
+    }
 }

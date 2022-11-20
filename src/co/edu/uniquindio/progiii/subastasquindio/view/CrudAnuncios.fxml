@@ -21,12 +21,17 @@
          <children>
             <ImageView fitHeight="64.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
                <FlowPane.margin>
-                  <Insets bottom="10.0" left="10.0" right="500.0" top="10.0" />
+                  <Insets bottom="10.0" left="10.0" right="250.0" top="10.0" />
                </FlowPane.margin>
                <image>
                   <Image url="@images/LogoSubastasQuindio.png" />
                </image>
             </ImageView>
+            <Button fx:id="btnGuardarAnuncios" mnemonicParsing="false" onAction="#guardarAnunciosCSV" text="Guardar Anuncios como CSV">
+               <FlowPane.margin>
+                  <Insets right="50.0" />
+               </FlowPane.margin>
+            </Button>
             <Label text="Editor de Anuncios" textAlignment="RIGHT">
                <font>
                   <Font size="17.0" />

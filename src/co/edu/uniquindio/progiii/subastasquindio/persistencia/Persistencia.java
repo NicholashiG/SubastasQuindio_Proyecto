@@ -282,4 +282,14 @@ public class Persistencia {
     }
 
 
+    public static void guardarAnunciosCSV(String dir, ArrayList<Publicacion> publicaciones) throws IOException {
+        String contenido = "";
+
+        for (Publicacion publicacion : publicaciones) {
+            contenido += publicacion.toStringCSV() + "\n";
+        }
+        String ruta = dir+"/anuncios.csv";
+        System.out.println(ruta);
+        ArchivoUtil.guardarArchivo(ruta, contenido, false);
+    }
 }

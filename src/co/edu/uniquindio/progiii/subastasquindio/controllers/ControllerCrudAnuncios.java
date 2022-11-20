@@ -1,15 +1,19 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.CannotSelectPujaGanadora;
+import co.edu.uniquindio.progiii.subastasquindio.exceptions.FileNotFoundException;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.PostNotFoundException;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.TooManyPostsException;
 import co.edu.uniquindio.progiii.subastasquindio.model.*;
+import co.edu.uniquindio.progiii.subastasquindio.services.DirPicker;
+import co.edu.uniquindio.progiii.subastasquindio.services.FilePicker;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.time.format.DateTimeFormatter;
@@ -49,6 +53,8 @@ public class ControllerCrudAnuncios implements Initializable {
 
     @FXML
     private Button btnEliminar;
+    @FXML
+    private Button btnGuardarAnuncios;
 
     @FXML
     private void nuevo() {
@@ -229,6 +235,33 @@ public class ControllerCrudAnuncios implements Initializable {
         control.openCrudArticulos();
         control.closeVentana();
 
+    }
+
+    @FXML
+    private void guardarAnunciosCSV() throws Exception {
+        String dir = escogerDireccion();
+        control.guardarAnunciosCSV(dir);
+    }
+
+    private String escogerDireccion() throws Exception {
+        String dir = "";
+        // método que crea un filePicker para que el usuario pueda escoger
+        // la imagen
+        DirPicker filePicker = new DirPicker();
+        try {
+            File direccion = filePicker.getDireccionArchivo();
+            if (direccion == null) {
+                throw new FileNotFoundException("Seleccione un archivo válido");
+            } else {
+                dir=direccion.getParent();
+                System.out.println(dir);
+
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        return dir;
     }
 
 
