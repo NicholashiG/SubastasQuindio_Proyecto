@@ -15,6 +15,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.ResourceBundle;
 
 public class ControllerCrudPuja implements Initializable {
@@ -73,7 +74,10 @@ public class ControllerCrudPuja implements Initializable {
         Puja pujaSeleccionada = listViewPujas.getSelectionModel().getSelectedItem();
         for (int i = 0; i < pujas.size(); i++) {
             if (pujas.get(i).getDineroOfrecido()==pujaSeleccionada.getDineroOfrecido() && pujas.get(i).getPublicacion().equals(pujaSeleccionada.getPublicacion())) {
-                pujas.remove(i);
+            	
+            	pujas.get(i).getPublicacion().getPujas().remove( pujas.get(i).getPublicacion().filtrarPuja(pujas.get(i)) );
+            	pujas.remove(i);
+                
                 listViewPujas.getItems().clear();
                 // actualiza la ventana
             }
@@ -81,6 +85,10 @@ public class ControllerCrudPuja implements Initializable {
         }
         this.initialize(urlGlobal, rbGlobal);
     }
+    
+    // ESTO ES LOGICA, VA EN EL MODELO DE PUBLICACION O PUJA
+    // Devuelve el indice del array de pujas de una publicacion 
+
 
     @FXML
     void guardarCambios(ActionEvent event) {
@@ -115,7 +123,7 @@ public class ControllerCrudPuja implements Initializable {
                     }
             } catch (NullPointerException e){
                 System.out.println(puja.getPublicacion());
-                    txtEstadoPuja.setText("Eatado: Aún no se ha escogido la puja ganadora");
+                    txtEstadoPuja.setText("Estado: Aún no se ha escogido la puja ganadora");
                     puja.setGanadora(false);
             }
 

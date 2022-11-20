@@ -1,6 +1,5 @@
 package co.edu.uniquindio.progiii.subastasquindio.controllers;
 
-import co.edu.uniquindio.progiii.subastasquindio.application.Main;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException;
 import co.edu.uniquindio.progiii.subastasquindio.model.*;
 import javafx.event.ActionEvent;
@@ -18,7 +17,6 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
@@ -113,8 +111,7 @@ public class MainController implements Initializable {
         btnRegistrarse.setVisible(true);
         hyperlinkRegistroVendedor.setVisible(true);
         bienvenida.setText("");
-        System.out.println("Se inicia la aplicación");
-        System.out.println("Se cargan los anuncios");
+        System.out.println("Iniciando aplicacion...");
         btnVerAnuncios.setVisible(false);
         anchorPaneArticuloSelec.setVisible(false);
         btnCerrarSesion.setVisible(false);
@@ -129,7 +126,7 @@ public class MainController implements Initializable {
             btnRegistrarse.setVisible(false);
             btnCerrarSesion.setVisible(true);
             hyperlinkRegistroVendedor.setVisible(false);
-            bienvenida.setText("Bienvenido, " + usuarioLogeado.getNombreUsuario() + "!");
+            bienvenida.setText("Bienvenido, " + usuarioLogeado.getNombreUsuario() + "!		");
             if (usuarioLogeado.getClass() == Vendedor.class) {
                 // si es vendedor agrega opciones propias del vendedor
                 btnVerAnuncios.setVisible(true);
@@ -141,30 +138,18 @@ public class MainController implements Initializable {
         }
 
         // SERIALIZACION AL INICIAR.
-
-        try {
-            control.setSubastasQuindio(control.cargarCasaSubastasAnunciosXML());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            control.guardarCasaSubastasXML(control.subastasQuindio);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        System.out.println("Cargando XML desde el servidor...");
+        control.setSubastasQuindio(control.cargarXMLServidor());
+        control.serializarXMLServidor();;
         try {
             control.guardarCasaSubastasXMLRespaldo(control.subastasQuindio);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        try {
-            control.setSubastasQuindio(control.cargarCasaSubastasAnunciosXML());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        //control.setSubastasQuindio(control.cargarXMLServidor());
 
         // Se agregan solamente las publicaciones que estén activas
-        for (Publicacion publicacion: control.subastasQuindio.getListaPublicaciones()){
+        for (Publicacion publicacion: control.getSubastasQuindio().getListaPublicaciones()){
             if (publicacion.getEstado() == Estado.ACTIVO){
                 listViewInicio.getItems().add(publicacion);
             }
@@ -195,6 +180,8 @@ public class MainController implements Initializable {
             /* Valores de condiciones: 1. Correcto
                                        2. Error usuario vendedor
                                        3. Error muchas pujas
+                                       4. Puja debe ser mayor que la anterior
+                                       5. Error pujo de igual valor ya existe
             */
             if (pujaRealizada == 1) {
                 lblValorPujaInfo.setText("La puja se realizó con éxito :D");
@@ -204,10 +191,18 @@ public class MainController implements Initializable {
                 } else {
                     if (pujaRealizada == 3) {
                         lblValorPujaInfo.setText("No se ha podido realizar la puja, tienes muchas pujas hechas");
+                    } else {
+                    	if (pujaRealizada == 4) {
+                            lblValorPujaInfo.setText("El valor debe ser mayor a la puja anterior");
+                        } else {
+                        	if (pujaRealizada == 5) {
+                                lblValorPujaInfo.setText("Puja de igual valor ya existe");
+                            }
                     }
                 }
             }
         }
+     } 
     }
 
     @FXML
@@ -247,13 +242,13 @@ public class MainController implements Initializable {
             try {
                 // se añaden 5 pujas en la pantalla
                 // La primera puja es la última puja hecha
-                // La segunda, cuarta y quinta son pujas al azar y, en caso de no existir, se deja vacío
-                // la tercera puja será la primera puja hecha a esa publicación
+            	// La segunda es la penultima
+            	
                 lblPuja1.setText("Puja 1: " + String.valueOf(publicacion.getPujas().get(publicacion.getPujas().size() - 1)));
-                lblPuja2.setText("Puja 2: " + String.valueOf(publicacion.getPujas().get((int) (Math.random() * 10))));
-                lblPuja3.setText("Puja 3: " + String.valueOf(publicacion.getPujas().get(0)));
-                lblPuja4.setText("Puja 4: " + String.valueOf(publicacion.getPujas().get((int) (Math.random() * 10))));
-                lblPuja5.setText("Puja 5: " + String.valueOf(publicacion.getPujas().get((int) (Math.random() * 10))));
+                lblPuja2.setText("Puja 2: " + String.valueOf(publicacion.getPujas().get(publicacion.getPujas().size() - 2)));
+                lblPuja3.setText("Puja 3: " + String.valueOf(publicacion.getPujas().get(publicacion.getPujas().size() - 3)));
+                lblPuja4.setText("Puja 4: " + String.valueOf(publicacion.getPujas().get(publicacion.getPujas().size() - 4)));
+                lblPuja5.setText("Puja 5: " + String.valueOf(publicacion.getPujas().get(publicacion.getPujas().size() - 5)));
             } catch (Exception e) {
                 System.out.println(e.toString());
             }
@@ -307,7 +302,6 @@ public class MainController implements Initializable {
     }
 
     public void verPujas() {
-        System.out.println("Aaaaaa");
         // ENVIO EL STAGE AL SINGLETON
         control.setMainStage((Stage) btnIniciarSesion.getScene().getWindow());
         control.openCrudPujas();
@@ -317,8 +311,8 @@ public class MainController implements Initializable {
     @FXML
     private void cerrarSesion(){
         control.guardarSalidaUsuarioLog(control.getUsuarioLogeado().getNombreUsuario());
-        control.setUsuarioLogeado(null);
-        this.initialize(url, rb);
+        control.logoff();
+        control.refreshMain();
 
     }
 

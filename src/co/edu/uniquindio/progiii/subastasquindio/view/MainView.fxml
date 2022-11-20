@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="690.0" prefWidth="1059.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.progiii.subastasquindio.controllers.MainController">
+<AnchorPane prefHeight="690.0" prefWidth="1059.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.progiii.subastasquindio.controllers.MainController">
    <children>
       <FlowPane prefHeight="84.0" prefWidth="1059.0">
          <children>
@@ -107,7 +107,7 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label fx:id="lblPuja5" layoutX="20.0" layoutY="487.0" prefHeight="22.0" prefWidth="461.0" text="Puja 5:">
+            <Label fx:id="lblPuja4" layoutX="21.0" layoutY="454.0" prefHeight="22.0" prefWidth="471.0" text="Puja 4:">
                <font>
                   <Font size="17.0" />
                </font>
@@ -117,7 +117,7 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label fx:id="lblPuja4" layoutX="21.0" layoutY="454.0" prefHeight="22.0" prefWidth="471.0" text="Puja 4:">
+            <Label fx:id="lblPuja5" layoutX="20.0" layoutY="487.0" prefHeight="22.0" prefWidth="461.0" text="Puja 5:">
                <font>
                   <Font size="17.0" />
                </font>
@@ -127,7 +127,7 @@
                   <Font size="19.0" />
                </font>
             </Label>
-            <Label fx:id="lblValorPujaInfo" layoutX="215.0" layoutY="151.0" prefHeight="17.0" prefWidth="298.0" />
+            <Label fx:id="lblValorPujaInfo" layoutX="215.0" layoutY="151.0" prefHeight="73.0" prefWidth="298.0" wrapText="true" />
          </children>
       </AnchorPane>
       <Label fx:id="lblInfo" layoutX="639.0" layoutY="274.0" prefHeight="72.0" prefWidth="284.0" text="¡Selecciona un artículo para visualizarlo!" textAlignment="CENTER" wrapText="true">

@@ -794,3 +794,133 @@ Nov 16, 2022 10:06:10 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.
 INFO: NickJurado,Ha ingresado un usuario,-11-16
 Nov 16, 2022 10:06:13 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
 INFO: NickJurado,Ha cerrado sesión un usuario,-11-16
+Nov 19, 2022 8:44:18 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 8:57:08 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 8:58:27 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha cerrado sesión un usuario,-11-19
+Nov 19, 2022 8:58:28 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha cerrado sesión un usuario,-11-19
+Nov 19, 2022 8:58:29 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha cerrado sesión un usuario,-11-19
+Nov 19, 2022 8:58:29 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha cerrado sesión un usuario,-11-19
+Nov 19, 2022 9:02:11 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 9:08:05 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 9:09:33 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 9:14:01 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 9:17:06 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 9:19:43 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 9:19:48 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha cerrado sesión un usuario,-11-19
+Nov 19, 2022 9:22:44 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 9:22:48 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha cerrado sesión un usuario,-11-19
+Nov 19, 2022 9:28:41 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 9:28:43 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha cerrado sesión un usuario,-11-19
+Nov 19, 2022 9:55:07 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 9:55:25 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 9:55:43 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 9:59:25 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 9:59:31 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 9:59:33 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 9:59:40 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha cerrado sesión un usuario,-11-19
+Nov 19, 2022 10:00:36 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: CompradorTest1,Ha ingresado un usuario,-11-19
+Nov 19, 2022 10:00:47 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:00:53 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:00:53 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:00:53 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:00:59 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:01:00 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:01:00 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:01:00 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:01:00 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:01:01 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:01:01 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:01:06 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: JoshSell,Ha cerrado sesión un usuario,-11-19
+Nov 19, 2022 10:09:05 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 10:09:14 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:12:08 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 10:12:18 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:14:19 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 10:14:32 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:14:36 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:19:28 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 10:19:35 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:25:23 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 10:25:28 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: El usuario es un vendedor, no un comprador co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException: El usuario es un vendedor, no un comprador,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:32:05 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+WARNING: No está logueado co.edu.uniquindio.progiii.subastasquindio.exceptions.InvalidBidException: No está logueado,¡Ha ocurrido una excepción!: ,-11-19
+Nov 19, 2022 10:32:17 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 10:32:26 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: Camilo a el artículo Arroz Negro por 6,Se ha hecho una nueva puja,-11-19
+Nov 19, 2022 10:32:36 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: Camilo a el artículo Arroz Negro por 2,Se ha hecho una nueva puja,-11-19
+Nov 19, 2022 10:33:28 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha cerrado sesión un usuario,-11-19
+Nov 19, 2022 10:47:02 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 10:47:12 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: Camilo a el artículo Arroz Negro por 2,Se ha hecho una nueva puja,-11-19
+Nov 19, 2022 10:47:57 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: Camilo a el artículo Arroz Negro por 2,Se ha hecho una nueva puja,-11-19
+Nov 19, 2022 10:48:22 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha cerrado sesión un usuario,-11-19
+Nov 19, 2022 11:19:16 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 11:19:25 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: Camilo a el artículo Arroz Negro por 3,Se ha hecho una nueva puja,-11-19
+Nov 19, 2022 11:19:49 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: Camilo a el artículo Arroz Negro por 3,Se ha hecho una nueva puja,-11-19
+Nov 19, 2022 11:22:28 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-19
+Nov 19, 2022 11:22:35 PM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Puja hecha por: Camilo a el artículo Arroz Negro por 3,Se ha hecho una nueva puja,-11-19
+Nov 20, 2022 12:04:20 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-20
+Nov 20, 2022 12:07:21 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-20
+Nov 20, 2022 12:12:15 AM co.edu.uniquindio.progiii.subastasquindio.persistencia.ArchivoUtil guardarRegistroLog
+INFO: Camilo,Ha ingresado un usuario,-11-20

@@ -37,11 +37,7 @@ public class ControllerRegistroVendedores implements Initializable {
                 // Se puede reutilizae el mismo Stage de Login y Registro, porque solo se usa uno a la vez
                 control.setLoginStage((Stage) usuario.getScene().getWindow());
                 control.registrarVendedor(usuario.getText(), contra.getText(), email.getText(), Integer.parseInt(edad.getText()), id.getText());
-                try {
-                    control.guardarCasaSubastasXML(control.subastasQuindio);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+                control.serializarXMLServidor();;
 
             } else feedback.setText("El correo, edad o id son erroneos");
 

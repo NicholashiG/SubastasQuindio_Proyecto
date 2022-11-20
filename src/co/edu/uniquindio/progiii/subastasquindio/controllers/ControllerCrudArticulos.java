@@ -61,7 +61,7 @@ public class ControllerCrudArticulos implements Initializable {
             SingletonController.guardarCambiosCrudLog("Se ha creado un nuevo artículo por " + control.getUsuarioLogeado().getNombreUsuario(), "Artículo nuevo: " + txtNombre.getText());
 
             try {
-                control.guardarCasaSubastasXML(control.subastasQuindio);
+                control.serializarXMLServidor();
                 control.guardarArticulos(articulo);
             } catch (IOException e) {
                 throw new RuntimeException(e);

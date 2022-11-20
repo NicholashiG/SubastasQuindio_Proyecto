@@ -53,12 +53,8 @@ public class ControllerCrudAnuncios implements Initializable {
     @FXML
     private void nuevo() {
         if (listViewAnuncios.getItems().size() == 3){
-            try {
-                // Guardamos la casa subastas para que todas las ventanas estén actualizadas
-                control.guardarCasaSubastasXML(control.subastasQuindio);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            // Guardamos la casa subastas para que todas las ventanas estén actualizadas
+			control.serializarXMLServidor();
             try {
 
                 lblInfo.setText("Tienes 3 publicaciones, borra una para crearla");
@@ -76,12 +72,8 @@ public class ControllerCrudAnuncios implements Initializable {
                 // Añadimos la publicación al ListView
                 listViewAnuncios.getItems().add(publicacion);
                 SingletonController.guardarCambiosCrudLog("Se ha creado un nuevo anuncio por " + control.getUsuarioLogeado().getNombreUsuario(), "Artículo anunciado: " + choiceArticulo.getValue().getNombre());
-                try {
-                    // Guardamos la casa subastas para que todas las ventanas estén actualizadas
-                    control.guardarCasaSubastasXML(control.subastasQuindio);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+                // Guardamos la casa subastas para que todas las ventanas estén actualizadas
+				control.serializarXMLServidor();
             }
             else{
                 lblInfo.setText("Tienes que llenar todos los campos");

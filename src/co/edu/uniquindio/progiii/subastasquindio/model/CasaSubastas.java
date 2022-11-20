@@ -11,7 +11,11 @@ import java.util.ArrayList;
 public class CasaSubastas implements Serializable {
 
 
-    //SingletonController control = SingletonController.getInstance();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//SingletonController control = SingletonController.getInstance();
     ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
     ArrayList<Publicacion> listaPublicaciones = new ArrayList<Publicacion>();
     ArrayList<Transaccion> listaTransacciones = new ArrayList<Transaccion>();
@@ -82,12 +86,23 @@ public class CasaSubastas implements Serializable {
     public Usuario getUsuarioLogeado() {
         return usuarioLogeado;
     }
-
-
-    public void setUsuarioLogeado(Usuario usuarioLogeado) {
-        this.usuarioLogeado = usuarioLogeado;
+    
+    // Funcion busca a un usuario con el mismo nombre y contraseña y
+    // lo setea como logueado.
+    public void setUsuarioLogeado(Usuario usuario) {
+        for (Usuario user : listaUsuarios) {
+            if (user.getNombreUsuario().equals(usuario.getNombreUsuario())) {
+                if (user.getContrasena().equals(usuario.getContrasena())) {
+                    usuarioLogeado = user;
+                }
+            }
+        }
     }
 
+    public void desloguear() {
+    	this.usuarioLogeado = null;
+    }
+    
     public ArrayList<Transaccion> getListaTransacciones() {
         return listaTransacciones;
     }

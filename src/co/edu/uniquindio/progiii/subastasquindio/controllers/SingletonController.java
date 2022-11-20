@@ -7,6 +7,7 @@ import co.edu.uniquindio.progiii.subastasquindio.exceptions.UsuarioException;
 import co.edu.uniquindio.progiii.subastasquindio.exceptions.WrongPasswordException;
 import co.edu.uniquindio.progiii.subastasquindio.model.*;
 import co.edu.uniquindio.progiii.subastasquindio.persistencia.Persistencia;
+import co.edu.uniquindio.progiii.subastasquindio.threads.HiloGeneral;
 import javafx.stage.Stage;
 
 import java.io.FileNotFoundException;
@@ -52,35 +53,36 @@ public class SingletonController {
 
     // Funcion de login
     public String login(String usuario, String contra) throws IOException {
-
-        // el string de feedback es el mensaje que se muestra
-        // en la ventana de login.
-        String feedback = "";
-        try {
+    	HiloGeneral h1;
             // Si esta funcion no da excepcion,
             // el usuario y contrasena son correctos
-            subastasQuindio.login(usuario, contra);
-            guardarCasaSubastasXML(subastasQuindio);
-            guardarInicioSesionUsuarioLog(usuario);
-            Main.refreshMain(mainStage);
-            Main.closeWindow(loginStage);
-
-        } catch (UserNotFoundException e) {
-            feedback = "Usuario no existe!";
-        } catch (WrongPasswordException e) {
-            feedback = "Contraseña incorrecta";
-        }
-        return feedback;
-
+        	
+        	Usuario user = new Usuario();
+        	user.setNombreUsuario(usuario);
+        	user.setContrasena(contra);
+        	
+        	h1 = crearHiloEnviador("ValidarUsuario", user);
+        	if (h1.getRespuesta().equals("Usuario encontrado")) {
+        		subastasQuindio.setUsuarioLogeado(user);
+        		serializarXMLServidor();
+                guardarInicioSesionUsuarioLog(usuario);
+                Main.refreshMain(mainStage);
+                Main.closeWindow(loginStage);
+        	}
+        return h1.getRespuesta();
+    } 
+    
+    public void logoff() {
+    	subastasQuindio.desloguear();
     }
 
     // refresca la ventana de artículos cada que se crea uno, además se guarda de nuevo en persistencia
     public void nuevoArticuloRefresh() throws IOException {
         // Cada vez que se crea un articulo
         // se guarda el modelo
-        guardarCasaSubastasXML(subastasQuindio);
+    	serializarXMLServidor();
         guardarCasaSubastasBinario(subastasQuindio);
-        cargarCasaSubastasAnunciosXML();
+        cargarXMLServidor();
         // Recarga las ventanas
         Main.refreshArticulos(articuloStage);
         Main.closeWindow(articuloStage);
@@ -91,9 +93,9 @@ public class SingletonController {
     public void nuevoAnuncioRefresh() throws IOException {
         // Cada vez que se crea un Anuncio
         // se guarda el modelo
-        guardarCasaSubastasXML(subastasQuindio);
+    	serializarXMLServidor();
         guardarCasaSubastasBinario(subastasQuindio);
-        cargarCasaSubastasAnunciosXML();
+        cargarXMLServidor();
         // Recarga las ventanas
         Main.refreshAnuncios(anunciosStage);
     }
@@ -103,9 +105,9 @@ public class SingletonController {
     public void atrasAnuncios() throws IOException {
 
         // se guarda el modelo al salir
-        guardarCasaSubastasXML(subastasQuindio);
+    	serializarXMLServidor();
         guardarCasaSubastasBinario(subastasQuindio);
-        cargarCasaSubastasAnunciosXML();
+        cargarXMLServidor();
         // Recarga las ventanas
         Main.closeWindow(anunciosStage);
         Main.refreshMain(mainStage);
@@ -113,9 +115,9 @@ public class SingletonController {
 
     public void atrasArticulos() throws IOException {
         // se guarda el modelo al salir
-        guardarCasaSubastasXML(subastasQuindio);
+    	serializarXMLServidor();
         guardarCasaSubastasBinario(subastasQuindio);
-        cargarCasaSubastasAnunciosXML();
+        cargarXMLServidor();
         // Recarga las ventanas
         Main.closeWindow(articuloStage);
         Main.openCrudAnuncios();
@@ -123,9 +125,9 @@ public class SingletonController {
 
     public void atrasPujas() throws IOException {
         // se guarda el modelo al salir
-        guardarCasaSubastasXML(subastasQuindio);
+    	serializarXMLServidor();
         guardarCasaSubastasBinario(subastasQuindio);
-        cargarCasaSubastasAnunciosXML();
+        cargarXMLServidor();
         // Recarga las ventanas
         Main.closeWindow(pujasStage);
         Main.refreshMain(mainStage);
@@ -191,55 +193,101 @@ public class SingletonController {
                                  1. Correcto
                                  2. Error usuario vendedor
                                  3. Error muchas pujas
+                                 4. Error puja no puede ser menor a la anterior
 
         */
-        int realizado = 0;
-        try {
-            Comprador comprador = (Comprador) subastasQuindio.getUsuarioLogeado();
-            if (comprador.getPujas().size() > 3) {
-                throw new TooManyBidsException("El usuario " + comprador.getNombreUsuario() + " tiene 3 pujas");
-            }
-            Publicacion publicacionSeleccionada = subastasQuindio.getPublicacionSeleccionada();
-            Puja puja = new Puja(publicacionSeleccionada, comprador, valorPuja);
-            comprador.getPujas().add(puja);
-            publicacionSeleccionada.getPujas().add(puja);
-            guardarNuevaPujaLog(puja);
-            realizado = 1;
-            try {
-                this.guardarCasaSubastasXML(this.subastasQuindio);
-                this.cargarCasaSubastasAnunciosXML();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        } catch (ClassCastException e) {
-            try {
-                realizado = 2;
-                throw new UsuarioException("El usuario es un vendedor, no un comprador");
-            } catch (UsuarioException uE) {
-            }
-        } catch (TooManyBidsException e) {
-            try {
-                realizado = 3;
-                throw new TooManyBidsException();
-            } catch (TooManyBidsException e1) {
-            }
-
-        }
-        return realizado;
+    	
+    	Publicacion seleccionado = subastasQuindio.getPublicacionSeleccionada();
+    	return seleccionado.registrarPuja(valorPuja);
+    	
+//        int realizado = 0;
+//        try {
+//            Comprador comprador = (Comprador) subastasQuindio.getUsuarioLogeado();
+//            
+//            if (comprador.getPujas().size() > 3) {
+//                throw new TooManyBidsException("El usuario " + comprador.getNombreUsuario() + " tiene 3 pujas");
+//            }
+//            Publicacion publicacionSeleccionada = subastasQuindio.getPublicacionSeleccionada();
+//            if (valorPuja < 
+//            	publicacionSeleccionada.getPujas().get( publicacionSeleccionada.getPujas().size() - 1 ).getDineroOfrecido())
+//            	return 4;
+//            
+//            Puja puja = new Puja(publicacionSeleccionada, comprador, valorPuja);
+//            comprador.getPujas().add(puja);
+//            publicacionSeleccionada.getPujas().add(puja);
+//            guardarNuevaPujaLog(puja);
+//            realizado = 1;
+//            serializarXMLServidor();
+//			this.cargarXMLServidor();
+//        } catch (ClassCastException e) {
+//            try {
+//            	System.out.println(subastasQuindio.getUsuarioLogeado().getNombreUsuario());
+//                realizado = 2;
+//                throw new UsuarioException("El usuario es un vendedor, no un comprador");
+//            } catch (UsuarioException uE) {
+//            }
+//        } catch (TooManyBidsException e) {
+//            try {
+//                realizado = 3;
+//                throw new TooManyBidsException();
+//            } catch (TooManyBidsException e1) {
+//            }
+//
+//        }
+//        return realizado;
     }
-
+    
+    
     public void registrarTransaccion(Publicacion publicacionSeleccionada, Puja puja) {
         new Transaccion(puja.getComprador(), publicacionSeleccionada.getArticulo().getVendedor(), publicacionSeleccionada);
         guardarTransaccionLog(publicacionSeleccionada.getArticulo().getVendedor().getNombreUsuario(), puja.getComprador().getNombreUsuario(), publicacionSeleccionada.getArticulo().getNombre());
-        try {
-            this.guardarCasaSubastasXML(this.subastasQuindio);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-
+        serializarXMLServidor();
     }
-    // LOGS
+    //-------------------- FUNCIONES RELACIONADAS CON HILOS/SERVIDOR -----------------------------
+    
+    
+    // Creadores de hilos:
+    
+    private HiloGeneral crearHiloEnviador(String accion, Object objeto) {
+    	HiloGeneral h1 = new HiloGeneral(accion, objeto);
+    	h1.start();
+    	try {
+			h1.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+    	return h1;
+    }
+    
+    private HiloGeneral crearHiloRecibidor(String accion) {
+    	HiloGeneral h1 = new HiloGeneral(accion);
+    	h1.start();
+    	try {
+			h1.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+    	return h1;
+    }
+    
+    
+    // Funciones de los hilos.
+    
+    
+    public CasaSubastas cargarXMLServidor() {
+    	
+    	HiloGeneral h1 = crearHiloRecibidor("CargarXML");
+    	CasaSubastas casaSubastas = h1.getXML();
+    	return casaSubastas;
+    }
+    
+    public void serializarXMLServidor() {
+    	HiloGeneral h1 = crearHiloEnviador("Serializar", this.subastasQuindio);
+    	System.out.println(h1.getRespuesta());
+    }
+
+    
+    //-------------------- LOGS --------------------
 
     public static void guardarRegistroUsuarioLog(String nombre, String email) {
         Persistencia.guardaRegistroLog("Se ha registrado un nuevo usuario", 1, nombre + "_" + email);
@@ -270,7 +318,11 @@ public class SingletonController {
     }
 
 
-    // ABRIR Y CERRAR VENTANAS
+    //-------------------- ABRIR Y CERRAR VENTANAS --------------------
+    
+    public void refreshMain() {
+    	Main.refreshMain(mainStage);
+    }
 
     // abre la ventana de login
     public void openLogin() {
@@ -306,7 +358,7 @@ public class SingletonController {
     }
 
 
-    // GETTERS Y SETTERS
+    //-------------------- GETTERS Y SETTERS --------------------
 
 
     public CasaSubastas getSubastasQuindio() {
@@ -361,29 +413,26 @@ public class SingletonController {
         return subastasQuindio.getUsuarioLogeado();
     }
 
-    public void setUsuarioLogeado(Usuario usuario) {
-        subastasQuindio.setUsuarioLogeado(usuario);
-    }
 
-    // SERIALIZACION XML Y TEXTO PLANO
+    // -------------------- SERIALIZACION XML Y TEXTO PLANO --------------------
 
     public void guardarAnunciosXML(CasaSubastas subastasQuindio) throws IOException {
         Persistencia.guardarPublicaciones(subastasQuindio);
     }
 
-    public CasaSubastas cargarCasaSubastasAnunciosXML() throws IOException {
-        CasaSubastas casaSubastas = Persistencia.cargarRecursoCasaSubastasXML();
-        return casaSubastas;
-    }
+//    public CasaSubastas cargarCasaSubastasAnunciosXML() throws IOException {
+//        CasaSubastas casaSubastas = Persistencia.cargarRecursoCasaSubastasXML();
+//        return casaSubastas;
+//    }
 
     public CasaSubastas cargarCasaSubastasAnunciosBinario() throws IOException {
         CasaSubastas casaSubastas = Persistencia.cargarRecursoCasaSubastasBinario();
         return casaSubastas;
     }
 
-    public void guardarCasaSubastasXML(CasaSubastas subastasQuindio) throws IOException {
-        Persistencia.guardarRecursoCasaSubastasXML(subastasQuindio);
-    }
+//    public void guardarCasaSubastasXML(CasaSubastas subastasQuindio) throws IOException {
+//        Persistencia.guardarRecursoCasaSubastasXML(subastasQuindio);
+//    }
 
     public void guardarCasaSubastasXMLRespaldo(CasaSubastas subastasQuindio) throws IOException {
         Persistencia.guardarRecursoCasaSubastasXMLRespaldo(subastasQuindio);
