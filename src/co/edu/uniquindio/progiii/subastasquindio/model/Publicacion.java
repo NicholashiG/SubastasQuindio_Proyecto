@@ -30,9 +30,7 @@ public class Publicacion implements Serializable {
     
     
     //Constructor vacío
-    public Publicacion() {
-
-    }
+    public Publicacion() {}
 
     public Publicacion(String fechaInicial, String fechaFinal, int valorInicial, Puja pujaGanadora, Estado estado, Articulo articulo) {
         this.fechaInicial = fechaInicial;
@@ -108,7 +106,6 @@ public class Publicacion implements Serializable {
     	int indice = -1;
     	for (Puja puja: pujas) {
     		// Si ya hay una puja de mismo valor, sumar 1 al indice
-    		System.out.println(indice);
 			if (puja.getDineroOfrecido() == valorPuja) indice++;
 		}
     	return indice;

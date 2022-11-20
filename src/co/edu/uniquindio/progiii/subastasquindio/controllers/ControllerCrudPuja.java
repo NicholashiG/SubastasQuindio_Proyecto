@@ -85,10 +85,7 @@ public class ControllerCrudPuja implements Initializable {
         }
         this.initialize(urlGlobal, rbGlobal);
     }
-    
-    // ESTO ES LOGICA, VA EN EL MODELO DE PUBLICACION O PUJA
-    // Devuelve el indice del array de pujas de una publicacion 
-
+ 
 
     @FXML
     void guardarCambios(ActionEvent event) {

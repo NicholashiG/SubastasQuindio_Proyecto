@@ -54,14 +54,14 @@ public class SingletonController {
     // Funcion de login
     public String login(String usuario, String contra) throws IOException {
     	HiloGeneral h1;
-            // Si esta funcion no da excepcion,
-            // el usuario y contrasena son correctos
+
         	
         	Usuario user = new Usuario();
         	user.setNombreUsuario(usuario);
         	user.setContrasena(contra);
-        	
+        	// Creamos un hilo con la accion de "ValidarUsuario"
         	h1 = crearHiloEnviador("ValidarUsuario", user);
+        	// Si esa respuesta es existosa:
         	if (h1.getRespuesta().equals("Usuario encontrado")) {
         		subastasQuindio.setUsuarioLogeado(user);
         		serializarXMLServidor();
@@ -69,6 +69,8 @@ public class SingletonController {
                 Main.refreshMain(mainStage);
                 Main.closeWindow(loginStage);
         	}
+        // En caso contrario, va a devolver al controlador
+        // la respuesta del servidor.
         return h1.getRespuesta();
     } 
     
@@ -194,47 +196,11 @@ public class SingletonController {
                                  2. Error usuario vendedor
                                  3. Error muchas pujas
                                  4. Error puja no puede ser menor a la anterior
-
+                                 5. Error Puja de mismo valor y a existe
         */
-    	
     	Publicacion seleccionado = subastasQuindio.getPublicacionSeleccionada();
     	return seleccionado.registrarPuja(valorPuja);
     	
-//        int realizado = 0;
-//        try {
-//            Comprador comprador = (Comprador) subastasQuindio.getUsuarioLogeado();
-//            
-//            if (comprador.getPujas().size() > 3) {
-//                throw new TooManyBidsException("El usuario " + comprador.getNombreUsuario() + " tiene 3 pujas");
-//            }
-//            Publicacion publicacionSeleccionada = subastasQuindio.getPublicacionSeleccionada();
-//            if (valorPuja < 
-//            	publicacionSeleccionada.getPujas().get( publicacionSeleccionada.getPujas().size() - 1 ).getDineroOfrecido())
-//            	return 4;
-//            
-//            Puja puja = new Puja(publicacionSeleccionada, comprador, valorPuja);
-//            comprador.getPujas().add(puja);
-//            publicacionSeleccionada.getPujas().add(puja);
-//            guardarNuevaPujaLog(puja);
-//            realizado = 1;
-//            serializarXMLServidor();
-//			this.cargarXMLServidor();
-//        } catch (ClassCastException e) {
-//            try {
-//            	System.out.println(subastasQuindio.getUsuarioLogeado().getNombreUsuario());
-//                realizado = 2;
-//                throw new UsuarioException("El usuario es un vendedor, no un comprador");
-//            } catch (UsuarioException uE) {
-//            }
-//        } catch (TooManyBidsException e) {
-//            try {
-//                realizado = 3;
-//                throw new TooManyBidsException();
-//            } catch (TooManyBidsException e1) {
-//            }
-//
-//        }
-//        return realizado;
     }
     
     
